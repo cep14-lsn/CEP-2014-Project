@@ -4,11 +4,11 @@ CEP Project
 iPreProcess Documentation
 
 To use iPreProcess, use !ipp[*] anywhere in script, where * is an iPreProcess command.
-iPreProcess command are structured as follows:
+iPreProcess commands are structured as follows:
 
 [directive] [arg1] [arg2] ...
 
-For example, an inclusion script would be as such:
+For example, an inclusion script would be written as such:
 
 !ipp[insert http://omo.riicc.sg/hellotest/amazing]
 
