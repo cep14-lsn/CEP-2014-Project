@@ -70,3 +70,11 @@ _cep14_insert
 Structure: _cep14_insert [file]
 
 This is a special directive for use in this project. [file] should be a file relative to the Repo.
+
+
+
+Page Updating
+=============
+The pages on the server are updated with GitHub's version when it is requested. However, as caching may occur, the changes may take a while to be reflected.
+
+Current estimated waiting time for the changes to be reflected: About 5 - 10 minutes.
