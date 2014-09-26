@@ -31,6 +31,22 @@ For example, an inclusion script would be written as such:
 
 A list of directives and their arguments can be found below.
 
+ifv
+===
+Structure: ifv [variableName] [op] [string] [valueiftrue] [optional valueiffalse]
+
+Tests the value in [variableName] against [string] using [op]. Currently accepted parameters for [op] are:
+
+	eq
+
+Tests if [variableName] is the same as [string].
+
+	neq
+
+Tests if [variableName] is not the same as [string].
+
+[valueiftrue] is printed if the test is true, otherwise [valueiffalse] is printed.
+
 insert
 ======
 Structure: insert [url]
