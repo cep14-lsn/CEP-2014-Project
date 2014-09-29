@@ -1,7 +1,7 @@
 CEP Project
 ===========
 
-Chosen topic: Food; specifically, a fast-food chain called Mekdoornels.
+Chosen topic: Food; specifically, a fast-food chain called Mekdoornels. [LIVE SITE](http://omo.riicc.sg/cep14/)
 
 Current Repo:
 
@@ -36,7 +36,7 @@ The menu page (that contains the list of food); pagename = Menu
 iPreProcess Documentation
 =========================
 
-To use iPreProcess, use !ipp[*] anywhere in script, where * is an iPreProcess command.
+To use iPreProcess, use `!ipp[*]` anywhere in script, where * is an iPreProcess command.
 iPreProcess commands are structured as follows:
 
 	[directive] [arg1] [arg2] ...
@@ -49,43 +49,43 @@ A list of directives and their arguments can be found below.
 
 ifv
 ---
-Structure: ifv [variableName] [op] [string] [valueiftrue] [optional valueiffalse]
+Structure: `ifv [variableName] [op] [string] [valueiftrue] [optional valueiffalse]`
 
-Tests the value in [variableName] against [string] using [op]. Currently accepted parameters for [op] are:
+Tests the value in `[variableName]` against `[string]` using `[op]`. Currently accepted parameters for `[op]` are:
 
 	eq
 
-Tests if [variableName] is the same as [string].
+Tests if `[variableName]` is the same as `[string]`.
 
 	neq
 
-Tests if [variableName] is not the same as [string].
+Tests if `[variableName]` is not the same as `[string]`.
 
-[valueiftrue] is printed if the test is true, otherwise [valueiffalse] is printed.
+`[valueiftrue]` is printed if the test is true, otherwise `[valueiffalse]` is printed.
 
 insert
 ------
-Structure: insert [url]
+Structure: `insert [url]`
 
-Includes [url] into the document at the specified point.
+Includes `[url]` into the document at the specified point.
 
 setv
 ----
-Structure: setv [variableName] [optional value]
+Structure: `setv [variableName] [optional value]`
 
-Sets [variableName] to [value]. If value is absent, clears the variable.
+Sets `[variableName]` to `[value]`. If value is absent, clears the variable.
 
 putv
 ----
-Structure: putv [variableName]
+Structure: putv `[variableName]`
 
-Writes the contents of [variableName] to the specified point.
+Writes the contents of `[variableName]` to the specified point.
 
 _cep14_insert
 -------------
-Structure: _cep14_insert [file]
+Structure: _cep14_insert `[file]`
 
-This is a special directive for use in this project. [file] should be a file relative to the Repo.
+This is a special directive for use in this project. `[file]` should be a file relative to the Repo.
 
 
 
