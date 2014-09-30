@@ -5,6 +5,10 @@ Chosen topic: Food; specifically, a fast-food chain called Mekdoornels. [LIVE SI
 
 Current Repo:
 
+_styles.css
+-----------
+The stylesheet for the entire website. If a specific page requires other styles please *don't* put it in here; use `<style>` tags instead.
+
 _head.html
 ----------
 The tags to be included in `<head>` for each document. This would mainly be stylesheet links and scripts, but can also include titles and meta tags.
