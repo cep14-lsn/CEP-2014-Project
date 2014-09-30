@@ -7,7 +7,7 @@ Current Repo:
 
 _head.html
 ----------
-The tags to be included in <head> for each document. This would mainly be stylesheet links and scripts, but can also include titles and meta tags.
+The tags to be included in `<head>` for each document. This would mainly be stylesheet links and scripts, but can also include titles and meta tags.
 
 _navbar.html
 ------------
@@ -19,7 +19,7 @@ The footer to be included in each document.
 
 _sandbox.html
 -------------
-A random place where you can test all your !ipp stuff :D
+A random place where you can test all your `!ipp` stuff :D
 
 index.php
 ---------
