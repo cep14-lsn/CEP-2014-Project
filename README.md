@@ -13,6 +13,10 @@ _navbar.html
 ------------
 The navbar to be included in each document.
 
+_footer.html
+------------
+The footer to be included in each document.
+
 _sandbox.html
 -------------
 A random place where you can test all your !ipp stuff :D
