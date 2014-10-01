@@ -1,3 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,600);
+
 body {
 	padding-top : 60px;
+    font-family: "Open Sans", Arial, sans-serif;
+} .navbar-default {
+    background-color: #000;
+    margin: 5px 5px 5px 5px;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 10px;
+    border-color: #000;
+} .navbar-default .navbar-nav>.active, .navbar-default .navbar-nav>.active:hover, .navbar-default .navbar-nav>.active:focus {
+    border-bottom: #daa520 solid 5px;
+    background-color: #000;
+} .navbar-default .navbar-nav>li:hover, .navbar-default .navbar-nav>li:focus {
+    border-bottom: #ff8 solid 5px;
 }
