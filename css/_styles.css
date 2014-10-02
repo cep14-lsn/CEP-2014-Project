@@ -38,7 +38,9 @@ body {
 	border-bottom : 2px solid #444;
     padding-left:10px;
     padding-right:10px;
-} .navbar-nav>.active, .navbar-nav>.active:hover, .navbar-nav>.active:focus {
+} .navbar-nav>li {
+    border-bottom: transparent solid 5px;
+} .navbar-nav>li.active, .navbar-nav>li.active:hover, .navbar-nav>li.active:focus {
 	border-bottom: #daa520 solid 5px;
 	background-color: #000;
 } .navbar-nav>li:hover, .navbar-nav>li:focus {
