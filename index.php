@@ -20,7 +20,7 @@
 			    top: 4%;
 			    margin-left : auto;
 			    margin-right : auto;
-			    height: 500px;
+			    height: 300px;
 			    /*width: 500px;*/
 			}
 		</style>
@@ -39,7 +39,9 @@
 						<img src = "burgercombo.gif" alt = "First slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
-								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button"></a></p>-->
+								<h1>Set Meals</h1>
+								<p>Explore our diverse set meal options that will fill you up for low cost.</p>
+								<p><a class = "btn btn-lg btn-primary" href = "menu.php" role = "button">Explore the menu</a></p>
 							</div>
 						</div>
 					</div>
@@ -47,7 +49,9 @@
 						<img src = "megafries.png" alt = "Second slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
-								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+								<h1>Fries</h1>
+								<p>Our fries are known all around the region. Grab some fries and share them with friends, or eat them yourself!</p>
+								<p><a class = "btn btn-lg btn-primary" href = "menu.php" role = "button">Fries and other food</a></p>
 							</div>
 						</div>
 					</div>
@@ -55,7 +59,9 @@
 						<img src = "Tripleburger.png" alt = "Third slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
-								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
+								<h1>Burgers</h1>
+								<p>Huge burgers. Few calories. That's right, more great-tasting food and less calories! What could be better?</p>
+								<p><a class = "btn btn-lg btn-primary" href = "menu.php" role = "button">Find other healthy meal choices</a></p>
 							</div>
 						</div>
 					</div>
