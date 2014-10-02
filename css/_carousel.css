@@ -12,9 +12,9 @@
 }
 .carousel-inner > .item > img {
     position: absolute;
-    top: 4%;
+    /*top: ;*/
     margin-left : auto;
     margin-right : auto;
-    height: 940px;
-    width: 500px;
+    /*height: 940px;
+    width: 500px;*/
 }
