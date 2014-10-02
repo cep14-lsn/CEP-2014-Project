@@ -41,8 +41,14 @@ background-color: #000;
 	background-color:#000;
 	font-weight:bold;
 	/*border-width: 2px 2px 2px 2px;*/
+} .dropdown-menu {
+    background-color:#000;
+    border-left: 2px solid #444;
+    border-bottom: 2px solid #444;
+    border-right: 2px solid #444;
 } .dropdown-menu > li {
     background-color:#000;
+    color:#fff;
     border-left: transparent solid 5px;
 } .dropdown-menu >li:hover {
     background-color:#000;
