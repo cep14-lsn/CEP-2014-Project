@@ -16,7 +16,7 @@
 			    height: 500px;
 			}
 			.carousel-inner > .item > img {
-			    position: absolute;
+			    /*position: absolute;*/
 			    top: 4%;
 			    margin-left : auto;
 			    margin-right : auto;
@@ -35,7 +35,7 @@
 					<li data-target = "#foodcarousel" data-slide-to = "2"></li>
 				</ol>
 				<div class = "carousel-inner">
-					<div class = "item">
+					<div class = "item active">
 						<img src = "burgercombo.gif" alt = "First slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
