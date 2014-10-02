@@ -48,13 +48,13 @@ background-color: #000;
     border-right: 2px solid #444;
 } .dropdown-menu > li {
     background-color:#000;
-    color:#fff;
     border-left: transparent solid 5px;
 } .dropdown-menu >li:hover {
     background-color:#000;
     border-left: #ff8 solid 5px;
-} .dropdown-menu > li > a:hover {
-    background-color:#000
+} .dropdown-menu > li > a, .dropdown-menu > li > a:hover {
+    background-color:#000;
+    color: #fff;
 } .dropdown-menu > .active, .dropdown-menu > .active-hover, .dropdown-menu > .active:focus {
     background-color:#000;
     border-left: #daa520 solid 5px;
