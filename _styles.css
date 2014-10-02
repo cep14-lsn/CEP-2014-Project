@@ -6,8 +6,7 @@ body {
 } .navbar-default {
     background-color: #000;
     color: #fff;
-    border-width: 2px;
-    border-color: #fff;
+    border : 2px solid #fff;
 } .navbar-default .navbar-nav>.active, .navbar-default .navbar-nav>.active:hover, .navbar-default .navbar-nav>.active:focus {
     border-bottom: #daa520 solid 5px;
     background-color: #000;
