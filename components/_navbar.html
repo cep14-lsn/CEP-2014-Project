@@ -11,7 +11,7 @@
 			<ul class = "nav navbar-nav">
 				<li !ipp[ifv pagename eq Home class="active"]><a href="/cep14">Home</a></li>
 				<li !ipp[ifv pagename eq Menu class="active"]><a href = "menu.php">Menu</a></li>
-				<li class="dropdown">
+				<li class="dropdown !ipp[ifv pagename eq OrderDelivery active!ipp[ifv pagename eq OrderReservation active]">
 					<a class="dropdown-toggle" href = "#" onclick = "return false;" data-toggle="dropdown">Order Online<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 					    <li !ipp[ifv pagename eq OrderDelivery class="active"]><a href="order_delivery.php">Delivery Order</a></li>
