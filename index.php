@@ -15,7 +15,7 @@
 				</ol>
 				<div class = "carousel-inner">
 					<div class = "item active">
-						<img src = "mclarenp1_c.jpg" alt = "First slide" />
+						<img src = "burgercombo.gif" alt = "First slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
 								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button"></a></p>-->
@@ -23,7 +23,7 @@
 						</div>
 					</div>
 					<div class = "item">
-						<img src = "mclarenp1_b.jpg" alt = "Second slide" />
+						<img src = "megafries.jpg" alt = "Second slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
 								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 					<div class = "item">
-						<img src = "mclarenp1.jpg" alt = "Third slide" />
+						<img src = "Tripleburger.jpg" alt = "Third slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
 								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
