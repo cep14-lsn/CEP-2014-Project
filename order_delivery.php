@@ -1,4 +1,4 @@
-!ipp[setv pagename OrderDelivery]
+!ipp[setv pagename Delivery]
 <html>
     <head>
         !ipp[_cep14_insert components/_head.html]
