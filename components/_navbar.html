@@ -1,33 +1,32 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-<div class = "navbar navbar-default navbar-fixed-top" role = "navigation">
-	<div class = "navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-navbar">
-            <span class="sr-only">Toggle navigation</span>
-        </button>
-		<a class = "navbar-brand" href = "/cep14">MekDoornels</a>
+	<div class="container-fluid">
+		<div class = "navbar navbar-default navbar-fixed-top" role = "navigation">
+			<div class = "navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-navbar">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+			<a class = "navbar-brand" href = "/cep14">MekDoornels</a>
+		</div>
+		<div class="collapse navbar-collapse" id="collapsible-navbar">
+			<ul class = "nav navbar-nav">
+				<li !ipp[ifv pagename eq Home class="active"]><a href="/cep14">Home</a></li>
+				<li !ipp[ifv pagename eq Menu class="active"]><a href = "menu.php">Menu</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown">Order Online<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+					    <li !ipp[ifv pagename eq OrderDelivery class="active"]><a href="order_delivery.php">Delivery Order</a></li>
+					    <li !ipp[ifv pagename eq OrderReservation class="active"]><a href="order_reservation.php" >Reservation order</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li !ipp[ifv pagename eq About class="active"]>
+					<a href="about.php">About Us</a>
+				</li>
+				<li !ipp[ifv pagename eq Contact class="active"]>
+					<a href="contact.php">Contact Us</a>
+				</li>
+			</ul>
+		</div>
 	</div>
-    <div class="collapse navbar-collapse" id="collapsible-navbar">
-        <ul class = "nav navbar-nav">
-            <li !ipp[ifv pagename eq Home class="active"]><a href="/cep14">Home</a></li>
-            <li !ipp[ifv pagename eq Menu class="active"]><a href = "menu.php">Menu</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Order Online<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li !ipp[ifv pagename eq OrderDelivery class="active"]><a href="order_delivery.php">Delivery Order</a></li>
-                    <li !ipp[ifv pagename eq OrderReservation class="active"]><a href="order_reservation.php" >Reservation order</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li !ipp[ifv pagename eq AboutUs class="active"]>
-                <a href="about.php">About Us</a>
-            </li>
-            <li !ipp[ifv pagename eq ContactUs class="active"]>
-                <a href="contact.php">Contact Us</a>
-            </li>
-        </ul>
-    </div>
-</div>
-</div>
 </nav>
