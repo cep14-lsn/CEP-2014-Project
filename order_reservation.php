@@ -1,4 +1,4 @@
-!ipp[setv pagename OrderReservation]
+!ipp[setv pagename Reservation]
 <html>
     <head>
         !ipp[_cep14_insert components/_head.html]
