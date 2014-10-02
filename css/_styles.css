@@ -21,8 +21,13 @@ body {
 	color: #e2b33c;
 	font-size:19px;
 } a.btn {
-  background-color:#daa520;
-  color:#000;
+    background-color:#daa520;
+    color:#000;
+    font-size:19px;
+    margin: 2px 2px 2px 2px;
+    border-color:transparent;
+} a.btn:hover {
+    background-color:#ff8;
 }
 
 /* Navbar styles*/
