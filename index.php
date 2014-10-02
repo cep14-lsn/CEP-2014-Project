@@ -2,7 +2,28 @@
 <html>
 	<head>
 		!ipp[_cep14_insert components/_head.html]
-		<link rel="stylesheet" href="css/_carousel.css" type="text/css"/>
+		<style>
+			.carousel {
+			    width : 100%;
+			    height: 500px;
+			    margin-bottom: 60px;
+			    background-color: #000;
+			}
+			.carousel-caption {
+			    z-index: 10;
+			}
+			.carousel .item {
+			    height: 500px;
+			}
+			.carousel-inner > .item > img {
+			    position: absolute;
+			    top: 4%;
+			    margin-left : auto;
+			    margin-right : auto;
+			    height: 940px;
+			    width: 500px;
+			}
+		</style>
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
