@@ -1,10 +1,10 @@
 !ipp[setv pagename Contact]
 <html>
 	<head>
-		!ipp[_cep14_insert _head.html]
+		!ipp[_cep14_insert components/_head.html]
 	</head>
 	<body>
-		!ipp[_cep14_insert _navbar.html]
-		!ipp[_cep14_insert _footer.html]
+		!ipp[_cep14_insert components/_navbar.html]
+		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>

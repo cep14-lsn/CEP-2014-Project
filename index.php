@@ -1,10 +1,10 @@
 !ipp[setv pagename Home]
 <html>
 	<head>
-		!ipp[_cep14_insert _head.html]
+		!ipp[_cep14_insert components/_head.html]
 	</head>
 	<body>
-		!ipp[_cep14_insert _navbar.html]
+		!ipp[_cep14_insert components/_navbar.html]
 		<div class = "container">
 			<div id = "foodcarousel" class = "carousel slide" data-ride = "carousel">
 				<ol class = "carousel-indicators">
@@ -42,6 +42,6 @@
 				<a class = "right carousel-control" href = "#foodcarousel" role = "button" data-slide = "next"><span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
-		!ipp[_cep14_insert _footer.html]
+		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>
