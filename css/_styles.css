@@ -22,7 +22,9 @@ body {
 } .navbar-default {
 	background-color: #000;
 	color: #fff;
-	border-bottom : 2px solid #fff;
+	border-bottom : 2px solid #444;
+    padding-left:10px;
+    padding-right:10px;
 } .navbar-default .navbar-nav>.active, .navbar-default .navbar-nav>.active:hover, .navbar-default .navbar-nav>.active:focus {
 	border-bottom: #daa520 solid 5px;
 	background-color: #000;
@@ -40,6 +42,7 @@ background-color: #000;
 	font-weight:bold;
 	/*border-width: 2px 2px 2px 2px;*/
 } .dropdown-menu > li {
+    background-color:#000;
     border-left: transparent solid 5px;
 } .dropdown-menu >li:hover {
     background-color:#000;
@@ -47,5 +50,6 @@ background-color: #000;
 } .dropdown-menu > li > a:hover {
     background-color:#000
 } .dropdown-menu > .active, .dropdown-menu > .active-hover, .dropdown-menu > .active:focus {
+    background-color:#000;
     border-left: #daa520 solid 5px;
 }
