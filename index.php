@@ -44,7 +44,7 @@
 						</div>
 					</div>
 					<div class = "item">
-						<img src = "megafries.jpg" alt = "Second slide" />
+						<img src = "megafries.png" alt = "Second slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
 								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
