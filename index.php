@@ -52,7 +52,7 @@
 						</div>
 					</div>
 					<div class = "item">
-						<img src = "Tripleburger.jpg" alt = "Third slide" />
+						<img src = "Tripleburger.png" alt = "Third slide" />
 						<div class = "container">
 							<div class = "carousel-caption">
 								<!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
