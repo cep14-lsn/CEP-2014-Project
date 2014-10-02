@@ -16,7 +16,7 @@
 			    height: 500px;
 			}
 			.carousel-inner > .item > img {
-			    /*position: absolute;*/
+			    position: absolute;
 			    top: 4%;
 			    margin-left : auto;
 			    margin-right : auto;
