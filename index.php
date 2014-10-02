@@ -1,4 +1,4 @@
-!ipp[setv pagename Home]<!--HA-->
+!ipp[setv pagename Home]
 <html>
 	<head>
 		!ipp[_cep14_insert components/_head.html]
