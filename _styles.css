@@ -6,7 +6,7 @@ body {
 } .navbar-default {
     background-color: #000;
     color: #fff;
-    border : 2px solid #fff;
+    border-bottom : 2px solid #fff;
 } .navbar-default .navbar-nav>.active, .navbar-default .navbar-nav>.active:hover, .navbar-default .navbar-nav>.active:focus {
     border-bottom: #daa520 solid 5px;
     background-color: #000;
@@ -22,5 +22,5 @@ body {
     color:#ff8;
     background-color:#000;
     font-weight:bold;
-    border-width: 2px 2px 2px 2px;
+    /*border-width: 2px 2px 2px 2px;*/
 }
