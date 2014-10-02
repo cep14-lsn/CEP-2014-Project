@@ -25,7 +25,7 @@ body {
 	border-bottom : 2px solid #444;
     padding-left:10px;
     padding-right:10px;
-} .navbar-default .navbar-nav>.active, .navbar-default .navbar-nav>.active:hover, .navbar-default .navbar-nav>.active:focus {
+} .navbar-nav>.active, .navbar-nav>.active:hover, .navbar-nav>.active:focus {
 	border-bottom: #daa520 solid 5px;
 	background-color: #000;
 } .navbar-default .navbar-nav>li:hover, .navbar-default .navbar-nav>li:focus {
@@ -58,4 +58,7 @@ background-color: #000;
 } .dropdown-menu > .active, .dropdown-menu > .active-hover, .dropdown-menu > .active:focus {
     background-color:#000;
     border-left: #daa520 solid 5px;
+} .btn .btn-primary {
+    background-color:#daa520;
+    color:#000;
 }
