@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,300italic|Open+Sans:700);
 
+/* Common for all objects */
 body {
     padding-top: 60px;
     font-family: "Ubuntu", Arial, sans-serif;
-} body, .jumbotron {
     background-color: #000;
     font-weight:300;
     color:#fff;
@@ -20,7 +20,13 @@ body {
 } h3 {
 	color: #e2b33c;
 	font-size:19px;
-} .navbar-default {
+} a.btn {
+  background-color:#daa520;
+  color:#000;
+}
+
+/* Navbar styles*/
+.navbar-default {
 	background-color: #000;
 	color: #fff;
 	border-bottom : 2px solid #444;
@@ -41,7 +47,6 @@ background-color: #000;
 	color:#ff8;
 	background-color:#000;
 	font-weight:bold;
-	/*border-width: 2px 2px 2px 2px;*/
 } .dropdown-menu {
     background-color:#000;
     border-left: 2px solid #444;
@@ -59,7 +64,10 @@ background-color: #000;
 } .dropdown-menu > .active, .dropdown-menu > .active-hover, .dropdown-menu > .active:focus {
     background-color:#000;
     border-left: #daa520 solid 5px;
-} .btn .btn-primary {
-    background-color:#daa520;
-    color:#000;
+}
+
+/* Jumbotrons */
+.jumbotron {
+    background-color:transparent;
+    text-align:center;
 }
