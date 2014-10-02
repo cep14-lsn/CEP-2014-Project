@@ -28,6 +28,7 @@ body {
     border-color:transparent;
 } a.btn:hover {
     background-color:#ff8;
+    color:#000;
 }
 
 /* Navbar styles*/
