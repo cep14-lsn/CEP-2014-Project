@@ -2,6 +2,7 @@
 <html>
 	<head>
 		!ipp[_cep14_insert components/_head.html]
+		!ipp[_cep14_insert css/_styles.css]
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
