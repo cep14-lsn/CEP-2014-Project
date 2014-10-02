@@ -8,13 +8,13 @@
 }
 .carousel .item {
     height: 500px;
-    background-color: #777;
+    background-color: #000;
 }
 .carousel-inner > .item > img {
     position: absolute;
     top: 4%;
     margin-left : auto;
     margin-right : auto;
-    /*height: 225px;
-    width: 225px;*/
+    height: 940px;
+    width: 500px;
 }
