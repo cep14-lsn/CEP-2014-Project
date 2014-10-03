@@ -118,4 +118,5 @@ a.btn:hover {
 	background-color : #222;
 	padding-top : 15px;
 	padding-bottom : 15px;
+	z-index : 999999999999;
 }
