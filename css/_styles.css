@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,300italic|Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,300italic,600|Open+Sans:700);
 
 /* Common for all objects */
 body {
@@ -38,6 +38,9 @@ a.btn {
 a.btn:hover {
 	background-color:#ff8;
 	color:#000;
+}
+span.bold {
+    font-weight:600;
 }
 
 /* Navbar styles*/
@@ -158,3 +161,4 @@ a.btn:hover {
 	visibility: visible;
 	opacity: 1;
 }
+
