@@ -40,10 +40,10 @@
 			<div class = "col-xs-6 col-md-3 food-item">
 				<img src = "burgercombo.gif" />
 				<p class = "food-desc">
-					<strong>MEGA FRIES</strong><br>
-					Calories : 5<br>
+					<strong>CHEESEBURGER XS</strong><br>
+					Calories : 1<br>
 					Taste : 10 / 10<br>
-					Smell : Mouthwateringly Savoury
+					Smell : Teppanyaki
 				</p>
 			</div>
 		</div>
