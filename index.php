@@ -29,7 +29,6 @@
 			.marketing .col-lg-4 {
 				margin-bottom: 20px;
 				text-align: justify;
-				width: 24%;
 				position: relative;
 				min-height: 1px;
 				padding-right: 15px;
