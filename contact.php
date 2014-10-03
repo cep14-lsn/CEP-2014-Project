@@ -3,7 +3,7 @@
 	<head>
 		!ipp[_cep14_insert components/_head.html]
 		<script>
-		var contactList = [{
+		var contactList = [
 			{
 				"name":"Carl",
 				"email":"carl@me.com",
@@ -76,7 +76,7 @@
 					"mobile":7654222
 				}
 			}
-		}];
+		];
 		</script>
 	</head>
 	<body>
