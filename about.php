@@ -15,7 +15,7 @@
         <hr>
         <div class="container-fluid">
             <h1>Our Story</h1>
-            <p>MekDoornels started in the year 1923, founded by the LSN Foundation as an experimental restaurant chain. Our first test subjects, er, customers were willing and daring volunteers who signed up for our tasty programme.</p>
+            <p>MekDoornels started in the year 1939, founded by the LSN Foundation as an experimental restaurant chain. Our first test subjects, er, customers were willing and daring volunteers who signed up for our tasty programme.</p>
             <p>The restaurant chain was intended to produce food for customers as fast as possible.</p>
             <p>In the first 6 years of our operation, just as the world struggled to survive through one of the most deadly wars ever, we struggled to stay competitive in the ever-changing restaurant industry.</p>
             <p>However, ever since Pear Inc. sponsored our growth in the year 1965, our business has continued to skyrocket, until you see the <span style="font-size: 0.1pt">increadibly dubious and crappy</span>success that is us today.</p>
