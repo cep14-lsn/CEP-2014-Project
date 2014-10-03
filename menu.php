@@ -33,11 +33,12 @@
 		var xh = new XMLHttpRequest();
 		xh.onreadystatechange = function () {
 			if ( xh.readyState == 4 && xh.status == 200 ) {
+				console.log( xh.responseText );
 				infoFood = JSON.parse( xh.responseText );
 			}
 		}
-		xh.open( "GET" , "js/food_info.json" , true )
-		xh.send()
+		xh.open( "GET" , "js/food_info.json" , true );
+		xh.send();
 		function menuCont( $scope ) {
 			$scope.foods = infoFood;
 			$scope.process = function ( l ) {
