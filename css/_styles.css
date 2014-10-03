@@ -52,11 +52,11 @@ a.btn:hover {
 .navbar-nav>li {
 	border-bottom: transparent solid 5px;
 }
-.navbar-nav>li.active, .navbar-nav>li.active:hover, .navbar-nav>li.active:focus , .navbar-nav > li.active.dropdown.open > .dropdown-toggle:focus {
+.navbar-nav>li.active, .navbar-nav>li.active:hover, .navbar-nav>li.active:focus , .navbar-nav > li.active.dropdown.open > .dropdown-toggle {
 	border-bottom: #daa520 solid 5px;
 	background-color: #444;
 }
-.navbar-nav>li:hover, .navbar-nav>li:focus, .navbar-nav > li.dropdown.open > .dropdown-toggle:focus {
+.navbar-nav>li:hover, .navbar-nav>li:focus, .navbar-nav > li.dropdown.open > .dropdown-toggle {
 	border-bottom: #ff8 solid 5px;
 }
 .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.active>a:focus {
