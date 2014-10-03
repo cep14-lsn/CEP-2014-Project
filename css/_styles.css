@@ -124,6 +124,11 @@ a.btn:hover {
 .foodview {
 	position:relative;
 }
+
+.foodview .img{
+	height:100px;
+}
+
 .fooddescription{
 	position:absolute;
 	visibility: hidden;
