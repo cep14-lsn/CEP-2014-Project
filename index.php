@@ -24,13 +24,14 @@
 				/*width: 500px;*/
 			}
 			.marketing .col-lg-4 > .img.img-circle{
+				position: center;
 				margin-left: auto;
 				margin-right: auto;
 			}
 			.marketing .col-lg-4 {
 				  margin-bottom: 20px;
 				  text-align: justify;
-				  width: 21%;
+				  width: 24%;
 				  position: relative;
 				  min-height: 1px;
 				  padding-right: 15px;
