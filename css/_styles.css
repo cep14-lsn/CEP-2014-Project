@@ -151,17 +151,21 @@ span.bold {
 /* Menu styles */
 .food-item {
 	text-align : center;
+	background-color : #111;
+	border-radius : 10px;
+	padding : 20px;
 }
 .food-item > img {
 	height : 200px;
 	width : auto;
 	margin-left : auto;
 	margin-right : auto;
-	border : 1px solid #fff;
 }
 .food-item > .food-desc {
 	display : none;
 	width : 100%;
+	background-color : #222;
+	border-radius : 10px;
 	text-align : justify;
 }
 .food-item:hover > .food-desc {
