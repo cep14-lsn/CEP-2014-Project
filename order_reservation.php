@@ -6,6 +6,7 @@
 		<script>
 			var GST = 0.07;
 			var SVCT = 0.10;
+			var location = "nowhere";
 
 			deduct = function() {return null;};
 
