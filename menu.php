@@ -3,7 +3,13 @@
 	<head>
 		!ipp[_cep14_insert components/_head.html]
 		<style>
-		.meal-pic > img {
+		.food-item {
+			background-color : #222;
+			border-radius : 10px;
+			padding : 10px;
+			margin : 10px;
+		}
+		.food-item > .food-pic > img {
 			width : 100%;
 		}
 		</style>
@@ -38,11 +44,11 @@
 					<h1>Set meals <small>to be had anywhere; à la carte or as a set meal</small></h1>
 				</div>
 				<div ng-repeat = "mealset in foods.mealSet">
-					<div class = "row">
-						<div class = "col-xs-12 col-md-6 meal-pic">
+					<div class = "row food-item">
+						<div class = "col-xs-12 col-md-6 food-pic">
 							<img ng-src = "{{mealset.img}}" alt = "Meal image" />
 						</div>
-						<div class = "col-xs-12 col-md-6 meal-info">
+						<div class = "col-xs-12 col-md-6 food-info">
 							<strong>{{ set.name }}</strong>
 							<p class = "text-muted"><i>{{ process( mealset.desc ) }}</i></p>
 							<table>
