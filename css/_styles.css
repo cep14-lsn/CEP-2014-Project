@@ -147,21 +147,21 @@ span.bold {
 	z-index : 999999999999;
 }
 .foodview {
-	position:relative;
+	position : relative;
 }
-.foodview > img{
-	height:100px;
+.foodview > img {
+	/*height : 100px;*/
 	width : 20%;
+	margin-left : auto;
+	margin-right : auto;
 }
-.fooddescription{
-	position:absolute;
-	visibility: hidden;
-	opacity: 0;
+.fooddescription {
+	position : absolute;
+	display : none;
 	width : 80px;
 	text-align : justify;
 }
-.foodview:hover .fooddescription{
-	visibility: visible;
-	opacity: 1;
+.foodview:hover .fooddescription , .foodview.active .fooddescription {
+	display : block;
 }
 
