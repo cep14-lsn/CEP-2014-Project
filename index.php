@@ -99,7 +99,7 @@
 		<div class="col-lg-4">
 		  <img class="img-circle" src="" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 		  <h2>Taste</h2>
-		  <p>The great taste that all love!</p>
+		  <p>The great taste that all people of all ages love and carry around in their hearts like a burden!</p>
 		</div><!-- /.col-lg-4 -->
 		</div><!-- /.row -->
 		</div>
