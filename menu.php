@@ -5,11 +5,18 @@
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
-		!ipp[_cep14_insert components/_footer.html]
-        	<h1>Tasty food selections below!</h1>
-		<div class = "foodview">
-			<img src = "Tripleburger.png">
-			<p class = "fooddescription"><strong>TRIPLEBURGER</strong><br>Calories: 10<br>Taste: 10/10<br>Smell: Overwhelmingly Pungent</p>
+		<h1>Menu</h1>
+		<div class = "row">
+			<div class = "col-xs-6 col-md-3 food-item">
+				<img src = "Tripleburger.png" />
+				<p class = "food-desc">
+					<strong>TRIPLEBURGER</strong><br>
+					Calories: 10<br>
+					Taste: 10 / 10<br>
+					Smell : Overwhelmingly Pungent</p>
+				</p>
+			</div>
 		</div>
+		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>
