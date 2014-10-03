@@ -1,6 +1,7 @@
 {
-    "mealSet": {
-        "Burger Combo": {
+    "mealSet": [
+        {
+            "name": "Burger Combo",
             "img": "burgercombo.gif",
             "nutrition": {
                 "calorie": 100,
@@ -23,7 +24,8 @@
                 "meal": 4
             }
         },
-        "MultiBurger (TM)": {
+        {
+            "name": "MultiBurger (TM)",
             "img": "Tripleburger.png",
             "nutrition": {
                 "calorie": 80,
@@ -47,7 +49,8 @@
                 "base": 1
             }
         },
-        "PizzaCake": {
+        {
+            "name": "PizzaCake"
             "img": "pizza_cake.jpg",
             "nutrition": {
                 "calorie": 135,
@@ -66,9 +69,10 @@
                 "~ Anonymous"
             ]
         }
-    },
-    "mealSide": {
-        "Mega Fries": {
+    ],
+    "mealSide": [
+        {
+            "name": "Mega Fries",
             "img": "megafries.png",
             "nutrition": {
                 "calorie": 40,
@@ -89,7 +93,8 @@
                 "side": 1.20
             }
         },
-        "Lemons": {
+        {
+            "name": "Fresh Lemon Fruit",
             "img": "combustible_lemon.png",
             "nutrition": {
                 "calorie": 1000,
@@ -116,9 +121,10 @@
                 "side": 4.00
             }
         }
-    },
-    "drinks": {
-        "Purple Drank": {
+    ],
+    "drinks": [
+        {
+            "name": "Purple Drank",
             "img": "purple_drank.jpg",
             "nutrition": {
                 "calorie": 20,
@@ -141,7 +147,8 @@
                 "side": 1.20
             }
         },
-        "Moonshine": {
+        {
+            "name": "Moonshine",
             "img": "moonshine.jpg",
             "nutrition": {
                 "calorie": 15,
@@ -160,5 +167,5 @@
                 "side": 2.00
             }
         }
-    }
+    ]
 }
