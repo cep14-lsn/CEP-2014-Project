@@ -47,6 +47,7 @@ a.btn:hover {
 	border-bottom : 2px solid #444;
 	padding-left:10px;
 	padding-right:10px;
+	height:70px;
 }
 .navbar-nav>li {
 	border-bottom: transparent solid 5px;
@@ -70,7 +71,15 @@ a.btn:hover {
 	color:#ff8;
 	background-color:#000;
 	font-weight:bold;
-	font-size:25pt;
+	font-size:22pt;
+}
+.navbar-header > a.navbar-motto, .navbar-header > a.navbar-motto:hover {
+	color:#ff8;
+	background-color:#000;
+	font-weight:bold;
+	font-size:10pt;
+	height:10pt;
+	float:left;
 }
 .dropdown:hover .dropdown-menu {
 	display:block;
