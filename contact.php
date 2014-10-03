@@ -3,8 +3,8 @@
 	<head>
 		!ipp[_cep14_insert components/_head.html]
 		<script>
-		function clCont( $s ) {
-			$s.contactList = [
+		function clCont( $scope ) {
+			$scope.contactList = [
 				{
 					"name":"Carl",
 					"email":"carl@me.com",
@@ -96,7 +96,6 @@
 					<p class = "text-muted"><i>{{ p.email }}</i></p>
 					<p>H {{ p.contact.home }} / M {{ p.contact.mobile}}</p>
 				</div>
-				hi
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
