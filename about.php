@@ -5,6 +5,9 @@
 </head>
 <body>
     !ipp[_cep14_insert components/_navbar.html]
+    <div class = "page-header">
+        <h1>About <small>so you can get to know more about us and have more confidence in eating our food</small></h1>
+    </div>
     <div class = "container">
         <div class="container-fluid">
             <h1>So, who are we?</h1>
