@@ -8,52 +8,47 @@
 			<h1 style = "font-size:20pt"> A wide and delectable selection of fine foods!</h1>
 			<h2 style = "font-size:8pt"> P.S. If any food item starts a conversation with you, please incinerate it.</h2>-->
 		!ipp[_cep14_insert components/_navbar.html]
-		<!--<div class = "page-header" id = "setmeals">
-			<h1>Set Meals <small>meals to have anywhere, complete with drink and side dish</small></h1>
-		</div>
-		<div class = "row">
-			<div class = "col-xs-6 col-md-3 food-item">
-				<img src = "burgercombo.gif" />
-				<p class = "food-desc">
-					<strong>CHEESEBURGER XS</strong><br>
-					Calories : 1<br>
-					Taste : 10 / 10<br>
-					Smell : Teppanyaki
-				</p>
-			</div>
-		</div>
-		<div class = "page-header" id = "burgers">
-			<h1>Burgers <small>a collection of burgers to satisfy your gastronomic needs</small></h1>
-		</div>
-		<div class = "row">
-			<div class = "col-xs-6 col-md-3 food-item">
-				<img src = "Tripleburger.png" />
-				<p class = "food-desc">
-					<strong>TRIPLEBURGER</strong><br>
-					Calories : 10<br>
-					Taste : 10 / 10<br>
-					Smell : Overwhelmingly Pungent
-				</p>
-			</div>
-		</div>
-		<div class = "page-header" id = "sidedishes">
-			<h1>Side Dishes <small>food to eat on-the-go, or as a snack</small></h1>
-		</div>
-		<div class = "row">
-			<div class = "col-xs-6 col-md-3 food-item">
-				<img src = "megafries.png" />
-				<p class = "food-desc">
-					<strong>MEGA FRIES</strong><br>
-					Calories : 5<br>
-					Taste : 10 / 10<br>
-					Smell : Mouthwateringly Savoury
-				</p>
-			</div>
-		</div>-->
 
-		<div data-ng-app="list-menu" data-ng-controller="listerMenu" class="container-fluid">
 
+		<div data-ng-app="list-menu" class="container-fluid">
+		    <h1>Set meals</h1>
+		    <p>These are meals to have anywhere. You can either purchase it &agrave; la carte or as a full meal.</p>
+		    <div data-ng-controller="listMealSet">
+		        <div data-ng-repeat="mealSet in infoFood">
+		            <h2>{{mealSet.name}}</h2>
+		            <img data-ng-src="{{mealSet.img}}">
+		            <p>{{mealSet.finalDesc}}</p>
+		            <table>
+		                <tr>
+		                    <th>Substance</th>
+		                    <th>Amount</th>
+		                </tr>
+		                <tr>
+		                    <td>Energy</td>
+		                    <td>{{mealSet.nutrition.calorie}} calories</td>
+		                </tr>
+		                <tr>
+		                    <td>Carbohydrates</td>
+		                    <td>{{mealSet.nutrition.carbohydrate / 5}} g</td>
+		                </tr>
+		                <tr>
+		                    <td>Fats</td>
+		                    <td>{{mealSet.nutrition.fats}} mg</td>
+		                </tr>
+		                <tr>
+		                    <td>Proteins</td>
+		                    <td>{{mealSet.nutrition.protein / 5}} g</td>
+		                </tr>
+		                <tr>
+		                    <td>Sodium</td>
+		                    <td>{{mealSet.nutrition.salt}} mg</td>
+		                </tr>
+		            </table>
+
+		        </div>
+		    </div>
 		</div>
+		<script src="js/menu.js"></script>
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>
