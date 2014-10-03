@@ -10,7 +10,7 @@
 			deduct = function() {return null;};
 
 			reserver = function($scope){
-				$scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5(location), 16)) * 20, 150));
+				$scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)) * 20, 150));
 				$scope.vacancies = Math.round($scope.tablesTotal * Math.random());
 
 				if($scope.vacancies == 0){
@@ -47,7 +47,7 @@
 			<table id="reserve">
 				<tr>
 					<td>Store Location</td>
-					<td><select ng-model="location">
+					<td><select ng-model="rLocation">
 						<option>Foo Bar</option>
 						<option>Bermuda Triangle Branch</option>
 						<option>Mordor Branch</option>
