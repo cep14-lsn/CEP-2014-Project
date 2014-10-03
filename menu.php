@@ -29,8 +29,8 @@
 		</style>
 	</head>
 	<script>
-		infoFood = jQuery.getJSON(($.getJSON("js/food_info.json", function(data) {return data})));
-		console.log( infoFood );
+		var infoFood;
+		jQuery.getJSON("js/food_info.json" , function(json){infoFood = json});
 		function menuCont( $scope ) {
 			$scope.foods = infoFood;
 			$scope.process = function ( l ) {
