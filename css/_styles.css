@@ -47,25 +47,30 @@ a.btn:hover {
 	border-bottom : 2px solid #444;
 	padding-left:10px;
 	padding-right:10px;
-
 }
 .navbar-nav>li {
 	border-bottom: transparent solid 5px;
 }
-.navbar-nav>li.active, .navbar-nav>li.active:hover, .navbar-nav>li.active:focus , .navbar-nav > li.active.dropdown.open > .dropdown-toggle {
+.navbar-nav>li.active, .navbar-nav>li.active:hover, .navbar-nav>li.active:focus {
 	border-bottom: #daa520 solid 5px;
 	background-color: #444;
 }
-.navbar-nav>li:hover, .navbar-nav>li:focus, .navbar-nav > li.dropdown.open > .dropdown-toggle {
+.navbar-nav>li:hover, .navbar-nav>li:focus {
 	border-bottom: #ff8 solid 5px;
+}
+.navbar-nav > li.dropdown.open > a.dropdown-toggle {
+	background-color : #000;
+}
+.navbar-nav > li.active.dropdown.open > a.dropdown-toggle {
+	background-color : #444;
 }
 .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 	color:#fff;
-	background-color: #000;
+	background-color: #555;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-nav>.open>a, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus {
 	color:#fff;
-	background-color:#000;
+	background-color:#444;
 }
 .navbar-header > a.navbar-brand, .navbar-header > a.navbar-brand:hover {
 	color:#ff8;
@@ -128,13 +133,13 @@ a.btn:hover {
 	height:100px;
 }
 .fooddescription{
-	position:relative;
+	position:absolute;
 	visibility: hidden;
 	opacity: 0;
-	width:80px;
-	text-align:justify;
+	width : 80px;
+	text-align : justify;
 }
-.foodview > img:hover .fooddescription{
+.foodview:hover .fooddescription{
 	visibility: visible;
 	opacity: 1;
 }
