@@ -44,7 +44,7 @@
 		!ipp[_cep14_insert components/_navbar.html]
 		<div ng-app = "" ng-controller = "menuCont" class="container-fluid">
 			<div class = "container" ng-repeat = "categoryinfo in [['mealSet','Set meals','to be had anywhere; à la carte or as a set meal','setmeals'],['mealSide','Side Dishes','to eat on the go, or as supplements to a fantastic meal','sidedishes'],['drinks','Drinks','thirst quenchers','drinks']]">
-				<div class = "page-header" ng-id = "{{ categoryinfo[3] }}">
+				<div class = "page-header" id = "{{ categoryinfo[3] }}">
 					<h1>{{ categoryinfo[1] }} <small>{{ categoryinfo[2] }}</small></h1>
 				</div>
 				<div ng-repeat = "mealset in foods[categoryinfo[0]]">
