@@ -44,10 +44,11 @@ a.btn:hover {
 .navbar-default {
 	background-color: #000;
 	color: #fff;
+	height:70px;
 	border-bottom : 2px solid #444;
 	padding-left:10px;
 	padding-right:10px;
-	height:70px;
+
 }
 .navbar-nav>li {
 	border-bottom: transparent solid 5px;
