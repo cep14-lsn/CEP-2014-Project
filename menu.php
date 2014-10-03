@@ -49,7 +49,7 @@
 							<img ng-src = "{{mealset.img}}" alt = "Meal image" />
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
-							<strong>{{ set.name }}</strong>
+							<strong>{{ mealset.name }}</strong>
 							<p class = "text-muted"><i>{{ process( mealset.desc ) }}</i></p>
 							<table>
 								<tr>
