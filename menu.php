@@ -3,7 +3,7 @@
 	<head>
 		!ipp[_cep14_insert components/_head.html]
 		<style>
-		.meal-pic {
+		.meal-pic > img {
 			width : 100%;
 		}
 		</style>
@@ -23,7 +23,7 @@
 		function menuCont( $scope ) {
 			$scope.foods = infoFood;
 			$scope.process = function ( l ) {
-				return l.join("<br>");
+				return l.join("\n");
 			}
 		}
 	</script>
