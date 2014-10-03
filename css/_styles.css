@@ -41,6 +41,7 @@ a.btn:hover {
 }
 span.bold {
     font-weight:700;
+    color:#ffc;
 }
 
 /* Navbar styles*/
