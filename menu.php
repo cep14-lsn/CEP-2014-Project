@@ -9,7 +9,7 @@
         	<h1>Tasty food selections below!</h1>
 	        <div class="container-fluid">
 			<div class = "foodview">
-				<img src = "Tripleburger.jpg">
+				<img src = "Tripleburger.png">
 				<p class = "fooddescription">Calories:10<br>Taste:10/10<br>Smell:overwhelming</p>
 			</div>
 	        </div>
