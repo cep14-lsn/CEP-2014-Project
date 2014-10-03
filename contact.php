@@ -105,7 +105,7 @@
 		<div class = "container" ng-app = "" ng-controller = "clCont">
 			<div class = "row contact" ng-repeat = "p in contactList">
 				<div class = "col-xs-12 col-md-2 contact-pic">
-					<img ng-src = "{{ p.profile-pic }}" alt = "Profile Picture" class = "img-circle" />
+					<img ng-src = "{{ p['profile-pic'] }}" alt = "Profile Picture" class = "img-circle" />
 				</div>
 				<div class = "col-xs-12 col-md-9 contact-info">
 					<strong>{{ p.name }}</strong>
