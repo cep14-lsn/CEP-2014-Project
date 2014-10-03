@@ -115,7 +115,7 @@
 				</div>
 				<div class = "col-xs-12 col-sm-9 contact-info">
 					<strong>{{ p.name }}</strong>
-					<a class = "text-muted" ng-href = "mailto:{{ p.email }}"><i>{{ p.email }}</i></a>
+					<p><i><a ng-href = "mailto:{{ p.email }}" class = "text-muted">{{ p.email }}</a></i></p>
 					<p>H {{ p.contact.home }} / M {{ p.contact.mobile}}</p>
 				</div>
 			</div>
