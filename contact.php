@@ -3,8 +3,8 @@
 	<head>
 		!ipp[_cep14_insert components/_head.html]
 		<script>
-		function clCont( $scope ) {
-			$scope.contactList = [
+		function clCont( $scop ) {
+			$scop.contactList = [
 				{
 					"name":"Carl",
 					"email":"carl@me.com",
