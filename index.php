@@ -42,7 +42,7 @@
 		<div class = "container">
         <h1>Welcome!</h1>
         <p>We are the leading franchise in the F&B industry and we are honored to have you on our site.</p>
-        <p>We bring out the best in fast food. For example, look at our brand new Triple Burger with fat amount totalling to 0.1 mg!</p>
+        <p>We bring out the best in fast food.</p>
         <p><a class="btn btn-primary" href="about.php">More About Us <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="menu.php">Our Wonderful Food <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 		<hr>
         <h1>Why Choose Us?</h1>
