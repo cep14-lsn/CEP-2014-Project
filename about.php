@@ -46,6 +46,55 @@
                 <li><span class="bold">Food tester</span> to help judge our food and appraise it for the market! You can either help certify the safety of the food, or appraise its taste!</li>
             </ul>
         </div>
+        <hr>
+        <div class="container-fluid">
+            <h1>Our Awards</h1>
+            <p>Since 2009, our amazing food has won over 40 prizes! Here are some of them which we are most proud of.</p>
+            <table id="awards">
+            <tr>
+                <th>Year</th>
+                <th>Organization</th>
+                <th>Award</th>
+                <th>Placing</th>
+                <th>Remarks</th>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>Food Association for Trade and Safety</td>
+                <td>Cleanest Restaurants Award</td>
+                <td>1st</td>
+                <td>For the 20th year running</td>
+            </tr>
+            <tr>
+                <td>2013</td>
+                <td>Consumers&lsquo; Union</td>
+                <td>Lowest Fat Prize</td>
+                <td>1st</td>
+                <td>For the 3rd year running</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>Consumer&lsquo; Union</td>
+                <td>Designer Ice Cream Meet</td>
+                <td>Gold</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td>International Foodlympic Federation</td>
+                <td>Titanium Chefs (Team) Event</td>
+                <td>1st</td>
+                <td>For the 5th Foodlympics running</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td><abbr title="F&eacute;d&eacute;ration Internationale de Food Association">FIFA</abbr></td>
+                <td>Quad-yearly Grand Tournament</td>
+                <td>1st</td>
+                <td></td>
+            </tr>
+            </table>
+        </div>
     </div>
     !ipp[_cep14_insert components/_footer.html]
 </body>

@@ -39,9 +39,17 @@ a.btn:hover {
 	background-color:#ff8;
 	color:#000;
 }
-span.bold {
+span.bold, th {
     font-weight:700;
     color:#ffc;
+}
+
+/* Table properties */
+table {
+    border-collapse:collapse;
+}
+th {
+    font-size:18px;
 }
 
 /* Navbar styles*/

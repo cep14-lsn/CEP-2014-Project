@@ -92,7 +92,7 @@
 		<div class="row">
 		<div class="col-lg-4">
 		  <h2>Safety</h2>
-		  <p>Industry leading food safety and security. Beat that, baby. [Certified by Food Action for Trade and Security]</p>
+		  <p>Industry leading food safety and security. Beat that, baby. [Certified by Food Association for Trade and Security]</p>
 		</div><!-- /.col-lg-4 -->
 		<div class="col-lg-4">
 		  <h2>Cost</h2>
