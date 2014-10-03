@@ -147,22 +147,20 @@ span.bold {
 	padding-bottom : 15px;
 	z-index : 999999999999;
 }
-.foodview {
-	position : relative;
-}
-.foodview > img {
-	/*height : 100px;*/
-	width : 20%;
+
+/* Menu styles */
+.food-item > img {
+	height : 200px;
+	width : auto;
 	margin-left : auto;
 	margin-right : auto;
+	border : 1px solid #fff;
 }
-.fooddescription {
-	position : absolute;
+.food-item > .food-desc {
 	display : none;
-	width : 80px;
+	width : 100%;
 	text-align : justify;
 }
-.foodview:hover .fooddescription , .foodview.active .fooddescription {
+.food-item:hover > .food-desc {
 	display : block;
 }
-
