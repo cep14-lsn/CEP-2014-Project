@@ -93,17 +93,14 @@
 	  	<div class="container marketing">
 		<div class="row">
 		<div class="col-lg-4">
-		  <img class="img-circle" src="" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 		  <h2>Safety</h2>
-		  <p>The safest and most secure food company in the business. Beat that, baby. (Certified by Food Action for Trade and Security a.k.a. FATS)</p>
+		  <p>Industry leading food safety and security. Beat that, baby. [Certified by Food Action for Trade and Security]</p>
 		</div><!-- /.col-lg-4 -->
 		<div class="col-lg-4">
-		  <img class="img-circle" src="" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 		  <h2>Cost</h2>
 		  <p>Great food at a great cheap price! <b>So just eat some!</b> Now!</p>
 		</div><!-- /.col-lg-4 -->
 		<div class="col-lg-4">
-		  <img class="img-circle" src="" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 		  <h2>Taste</h2>
 		  <p>The great taste that all people of all ages love and carry around in their hearts like a burden!</p>
 		</div><!-- /.col-lg-4 -->
