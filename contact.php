@@ -100,6 +100,11 @@
 					text-align : center;
 				}
 			}
+			@media ( min-width : 768px ) {
+				.contact > .contact-pic {
+					text-align : center;
+				}
+			}
 		</style>
 	</head>
 	<body>
