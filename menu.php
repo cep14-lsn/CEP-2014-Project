@@ -4,11 +4,11 @@
 		!ipp[_cep14_insert components/_head.html]
 	</head>
 	<body>
-		<div class = "menu-desc">
+		<!--<div class = "menu-desc">
 			<h1 style = "font-size:20pt"> A wide and delectable selection of fine foods!</h1>
-			<h2 style = "font-size:8pt"> P.S. If any food item starts a conversation with you, please incinerate it.</h2>
+			<h2 style = "font-size:8pt"> P.S. If any food item starts a conversation with you, please incinerate it.</h2>-->
 		!ipp[_cep14_insert components/_navbar.html]
-		<div class = "page-header" id = "setmeals">
+		<!--<div class = "page-header" id = "setmeals">
 			<h1>Set Meals <small>meals to have anywhere, complete with drink and side dish</small></h1>
 		</div>
 		<div class = "row">
@@ -49,7 +49,9 @@
 					Smell : Mouthwateringly Savoury
 				</p>
 			</div>
-		</div>
+		</div>-->
+
+		<div
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>
