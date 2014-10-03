@@ -9,8 +9,12 @@
 			padding : 10px;
 			margin : 10px;
 		}
+		.food-item > .food-pic {
+			text-align : center;
+		}
 		.food-item > .food-pic > img {
-			width : 100%;
+			max-height : 500px;
+			max-width : 100%;
 		}
 		</style>
 	</head>
