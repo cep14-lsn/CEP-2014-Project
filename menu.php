@@ -5,6 +5,20 @@
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
+		<div class = "page-header" id = "setmeals">
+			<h1>Set Meals <small>meals to have anywhere, complete with drink and side dish</small></h1>
+		</div>
+		<div class = "row">
+			<div class = "col-xs-6 col-md-3 food-item">
+				<img src = "burgercombo.gif" />
+				<p class = "food-desc">
+					<strong>CHEESEBURGER XS</strong><br>
+					Calories : 1<br>
+					Taste : 10 / 10<br>
+					Smell : Teppanyaki
+				</p>
+			</div>
+		</div>
 		<div class = "page-header" id = "burgers">
 			<h1>Burgers <small>a collection of burgers to satisfy your gastronomic needs</small></h1>
 		</div>
@@ -30,20 +44,6 @@
 					Calories : 5<br>
 					Taste : 10 / 10<br>
 					Smell : Mouthwateringly Savoury
-				</p>
-			</div>
-		</div>
-		<div class = "page-header" id = "setmeals">
-			<h1>Set Meals <small>meals to have anywhere, complete with drink and side dish</small></h1>
-		</div>
-		<div class = "row">
-			<div class = "col-xs-6 col-md-3 food-item">
-				<img src = "burgercombo.gif" />
-				<p class = "food-desc">
-					<strong>CHEESEBURGER XS</strong><br>
-					Calories : 1<br>
-					Taste : 10 / 10<br>
-					Smell : Teppanyaki
 				</p>
 			</div>
 		</div>
