@@ -37,8 +37,9 @@
 				infoFood = JSON.parse( xh.responseText );
 			}
 		}
-		xh.open( "GET" , "js/food_info.json" , true );
+		xh.open( "GET" , "js/food_info.json" , false );
 		xh.send();
+		infoFood = JSON.parse( xh.responseText );
 		function menuCont( $scope ) {
 			$scope.foods = infoFood;
 			$scope.process = function ( l ) {
