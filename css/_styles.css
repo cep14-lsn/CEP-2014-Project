@@ -56,21 +56,27 @@ a.btn:hover {
 	background-color: #444;
 }
 .navbar-nav>li:hover, .navbar-nav>li:focus {
+	background-color : #222;
 	border-bottom: #ff8 solid 5px;
 }
 .navbar-nav > li.dropdown.open > a.dropdown-toggle {
-	background-color : #000;
-}
-.navbar-nav > li.active.dropdown.open > a.dropdown-toggle {
 	background-color : #444;
 }
-.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 	color:#fff;
 	background-color: #555;
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-nav>.open>a, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus {
+.navbar-default .navbar-nav>li.active>a, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus {
 	color:#fff;
 	background-color:#444;
+}
+.navbar-default .navbar-nav>li>a {
+	color : #fff;
+	background-color : #000;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+	color : #fff;
+	background-color : #222;
 }
 .navbar-header > a.navbar-brand, .navbar-header > a.navbar-brand:hover {
 	color:#ff8;
@@ -128,10 +134,10 @@ a.btn:hover {
 }
 .foodview {
 	position:relative;
-	width:20%;
 }
 .foodview > img{
 	height:100px;
+	width : 20%;
 }
 .fooddescription{
 	position:absolute;
