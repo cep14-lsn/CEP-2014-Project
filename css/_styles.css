@@ -66,6 +66,9 @@ span.bold {
 	color : #fff;
 	background-color : #222;
 }
+.navbar-nav > li.dropdown.open {
+	border-bottom : #ff8 solid 5px;
+}
 .navbar-default .navbar-nav>.active:hover>a, .navbar-default .navbar-nav>.active:focus>a {
 	color : #fff;
 	background-color: #555;
