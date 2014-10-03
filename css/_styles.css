@@ -131,6 +131,8 @@ a.btn:hover {
 	position:absolute;
 	visibility: hidden;
 	opacity: 0;
+	width:80px;
+	text-align:justify;
 }
 .foodview:hover .fooddescription{
 	visibility: visible;
