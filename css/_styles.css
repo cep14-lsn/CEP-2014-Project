@@ -108,6 +108,7 @@ a.btn:hover {
 }
 .dropdown-menu > li > a:hover {
 	background-color : #222;
+	color : #fff;
 }
 .dropdown-menu > .active, .dropdown-menu > .active:hover, .dropdown-menu > .active:focus {
 	background-color:#444;
