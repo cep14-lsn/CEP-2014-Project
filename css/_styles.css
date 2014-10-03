@@ -149,6 +149,9 @@ span.bold {
 }
 
 /* Menu styles */
+.food-item {
+	text-align : center;
+}
 .food-item > img {
 	height : 200px;
 	width : auto;
