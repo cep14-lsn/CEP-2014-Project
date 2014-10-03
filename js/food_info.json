@@ -50,7 +50,7 @@
             }
         },
         {
-            "name": "PizzaCake"
+            "name": "PizzaCake",
             "img": "pizza_cake.jpg",
             "nutrition": {
                 "calorie": 135,
