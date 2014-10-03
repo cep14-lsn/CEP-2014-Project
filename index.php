@@ -93,14 +93,17 @@
 		<div class="col-lg-4">
 		  <h2>Safety</h2>
 		  <p>Industry leading food safety and security. Beat that, baby. [Certified by Food Association for Trade and Security]</p>
+		  <p><a class="btn btn-lg btn-parimary" href="about.php#link-awards" role="button">Our Certification and Awards <span class = "glyphicon glyphicon-chevron-right"></span></a></p>
 		</div><!-- /.col-lg-4 -->
 		<div class="col-lg-4">
 		  <h2>Cost</h2>
 		  <p>Great food at a great cheap price! <b>So just eat some!</b> Now!</p>
+		  <p><a class="btn btn-lg btn-primary" href="order_delivery.php" role="button">Order to wherever you are! <span class = "glyphicon glyphicon-chevron-right"></span></a></p>
 		</div><!-- /.col-lg-4 -->
 		<div class="col-lg-4">
 		  <h2>Taste</h2>
 		  <p>The great taste that all people of all ages love and carry around in their hearts like a burden!</p>
+		  <p><a class="btn btn-lg btn-primary" href="menu.php" role="button">Food Catalog <span class = "glyphicon glyphicon-chevron-right"></span></a></p>
 		</div><!-- /.col-lg-4 -->
 		</div><!-- /.row -->
 		</div>
