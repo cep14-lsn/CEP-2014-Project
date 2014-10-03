@@ -73,14 +73,6 @@ a.btn:hover {
 	font-weight:bold;
 	font-size:22pt;
 }
-.navbar-header > a.navbar-motto, .navbar-header > a.navbar-motto:hover {
-	color:#ff8;
-	background-color:#000;
-	font-weight:bold;
-	font-size:10pt;
-	height:10pt;
-	float:left;
-}
 .dropdown:hover .dropdown-menu {
 	display:block;
 }
