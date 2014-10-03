@@ -79,7 +79,7 @@
                         <div class = "carousel-caption">
                             <h1>Burgers</h1>
                             <p>Huge burgers. Few calories. That's right, more great-tasting food and less calories! What could be better?</p>
-                            <p><a class = "btn btn-lg btn-primary" href = "menu.php#burgers" role = "button">Find other healthy meal choices <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                            <p><a class = "btn btn-lg btn-primary" href = "menu.php#setmeals" role = "button">Find other healthy meal choices <span class="glyphicon glyphicon-chevron-right"></span></a></p>
                         </div>
                     </div>
                 </div>
