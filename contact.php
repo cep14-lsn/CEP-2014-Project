@@ -7,7 +7,7 @@
 			{
 				"name":"Carl",
 				"email":"carl@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/carl.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/carl.jpg",
 				"contact":{
 					"home":1234567,
 					"mobile":7654322
@@ -16,7 +16,7 @@
 			{
 				"name":"Dave",
 				"email":"dave@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/dave.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/dave.jpg",
 				"contact":{
 					"home":3344422,
 					"mobile":3232323
@@ -25,7 +25,7 @@
 			{
 				"name":"Jerry",
 				"email":"jerry@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/jerry.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/jerry.jpg",
 				"contact":{
 					"home":5555555,
 					"mobile":4433221
@@ -34,7 +34,7 @@
 			{
 				"name":"Kevin",
 				"email":"kevin@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/kevin.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/kevin.jpg",
 				"contact":{
 					"home":5453433,
 					"mobile":1111111
@@ -43,7 +43,7 @@
 			{
 				"name":"Phil",
 				"email":"phil@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/phil.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/phil.jpg",
 				"contact":{
 					"home":4545455,
 					"mobile":333322
@@ -52,7 +52,7 @@
 			{
 				"name":"Stuart",
 				"email":"stuart@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/stuart.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/stuart.jpg",
 				"contact":{
 					"home":5656564,
 					"mobile":8765443
@@ -61,7 +61,7 @@
 			{
 				"name":"Tim",
 				"email":"tim@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/tim.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/tim.jpg",
 				"contact":{
 					"home":8888776,
 					"mobile":9999008
@@ -70,7 +70,7 @@
 			{
 				"name":"Tom",
 				"email":"tom@me.com",
-				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/tom.jpg"
+				"profile-pic":"https://dl.dropboxusercontent.com/u/547441/minion/tom.jpg",
 				"contact":{
 					"home":1234111,
 					"mobile":7654222
