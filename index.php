@@ -40,6 +40,12 @@
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
 		<div class = "container">
+		    <h1>Welcome!</h1>
+		    <p>We are the leading franchise in the F&B industry and we are honored to have you on our site.</p>
+		    <p>We bring out the best in fast food. For example, look at our brand new Triple Burger with fat amount totalling to 0.1 mg!</p>
+		    <p><a class="btn btn-primary" href="about.php">More About Us <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="menu.php">Our Wonderful Food <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+		</div>
+		<div class = "container">
 			<div id = "foodcarousel" class = "carousel slide" data-ride = "carousel">
 				<ol class = "carousel-indicators">
 					<li data-target = "#foodcarousel" data-slide-to = "0" class = "active"></li>
@@ -83,8 +89,6 @@
 			</div>
 		</div>
 	  	<div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
 		<div class="row">
 		<div class="col-lg-4">
 		  <img class="img-circle" src="" alt="Generic placeholder image" style="width: 140px; height: 140px;">
