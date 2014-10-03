@@ -15,20 +15,33 @@
 			<hr>
 
 			<h1>Reservation Services</h1>
-			<p>Store Location: <select ng-model="location">
-				<option>Foo Bar</option>
-				<option>Bermuda Triangle Branch</option>
-				<option>Mordor Branch</option>
-				<option>Hogsmeade Branch</option>
-				<option>Ba Sing Se</option>
-				<option>Atlantis Branch</option>
-				<option>Mt. Vesuvius Branch</option>
-				<option>The Rude Sandstorm</option>
-			</select></p>
-			<p>Total Tables: {{ tablesTotal }}</p>
-			<p>Vacancies: <span id="vacancies">{{ vacancies }}</span></p>
-			<p>Reserve Tables: <input type="number" ng-model="intended"></p>
-			<p>Cost: {{ cost|currency }}</p>
+			<table id="reserve">
+				<tr>
+					<td>Store Location</td>
+					<td><select ng-model="location">
+						<option>Foo Bar</option>
+						<option>Bermuda Triangle Branch</option>
+						<option>Mordor Branch</option>
+						<option>Hogsmeade Branch</option>
+						<option>Ba Sing Se</option>
+						<option>Atlantis Branch</option>
+						<option>Mt. Vesuvius Branch</option>
+						<option>The Rude Sandstorm</option>
+					</select></td>
+				</tr><tr>
+					<td>Total Tables</td>
+					<td>{{ tablesTotal }}</td>
+				</tr><tr>
+					<td>Vacancies</td>
+					<td><span id="vacancies">{{ vacancies }}</span></td>
+				</tr><tr>
+					<td>Reserve Tables</td>
+					<td><input type="number" ng-model="intended"></td>
+				</tr><tr>
+					<td>Cost</td>
+					<td>{{ cost|currency }}</td>
+				</tr>
+			</table>
 			<p><a class="btn btn-primary" href="#" onclick="deduct()">Process Deduction</a></p>
 			<br>
 			<p>Use this reservation code: {{ reservation_code }}</p>
