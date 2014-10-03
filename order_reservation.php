@@ -3,6 +3,35 @@
 	<head>
 		!ipp[_cep14_insert components/_head.html]
 		<script src="js/md5.js"></script>
+		<script>
+			var GST = 0.07;
+			var SVCT = 0.10;
+
+			deduct = function() {return null;};
+
+			reserver = function($scope){
+				$scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5(location), 16)) * 20, 150));
+				$scope.vacancies = Math.round($scope.tablesTotal * Math.random());
+
+				if($scope.vacancies == 0){
+					$("#vacancy").css("color", "#f30");
+				}
+
+				if($scope.intended > $scope.vacancies) {
+					$scope.intended = 0;
+					alert("There are not enough tables!")
+				} else {
+					$scope.cost = $scope.intended * 12.5 * (1 + GST) * (1 + SVCT);
+				}
+
+				deduct = function() {
+					var now = Date();
+					alert($scope.cost + " has been deducted from your account.");
+					var codeFinal = $scope.tablesTotal.toString(16) + $scope.vacancies.toString(16) + $scope.intended.toString(16);
+					$scope.reservation_code = md5(now.toSource() + codeFinal);
+				}
+			}
+		</script>
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
@@ -46,35 +75,6 @@
 			<br>
 			<p>Use this reservation code: {{ reservation_code }}</p>
 		</div>
-		<script>
-			var GST = 0.07;
-			var SVCT = 0.10;
-
-			deduct = function() {return null;};
-
-			reserver = function($scope){
-				$scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5(location), 16)) * 20, 150));
-				$scope.vacancies = Math.round($scope.tablesTotal * Math.random());
-
-				if($scope.vacancies == 0){
-					$("#vacancy").css("color", "#f30");
-				}
-
-				if($scope.intended > $scope.vacancies) {
-					$scope.intended = 0;
-					alert("There are not enough tables!")
-				} else {
-					$scope.cost = $scope.intended * 12.5 * (1 + GST) * (1 + SVCT);
-				}
-
-				deduct = function() {
-					var now = Date();
-					alert($scope.cost + " has been deducted from your account.");
-					var codeFinal = $scope.tablesTotal.toString(16) + $scope.vacancies.toString(16) + $scope.intended.toString(16);
-					$scope.reservation_code = md5(now.toSource() + codeFinal);
-				}
-			}
-		</script>
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>
