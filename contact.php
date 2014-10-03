@@ -88,20 +88,16 @@
 				background-color : #222;
 				border-radius : 10px;
 			}
-			.contact-pic {
+			.contact > .contact-pic {
+				text-align : center;
 				margin-left : auto;
 				margin-right : auto;
 			}
-			.contact-info {
+			.contact > .contact-info {
 				text-align : justify;
 			}
 			@media ( max-width : 767px ) {
-				.contact {
-					text-align : center;
-				}
-			}
-			@media ( min-width : 768px ) {
-				.contact > .contact-pic {
+				.contact > contact-info {
 					text-align : center;
 				}
 			}
