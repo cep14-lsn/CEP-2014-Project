@@ -95,6 +95,11 @@
 			.contact-info {
 				text-align : justify;
 			}
+			@media ( max-width : 767px ) {
+				.contact {
+					text-align : center;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -104,10 +109,10 @@
 		</div>
 		<div class = "container" ng-app = "" ng-controller = "clCont">
 			<div class = "row contact" ng-repeat = "p in contactList">
-				<div class = "col-xs-12 col-md-2 contact-pic">
+				<div class = "col-xs-12 col-sm-2 contact-pic">
 					<img ng-src = "{{ p['profile-pic'] }}" alt = "Profile Picture" class = "img-circle" />
 				</div>
-				<div class = "col-xs-12 col-md-9 contact-info">
+				<div class = "col-xs-12 col-sm-9 contact-info">
 					<strong>{{ p.name }}</strong>
 					<p class = "text-muted"><i>{{ p.email }}</i></p>
 					<p>H {{ p.contact.home }} / M {{ p.contact.mobile}}</p>
