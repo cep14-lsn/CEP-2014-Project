@@ -95,13 +95,13 @@ a.btn:hover {
 	border-left: #daa520 solid 5px;
 }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
-    background-color:#000;
+	background-color:#000;
 }
 
 /* Jumbotrons */
 .jumbotron {
 	background-color:transparent;
-text-align:center;
+	text-align:center;
 }
 
 /* Footer */
