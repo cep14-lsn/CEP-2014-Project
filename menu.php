@@ -6,5 +6,12 @@
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
 		!ipp[_cep14_insert components/_footer.html]
+        	<h1>Tasty food selections below!</h1>
+	        <div class="container-fluid">
+			<div class = "foodview">
+				<img src = "Tripleburger.jpg">
+				<p class = "fooddescription">Calories:10<br>Taste:10/10<br>Smell:overwhelming</p>
+			</div>
+	        </div>
 	</body>
 </html>
