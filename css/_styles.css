@@ -121,3 +121,16 @@ a.btn:hover {
 	padding-bottom : 15px;
 	z-index : 999999999999;
 }
+.foodview {
+	position:relative;
+}
+.fooddescription{
+	position:absolute;
+	visibility: hidden;
+	opacity: 0;
+}
+.foodview:hover .fooddescription{
+	visibility: visible;
+	opacity: 1;
+}
+}
