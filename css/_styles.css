@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,300italic,600|Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,300italic,700|Open+Sans:700);
 
 /* Common for all objects */
 body {
@@ -40,7 +40,7 @@ a.btn:hover {
 	color:#000;
 }
 span.bold {
-    font-weight:600;
+    font-weight:700;
 }
 
 /* Navbar styles*/
