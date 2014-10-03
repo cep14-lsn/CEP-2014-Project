@@ -32,7 +32,9 @@
 		var infoFood;
 		var xh = new XMLHttpRequest();
 		xh.onreadystatechange = function () {
-			( xh.readyState == 4 && xh.status == 200 ? function() { infoFood = JSON.parse( xh.responseText ) } : function() {} )();
+			if ( xh.readyState == 4 && xh.status == 200 ) {
+				infoFood = JSON.parse( xh.responseText );
+			}
 		}
 		xh.open( "GET" , "js/food_info.json" , true )
 		xh.send()
