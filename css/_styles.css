@@ -54,6 +54,8 @@ td, th {
 }
 table, th, td {
     border: 1px solid #555;
+} #reserve, #reserve > tr > td {
+    border: 5px solid transparent;
 }
 
 /* Form styles */
