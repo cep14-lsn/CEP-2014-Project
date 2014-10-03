@@ -30,8 +30,12 @@
 	</head>
 	<script>
 		var infoFood;
-		$.getJSON("js/food_info.json").done( function(json){infoFood = json;console.log("hi");} );
-		console.log('hello');
+		var xh = new XMLHttpRequest();
+		xh.onreadystatechange = function () {
+			( xh.readyState == 4 && xh.status == 200 ? function() { infoFood = JSON.parse( xh.responseText ) } : function() {} )();
+		}
+		xh.open( "GET" , "js/food_info.json" , true )
+		xh.send()
 		function menuCont( $scope ) {
 			$scope.foods = infoFood;
 			$scope.process = function ( l ) {
