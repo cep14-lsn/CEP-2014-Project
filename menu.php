@@ -47,36 +47,36 @@
 				<div class = "page-header">
 					<h1>Set meals <small>to be had anywhere; à la carte or as a set meal</small></h1>
 				</div>
-				<div ng-repeat = "set in foods.mealSet">
+				<div ng-repeat = "mealset in foods.mealSet">
 					<div class = "row">
 						<div class = "col-xs-12 col-md-6 meal-pic">
-							<img ng-src = "{{set.img}}" alt = "Meal image" />
+							<img ng-src = "{{mealset.img}}" alt = "Meal image" />
 						</div>
 						<div class = "col-xs-12 col-md-6 meal-info">
 							<strong>{{ set.name }}</strong>
-							<p class = "text-muted"><i>{{ process( set.desc ) }}</i></p>
+							<p class = "text-muted"><i>{{ process( mealset.desc ) }}</i></p>
 							<table>
 								<tr>
 									<th>Nutritional Information</th>
 								</tr>
 								<tr>
 									<td>Energy</td>
-									<td>{{ set.nutrition.calorie }} kcal</td>
+									<td>{{ mealset.nutrition.calorie }} kcal</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td>{{ set.nutrition.calorie * 4.2 }} kJ</td>
+									<td>{{ mealset.nutrition.calorie * 4.2 }} kJ</td>
 								<tr>
 									<td>Carbohydrates</td>
-									<td>{{ set.nutrition.carbohydrate / 5 }} g</td>
+									<td>{{ mealset.nutrition.carbohydrate / 5 }} g</td>
 								</tr>
 								<tr>
 									<td>Fats</td>
-									<td>{{ set.nutrition.fats }} mg</td>
+									<td>{{ mealset.nutrition.fats }} mg</td>
 								</tr>
 								<tr>
 									<td>Protein</td>
-									<td>{{ set.nutrition.protein / 5 }} g</td>
+									<td>{{ mealset.nutrition.protein / 5 }} g</td>
 								</tr>
 							</table>
 						</div>
