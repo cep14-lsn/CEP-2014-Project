@@ -12,7 +12,7 @@
             },
             "desc": [
                 "For more conservative customers, we have our traditional Burger Combo meal.",
-                "You can order an upgraded version for $1.00 more with 20% less fat."
+                "You can order an upgraded version for $1.00 more with 20% less fat and 45.6% more doubts."
             ],
             "lore": [
                 "'My kingdom for a burger!'",
@@ -35,7 +35,7 @@
                 "salt": 6
             },
             "desc": [
-                "Order your very own customized MultiBurger (TM) today. Each layer consists of a succulent beef steak with fresh cheddar cheese, with lettuce and tomato at the top.",
+                "Order your very own customized MultiBurger (TM) today. Each layer consists of a (post) - succulent beef steak with (once) fresh cheddar cheese, with (suspiciously) crunchy lettuce and tomato at the top.",
                 "NOTE: Nutrition values and cost values above are given per layer of burger. Add $1, 20 calories, 5 g of carbohydrate for the lettuce and tomato.",
                 "Only available a la carte."
             ],
@@ -61,8 +61,8 @@
             },
             "desc": [
                 "Fusing two traditional favorites - the pizza and the cake, we get the PizzaCake!",
-                "It is a wonderful meal that you can spend as long as you like eating.",
-                "Studies have also shown it reduces waistlines by 5 cm (provided you are obese)."
+                "It is a wonderful meal that you spend as long as you like eating, don't feel guilty about, and then suddenly you have to pay taxes!",
+                "Studies have also shown it reduces waistlines by 5 cm*."
             ],
             "lore": [
                 "'PizzaCake Delivery, 6-222-6-111!' (Disclaimer: not a valid phone number)",
@@ -82,7 +82,7 @@
                 "salt": 12
             },
             "desc": [
-                "Mmm... tasty, mouthwatering fries. Made from freshly harvested potatoes and oceanic salt only."
+                "Mmm... tasty, mouthwatering fries. Made from somewhat freshly harvested potatoes and near-oceanic salt only."
             ],
             "lore": [
                 "'I believe you speak French?' ~ Host",
@@ -104,8 +104,11 @@
                 "salt": 4
             },
             "desc": [
-                "What could be more enjoyable on a hot summer day other than fresh fruit?",
-                "Don't get sour though, there is plenty for everyone!",
+                "When life brings you down...",
+                "And you can't help but get emo...",
+                "Don't fret, Mekdoornels is here to settle your low self-esteem!",
+                "Just return the lemon you bought to us, we will accept it free of charge, and you will feel a great deal more *ahem* confident!"
+                "Don't get (EVEN MORE) sour though, there is plenty for everyone!",
                 "NOTE: Ignore the label on the side and the wiring at the ends, it is merely decoration that is edible."
             ],
             "lore": [
@@ -136,7 +139,8 @@
             "desc": [
                 "Purple Drank [sic] is a inspirational and thought-provoking drink.",
                 "A must-drink before any important events such as national examinations and career interviews.",
-                "It also cures any acute coughing problems."
+                "It also cures any acute coughing problems.",
+                "Yah, bro."
             ],
             "lore": [
                 "'Roses are red, / Violets are blue. / Purple drank is purple, / Wait, violets aren't blue.'",
