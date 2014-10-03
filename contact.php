@@ -97,7 +97,7 @@
 				text-align : justify;
 			}
 			@media ( max-width : 767px ) {
-				.contact > contact-info {
+				.contact > .contact-info {
 					text-align : center;
 				}
 			}
