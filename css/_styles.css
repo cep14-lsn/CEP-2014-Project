@@ -9,6 +9,9 @@ body {
 	color:#fff;
 	font-size:16px;
 }
+body::-webkit-scrollbar {
+	display : none;
+}
 h1, h2, h3 {
 	font-family:"Open Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-weight:bold;
