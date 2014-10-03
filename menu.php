@@ -5,8 +5,8 @@
 	</head>
 	<body>
 		<div class = "menu-desc">
-			<h1 style = "font-size:40pt"> A wide and delectable selection of fine foods!</h1>
-			<h2 style = "font-size:30pt"> P.S. If any food item starts a conversation with you, please incinerate it.</h2>
+			<h1 style = "font-size:30pt"> A wide and delectable selection of fine foods!</h1>
+			<h2 style = "font-size:10pt"> P.S. If any food item starts a conversation with you, please incinerate it.</h2>
 		!ipp[_cep14_insert components/_navbar.html]
 		<div class = "page-header" id = "setmeals">
 			<h1>Set Meals <small>meals to have anywhere, complete with drink and side dish</small></h1>
