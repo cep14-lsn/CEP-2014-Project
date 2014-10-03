@@ -128,13 +128,13 @@ a.btn:hover {
 	height:100px;
 }
 .fooddescription{
-	position:absolute;
+	position:relative;
 	visibility: hidden;
 	opacity: 0;
 	width:80px;
 	text-align:justify;
 }
-.foodview:hover .fooddescription{
+.foodview > img:hover .fooddescription{
 	visibility: visible;
 	opacity: 1;
 }
