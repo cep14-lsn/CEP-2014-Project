@@ -45,7 +45,9 @@
 		    <p>We bring out the best in fast food. For example, look at our brand new Triple Burger with fat amount totalling to 0.1 mg!</p>
 		    <p><a class="btn btn-primary" href="about.php">More About Us <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="menu.php">Our Wonderful Food <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 		</div>
+		<hr>
 		<div class = "container">
+		    <h1>Why Choose Us?</h1>
 			<div id = "foodcarousel" class = "carousel slide" data-ride = "carousel">
 				<ol class = "carousel-indicators">
 					<li data-target = "#foodcarousel" data-slide-to = "0" class = "active"></li>
