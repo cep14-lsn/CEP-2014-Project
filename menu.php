@@ -30,6 +30,7 @@
 	</head>
 	<script>
 		infoFood = jQuery.getJSON(($.getJSON("js/food_info.json", function(data) {return data})));
+		console.log( infoFood );
 		function menuCont( $scope ) {
 			$scope.foods = infoFood;
 			$scope.process = function ( l ) {
