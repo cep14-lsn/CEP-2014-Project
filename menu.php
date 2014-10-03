@@ -2,6 +2,31 @@
 <html>
 	<head>
 		!ipp[_cep14_insert components/_head.html]
+		<style>
+		.food-item {
+			text-align : center;
+			background-color : #222;
+			border-radius : 10px;
+			padding : 10px;
+		}
+		.food-item > img {
+			height : 200px;
+			width : auto;
+			margin-left : auto;
+			margin-right : auto;
+		}
+		.food-item > .food-desc {
+			display : none;
+			width : 100%;
+			background-color : #444;
+			border-radius : 10px;
+			text-align : justify;
+			padding : 10px;
+		}
+		.food-item:hover > .food-desc {
+			display : block;
+		}
+		</style>
 	</head>
 	<body>
 		<div class = "menu-desc">
