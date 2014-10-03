@@ -61,13 +61,13 @@ a.btn:hover {
 }
 .navbar-nav > li.dropdown.open > a.dropdown-toggle {
 	color : #fff;
-	background-color : #444;
+	background-color : #222;
 }
-.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+.navbar-default .navbar-nav>.active:hover>a, .navbar-default .navbar-nav>.active:focus>a {
 	color : #fff;
-	background-color: #555;
+	background-color: #444;
 }
-.navbar-default .navbar-nav>li.active>a, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus {
+.navbar-default .navbar-nav>li.active>a, .navbar-nav>.open:hover>a, .navbar-nav>.open:focus>a {
 	color:#fff;
 	background-color:#444;
 }
@@ -75,7 +75,7 @@ a.btn:hover {
 	color : #fff;
 	background-color : #000;
 }
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+.navbar-default .navbar-nav>li:hover>a, .navbar-default .navbar-nav>li:focus>a {
 	color : #fff;
 	background-color : #222;
 }
