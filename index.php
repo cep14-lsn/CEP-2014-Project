@@ -59,7 +59,7 @@
                         <div class = "carousel-caption">
                             <h1>Set Meals</h1>
                             <p>Explore our diverse set meal options that will fill you up for low cost.</p>
-                            <p><a class = "btn btn-lg btn-primary" href = "menu.php" role = "button">Explore the menu <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                            <p><a class = "btn btn-lg btn-primary" href = "menu.php#setmeals" role = "button">Explore the menu <span class="glyphicon glyphicon-chevron-right"></span></a></p>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class = "carousel-caption">
                             <h1>Fries</h1>
                             <p>Our fries are known all around the region. Grab some fries and share them with friends, or eat them yourself!</p>
-                            <p><a class = "btn btn-lg btn-primary" href = "menu.php" role = "button">Fries and other food <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                            <p><a class = "btn btn-lg btn-primary" href = "menu.php#sidedishes" role = "button">Fries and other food <span class="glyphicon glyphicon-chevron-right"></span></a></p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <div class = "carousel-caption">
                             <h1>Burgers</h1>
                             <p>Huge burgers. Few calories. That's right, more great-tasting food and less calories! What could be better?</p>
-                            <p><a class = "btn btn-lg btn-primary" href = "menu.php" role = "button">Find other healthy meal choices <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+                            <p><a class = "btn btn-lg btn-primary" href = "menu.php#burgers" role = "button">Find other healthy meal choices <span class="glyphicon glyphicon-chevron-right"></span></a></p>
                         </div>
                     </div>
                 </div>
