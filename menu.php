@@ -51,7 +51,9 @@
 			</div>
 		</div>-->
 
-		<div
+		<div data-ng-app="list-menu" data-ng-controller="listerMenu" class="container-fluid">
+
+		</div>
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>

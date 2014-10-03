@@ -1,0 +1,18 @@
+{
+    "mealSet": [
+        {
+            "name": "Burger Combo",
+            "img": "burgercombo.gif",
+            "nutrition": {
+                "calorie": 100,
+                "carbo": 170,
+                "fats": 20,
+                "protein": 800
+            },
+            "desc": "For more conservative customers, we have our traditional Burger Combo meal. You can order an upgraded version for $1.00 more with less fat.",
+            "lore": "'My kingdom for a burger!' ~ Rich Ard III",
+            "stock": 200,
+            "cost": 3.00
+        }
+    ]
+}
