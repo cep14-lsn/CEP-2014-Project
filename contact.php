@@ -80,6 +80,22 @@
 			];
 		}
 		</script>
+		<style>
+			.contact {
+				padding : 5px;
+				margin : 5px;
+				width : 100%;
+				background-color : #222;
+				border-radius : 10px;
+			}
+			.contact-pic {
+				margin-left : auto;
+				margin-right : auto;
+			}
+			.contact-info {
+				text-align : justify;
+			}
+		</style>
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
