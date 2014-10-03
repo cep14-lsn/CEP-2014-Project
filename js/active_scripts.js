@@ -1,7 +1,7 @@
 // Associated with replaceSpan
 var spanText = {
     // Class (span- will be appended later) : HTML text
-    "topSecret": "[REDACTED]"
+    "topSecret": "<abbr title='[REDACTED]'>&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;</abbr>"
 };
 
 replaceSpan = function() {
