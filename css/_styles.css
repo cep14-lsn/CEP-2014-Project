@@ -47,9 +47,13 @@ span.bold, th {
 /* Table properties */
 table {
     border-collapse:collapse;
+    border-color:#555;
 }
 th {
     font-size:18px;
+}
+td {
+    padding: 1px 1px 1px 1px;
 }
 
 /* Navbar styles*/
