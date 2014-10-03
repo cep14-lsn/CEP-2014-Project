@@ -1,18 +1,74 @@
 {
-    "mealSet": [
-        {
-            "name": "Burger Combo",
+    "mealSet": {
+        "Burger Combo": {
             "img": "burgercombo.gif",
             "nutrition": {
                 "calorie": 100,
-                "carbo": 170,
+                "carbohydrate": 170,
                 "fats": 20,
-                "protein": 800
+                "protein": 800,
+                "salt": 10
             },
-            "desc": "For more conservative customers, we have our traditional Burger Combo meal. You can order an upgraded version for $1.00 more with less fat.",
-            "lore": "'My kingdom for a burger!' ~ Rich Ard III",
+            "desc": [
+                "For more conservative customers, we have our traditional Burger Combo meal.",
+                "You can order an upgraded version for $1.00 more with 20% less fat."
+            ],
+            "lore": [
+                "'My kingdom for a burger!'",
+                "~ Rich Ard IV"
+            ],
             "stock": 200,
-            "cost": 3.00
+            "cost": {
+                "a la carte": 3,
+                "meal": 4
+            }
+        },
+        "MultiBurger (TM)": {
+            "img": "Tripleburger.png",
+            "nutrition": {
+                "calorie": 80,
+                "carbohydrate": 135,
+                "fats": 2,
+                "protein": 750,
+                "salt": 6
+            },
+            "desc": [
+                "Order your very own customized MultiBurger (TM) today. Each layer consists of a succulent beef steak with fresh cheddar cheese, with lettuce and tomato at the top.",
+                "NOTE: Nutrition values and cost values above are given per layer of burger. Add $1, 20 calories, 5 g of carbohydrate for the lettuce and tomato.",
+                "Only available a la carte."
+            ],
+            "lore": [
+                "'We are many, we are one.'",
+                "~ Rescue Heroes: The Movie"
+            ],
+            "stock": 500,
+            "cost": {
+                "layer": 1.50,
+                "base": 1
+            }
         }
-    ]
+    },
+    "mealSide": {
+        "Mega Fries": {
+            "img": "megafries.png",
+            "nutrition": {
+                "calorie": 40,
+                "carbohydrate": 90,
+                "fats": 1,
+                "protein": 2,
+                "salt": 12
+            },
+            "desc": [
+                "Mmm... tasty, mouthwatering fries. Made from freshly harvested potatoes and oceanic salt only."
+            ],
+            "lore": [
+                "'I believe you speak French?' ~ Host",
+                "'Yes, french fries and french toast!' ~ Maury"
+            ],
+            "stock": 1337,
+            "cost": {
+                "side": 1.20
+            }
+        }
+    }
 }
