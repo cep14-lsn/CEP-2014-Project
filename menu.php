@@ -10,7 +10,7 @@
 	        <div class="container-fluid">
 			<div class = "foodview">
 				<img src = "Tripleburger.png">
-				<p class = "fooddescription">Calories:10<br>Taste:10/10<br>Smell:overwhelming</p>
+				<p class = "fooddescription"><strong>TRIPLEBURGER</strong><br>Calories: 10<br>Taste: 10/10<br>Smell: Overwhelmingly Pungent</p>
 			</div>
 	        </div>
 	</body>
