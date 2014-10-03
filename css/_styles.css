@@ -67,6 +67,7 @@ a.btn:hover {
 	color:#ff8;
 	background-color:#000;
 	font-weight:bold;
+	font-size:25pt;
 }
 .dropdown:hover .dropdown-menu {
 	display:block;
