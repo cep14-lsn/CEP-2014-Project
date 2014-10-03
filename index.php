@@ -4,25 +4,40 @@
 		!ipp[_cep14_insert components/_head.html]
 		<style>
 			.carousel {
-			    width : 100%;
-			    height: 500px;
-			    margin-bottom: 60px;
-			    background-color: #000;
+				width : 100%;
+				height: 500px;
+				margin-bottom: 60px;
+				background-color: #000;
 			}
 			.carousel-caption {
-			    z-index: 10;
+				z-index: 10;
 			}
 			.carousel .item {
-			    height: 500px;
+				height: 500px;
 			}
 			.carousel-inner > .item > img {
-			    /*position: absolute;*/
-			    top: 4%;
-			    margin-left : auto;
-			    margin-right : auto;
-			    height: 300px;
-			    /*width: 500px;*/
+				/*position: absolute;*/
+				top: 4%;
+				margin-left : auto;
+				margin-right : auto;
+				height: 300px;
+				/*width: 500px;*/
 			}
+			.marketing .col-lg-4 > .img.img-circle{
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.marketing .col-lg-4 {
+				  margin-bottom: 20px;
+				  text-align: justify;
+				  width: 21%;
+				  position: relative;
+				  min-height: 1px;
+				  padding-right: 15px;
+				  padding-left: 15px;
+				  float: left;
+			}
+
 		</style>
 	</head>
 	<body>
