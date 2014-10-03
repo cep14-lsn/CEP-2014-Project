@@ -82,7 +82,7 @@
 				<a class = "right carousel-control" href = "#foodcarousel" role = "button" data-slide = "next"><span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
-		    <div class="container marketing">
+	  	<div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
 		<div class="row">
@@ -105,6 +105,7 @@
 		  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 		</div><!-- /.col-lg-4 -->
 		</div><!-- /.row -->
+		</div>
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
 </html>
