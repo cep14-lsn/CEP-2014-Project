@@ -39,12 +39,12 @@
 						$scope.intended = 0;
 						alert("There are not enough tables!")
 					} else {
-						$scope.cost = $scope.intended * 12.5 * (1 + GST) * (1 + SVC);
+						$scope.cost = $scope.intended * 6 * (1 + GST) * (1 + SVC);
 					}
 				}
 
 				$scope.updateLocation = function() {
-                    $scope.tablesTotal = Math.ceil(Math.min(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)), 15), 150));
+                    $scope.tablesTotal = Math.round(Math.min(Math.max(parseInt(md5($scope.rLocation), 16) / 5e+35, 15), 150));
                     $scope.vacancies = Math.round($scope.tablesTotal * Math.random());
                     $scope.updateCosts();
 
@@ -56,7 +56,8 @@
                 }
 
 				$scope.deduct = function() {
-					if(!confirm("Are you sure you want to reserve " + $scope.intended + " tables at " + $scope.rLocation + " for " + $filter("currency")($scope.cost) + "?")){
+					if(!confirm("Are you sure you want to reserve " + $scope.intended + " tables at " + $scope.rLocation + " for " + $scope.cost + "?")){
+						alert("Not reserved.");
 						return null;
 					}
 
