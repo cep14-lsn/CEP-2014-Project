@@ -8,6 +8,10 @@
 				color:#999;
 				font-size:14px;
 			}
+			img .food-icon {
+                max-height: 160px;
+                max-width: 100%
+            }
 		</style>
 		<script>
 			var infoFood;
