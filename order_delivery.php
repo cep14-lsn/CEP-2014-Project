@@ -45,7 +45,7 @@
 					var itemType;
 
 					for(itemType in $scope.cart){
-						$scope.expenseFood += itemType.number * $scope.infoFood[itemType.name].cost.meal;
+						$scope.expenseFood += itemType.number /* $scope.infoFood[itemType.name].cost.meal*/;
 					}
 
 					$scope.expenseDelivery = $scope.dDist * 2.5 + 1;
@@ -104,7 +104,7 @@
 					<img data-ng-src="mealSet.img">
 					<p>Unit Cost: <abbr title="As a set">{{ mealSet.cost.meal | currency }}</abbr> | <abbr title="As &agrave; la carte at a branch"><span class="alc">{{ mealSet.cost.alc | currency }}</span></abbr></p>
 					<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name)"></p>
-					<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty }} </p>
+					<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty | currency }} </p>
 				</div>
 			</div>
 			<br>
@@ -116,7 +116,7 @@
 					<img data-ng-src="mealSide.img">
 					<p>Unit Cost: {{ mealSide.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="mealSide.qty" data-ng-change="updateCart('mealSide', mealSide.qty, mealSide.name)"></p>
-					<p>Total Cost: {{ mealSide.cost.side * mealSide.qty }}</p>
+					<p>Total Cost: {{ mealSide.cost.side * mealSide.qty | currency }}</p>
 				</div>
 			</div>
 			<br>
@@ -128,7 +128,7 @@
 					<img data-ng-src="mealDrink.img">
 					<p>Unit Cost: {{  mealDrink.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="mealDrink.qty" data-ng-change="updateCart('drinks', mealDrink.qty, mealDrink.name)"></p>
-					<p>Total Cost: {{ mealDrink.cost.side * mealDrink.qty }}</p>
+					<p>Total Cost: {{ mealDrink.cost.side * mealDrink.qty | currency }}</p>
 				</div>
 			</div>
 			<hr>
