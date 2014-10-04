@@ -2,8 +2,10 @@
 <html>
 	<head>
 		!ipp[_cep14_insert components/_head.html]
-		<script src="js/md5.js"></script>
+		<script src="js/hash.js"></script>
 		<script>
+			var BASE_COST = 6;
+			var ADDITIONAL_CHARGE = 10;
 			var GST = 0.07;
 			var SVC = 0.10;
 			
@@ -15,7 +17,32 @@
 					return str;
 				}
 			}
+			function tellUser( s ) {
+				alert( s );
+			}
 			function resvCont( $scope ) {
+				$scope.changeLocation = function () {
+					if ( !$scope.locInfo[ $scope.loc ] ) {
+						var tables = Math.min( Math.max( hashdigest( hash( $scope.loc ) ) , 15 ) , 150 ) , vacancies = Math.round( tables * Math.random() );
+						$scope.locInfo[ $scope.loc ] = {
+							"tables" : tables,
+							"vacancies" : vacancies,
+							"cost" : ( BASE_COST + ( 1 - vacancies / tables ) * ADDITIONAL_CHARGE ) * ( 1 + GST ) * ( 1 + SVC ),
+						}
+					}
+				}
+				$scope.reserve = function () {
+					if ( ! confirm("Do you want to reserve " + $scope.ir + " tables at " + $scope.loc + "?" ) ) {
+						tellUser("Reservation cancelled.");
+						return;
+					}
+					var rcode = pad( Date().getTime().toString(16) , 16 );
+					rcode += pad( $scope.ir.toString( 16 ) , 4 );
+					rcode += $scope.loc;
+					$scope.rcode = btoa( rcode );
+				}
+				$scope.locInfo = {};
+				$scope.loc = "The Abyss";
 			}
 
 			reserver = function($scope){
@@ -83,31 +110,18 @@
 					<td><select ng-model="rLocation" ng-change="updateLocation()">
 						<option>The Abyss</option>
 						<option>Foo Bar</option>
-						<option>General Proximity of Bermuda Triangle</option>
-						<option>Mausoleum at Halicarnassus</option>
-						<option>Hanging Gardens of Babylon</option>
-						<option>Temple of Artemis at Epheus</option>
-						<option>Colossus of Rhodes</option>
-						<option>Lighthouse of Alexandra</option>
-						<option>Statue of Zeus at Olympia</option>
-						<option>Minotaur Labyrinth</option>
+						<option>Bermuda Triangle</option>
 						<option>Airstrip One</option>
 						<option>Mordor</option>
-						<option>Sagittarius A*</option>
-						<option>Luskan</option>
-						<option>The Nautilius</option>
 						<option>USS Enterprise</option>
 						<option>Cybertron</option>
-						<option>Proxima Centauri</option>
 						<option>Death Star II</option>
-						<option>Diagon Alley</option>
-						<option>Ba Sing Se Middle Ring</option>
+						<option>Hogsmeade</option>
+						<option>Ba Sing Se</option>
 						<option>Atlantis South</option>
 						<option>Mt. Vesuvius</option>
 						<option>The Rude Sandstorm</option>
-						<option>Lumiose City</option>
 						<option>The Capitol</option>
-						<option>The Matrix</option>
 					</select></td>
 				</tr><tr>
 					<td>Total Tables</td>
