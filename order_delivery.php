@@ -89,6 +89,10 @@
 						$scope.foods.push( infoFood[k][i] );
 					}
 				}
+				$scope.newcartitem = {
+					"name" : "Choose a food item...",
+					"mode" : "Meal",
+				}
 			}
 		</script>
 	</head>
