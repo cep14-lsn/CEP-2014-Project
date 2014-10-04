@@ -69,10 +69,12 @@ table, th, td {
     border: 5px solid transparent;
 }*/
 
-/* Form styles */
-select, input {
-    background-color: #000;
-    color: #fff;
+/* Panels */
+.panel.panel-primary > .panel-heading {
+	background-color : #daa520;
+}
+.panel > .panel-body {
+	background-color : #222;
 }
 
 /* Navbar styles*/
