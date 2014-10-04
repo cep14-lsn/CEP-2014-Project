@@ -45,8 +45,11 @@ span.bold, th {
 }
 
 /* Table properties */
-.table.table-hover > tbody > tr:hover > td , .table.table-hover > tbody > tr:hover > th {
-	background-color : #222;
+.table > tbody > tr > th {
+	border-top : 0px;
+}
+.table > tbody > tr {
+	border-top : 2px solid #fff;
 }
 /*table {
     border-collapse:collapse;
