@@ -41,7 +41,7 @@
 					li.cost = ( BASE_COST + ( 1 - li.vacancies / li.tables ) * ADDITIONAL_CHARGE ) * ( 1 + GST ) * ( 1 + SVC );
 				}
 				$scope.reserve = function () {
-					if ( $scope.ir < 0 ) {
+					if ( $scope.ir <= 0 ) {
 						tellUser("Invalid reservation");
 					}
 					if ( $scope.ir > $scope.locInfo[ $scope.loc ].vacancies ) {
@@ -121,7 +121,7 @@
 				<tr>
 					<td>Reserve tables</td>
 					<td>
-						<input type = "number" ng-model = "ir" class = "{{ 'form-control' + ( ir <= locInfo[loc].vacancies && ir >= 0 ? '' : ' ng-invalid' ) }}" />
+						<input type = "number" ng-model = "ir" class = "{{ 'form-control' + ( ir <= locInfo[loc].vacancies && ir > 0 ? '' : ' ng-invalid' ) }}" />
 					</td>
 				</tr>
 				<tr>
