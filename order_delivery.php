@@ -83,19 +83,20 @@
 			}
 			function deliCont( $scope ) {
 				$scope.itemclick = function( item ) {
-					console.log( item )
 					item.handler( item );
 				}
 				$scope.newcartitem_ordermode = function( item ) {
 					$scope.dds[1].name = item.display;
 					if ( item.display == "Set Meal" ) {
-						$scope.newcartitem.mode = "set";
+						$scope.newcartitem_choose( {"food":$scope.newcartitem.food} );)
 					} else {
 						$scope.newcartitem.mode = "alc";
+						while ( $scope.dds.length > 1 ) {
+							$scope.dds.pop();
+						}
 					}
 				}
 				$scope.newcartitem_choose = function( item ) {
-					console.log(item);
 					var f = item.food;
 					$scope.dds[0].name = f.name;
 					$scope.newcartitem.food = f;
