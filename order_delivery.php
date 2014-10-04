@@ -209,7 +209,7 @@
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
 								<li ng-repeat = "c in dd.options">
-									<a href = "#" ng-click = "itemclick( c )">
+									<a href = "#" onclick = "return false;" ng-click = "itemclick( c )">
 										{{ c.display }}
 									</a>
 								</li>
