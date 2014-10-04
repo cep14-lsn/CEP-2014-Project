@@ -31,6 +31,10 @@
 						}
 					}
 				}
+				$scope.refreshCost = function () {
+					var li = $scope.locInfo[ $scope.loc ]
+					li.cost = ( BASE_COST + ( 1 - li.vacancies / li.tables ) * ADDITIONAL_CHARGE ) * ( 1 + GST ) * ( 1 + SVC );
+				}
 				$scope.reserve = function () {
 					if ( ! confirm("Do you want to reserve " + $scope.ir + " tables at " + $scope.loc + "?" ) ) {
 						tellUser("Reservation cancelled.");
@@ -39,121 +43,82 @@
 					var rcode = pad( Date().getTime().toString(16) , 16 );
 					rcode += pad( $scope.ir.toString( 16 ) , 4 );
 					rcode += $scope.loc;
+					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost) + " has been deducted from your account. Keep the reservation code and show it when entering." )
 					$scope.rcode = btoa( rcode );
+					$scope.vacancies -= $scope.ir;
+					$scope.ir = 0;
+					$scope.refreshCost();
 				}
 				$scope.locInfo = {};
 				$scope.loc = "The Abyss";
-			}
-
-			reserver = function($scope){
-				// Default values
-				$scope.rLocation = "The Abyss";
-				$scope.tablesTotal = 42;
-				$scope.vacancies = 24;
-				$scope.intended = 0;
-				$scope.cost = 0;
-
-				$scope.updateCosts = function() {
-					if($scope.intended > $scope.vacancies) {
-						$scope.intended = 0;
-						alert("There are not enough tables!")
-					} else {
-						$scope.cost = $scope.intended * 6 * (1 + GST) * (1 + SVC);
-					}
-				}
-
-				$scope.updateLocation = function() {
-                    $scope.tablesTotal = Math.round(Math.min(Math.max(parseInt(md5($scope.rLocation), 16) / 5e+35, 15), 150));
-                    $scope.vacancies = Math.round($scope.tablesTotal * Math.random());
-                    $scope.updateCosts();
-
-                    if($scope.vacancies == 0){
-                        $("#vacancy").css("color", "#f30");
-                    } else {
-                        $("#vacancy").css("color", "#fff");
-                    }
-                }
-
-				$scope.deduct = function() {
-					if(!confirm("Are you sure you want to reserve " + $scope.intended + " tables at " + $scope.rLocation + "?")){
-						alert("Not reserved.");
-						return null;
-					}
-
-					var rCode = pad(Date().getTime().toString(16), 16); // Timestamp as Unix time
-					rCode += pad($scope.intended.toString(16), 4);
-					rCode += $scope.rLocation();
-					$scope.codeReserved = md5(rCode);
-					// Presumably, a server-side database would be updated here with the hash and the information.
-					// A function would also be called to check if the time slot was available.
-
-					alert($filter("currency")($scope.cost) + " has been deducted from your account. Use the reservation code and keep it safe.");
-				}
+				$scope.changeLocation();
 			}
 		</script>
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
-		<div class="container-fluid" ng-app="" ng-controller="reserver">
-			<h1>Why reserve?</h1>
-			<p>Sometimes, it can be difficult for you and your friends or family to find a space just for you at the MekDoornels restaurant.</p>
-			<p>Popularity can be both a blessing and a curse.</p>
-			<p>However, for you, we have just the right solution - Seat Reservation!</p>
-			<p>For just a few dollars, we can find you an available seat and reserve it for you.</p>
-			<p>Note: All reservations are limited to 2 hours.</p>
-			<hr>
-
-			<h1>Reservation Services</h1>
-			<table id="reserve">
+		<div class="container-fluid" ng-app="" ng-controller="resvCont">
+			<div class = "page-header">
+				<h1>Reservation Services <small>for your convenience of getting a seat</small></h1>
+			</div>
+			<table class = "table">
 				<tr>
-					<td>Store Location</td>
-					<td><select ng-model="rLocation" ng-change="updateLocation()">
-						<option>The Abyss</option>
-						<option>Foo Bar</option>
-						<option>Mausoleum at Halicarnassus</option>
-						<option>Hanging Gardens of Babylon</option>
-						<option>Temple of Artemis at Epheus</option>
-						<option>Colossus of Rhodes</option>
-						<option>Statue of Zeus at Olympia</option>
-						<option>Lighthouse of Alexandra</option>
-						<option>Minotaur Labyrinth</option>
-						<option>Bermuda Triangle</option>
-						<option>Sagittarius A*</option>
-						<option>Luskan</option>
-						<option>In the Mariana Trench</option>
-						<option>The Nautilius</option>
-						<option>Proxima Centauri</option>
-						<option>Diagon Alley</option>
-						<option>Lumiose City</option>
-						<option>The Matrix</option>
-						<option>Airstrip One</option>
-						<option>Mordor</option>
-						<option>USS Enterprise</option>
-						<option>Cybertron</option>
-						<option>Death Star II</option>
-						<option>Ba Sing Se Middle Ring</option>
-						<option>Atlantis South</option>
-						<option>Mt. Vesuvius</option>
-						<option>The Rude Sandstorm</option>
-						<option>The Capitol</option>
-					</select></td>
-				</tr><tr>
-					<td>Total Tables</td>
-					<td>{{ tablesTotal }}</td>
-				</tr><tr>
+					<td>Select Location</td>
+					<td>
+						<select ng-model = "loc" ng-change = "changeLocation">
+							<option>The Abyss</option>
+							<option>Foo Bar</option>
+							<option>Mausoleum at Halicarnassus</option>
+							<option>Hanging Gardens of Babylon</option>
+							<option>Temple of Artemis at Epheus</option>
+							<option>Colossus of Rhodes</option>
+							<option>Statue of Zeus at Olympia</option>
+							<option>Lighthouse of Alexandra</option>
+							<option>Minotaur Labyrinth</option>
+							<option>Bermuda Triangle</option>
+							<option>Sagittarius A*</option>
+							<option>Luskan</option>
+							<option>In the Mariana Trench</option>
+							<option>The Nautilius</option>
+							<option>Proxima Centauri</option>
+							<option>Diagon Alley</option>
+							<option>Lumiose City</option>
+							<option>The Matrix</option>
+							<option>Airstrip One</option>
+							<option>Mordor</option>
+							<option>USS Enterprise</option>
+							<option>Cybertron</option>
+							<option>Death Star II</option>
+							<option>Ba Sing Se Middle Ring</option>
+							<option>Atlantis South</option>
+							<option>Mt. Vesuvius</option>
+							<option>The Rude Sandstorm</option>
+							<option>The Capitol</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Total number of tables</td>
+					<td>{{ locInfo[loc].tables }}</td>
+				</tr>
+				<tr>
 					<td>Vacancies</td>
-					<td><span id="vacancies">{{ vacancies }}</span></td>
-				</tr><tr>
-					<td>Reserve Tables</td>
-					<td><input type="number" ng-model="intended" ng-change="updateCosts()"></td>
-				</tr><tr>
-					<td>Cost</td>
-					<td>{{ cost|currency }}</td>
+					<td>{{ locInfo[loc].vacancies }}</td>
+				</tr>
+				<tr>
+					<td>Reserve tables</td>
+					<td>
+						<input type = "number" class = "form-control" ng-model = "ir" ng-class = "{{ ir <= locInfo[loc].vacancies ? 'bg-success' : 'bg-warning' }}" />
+						<span class = "input-group-addon" ng-show = "ir > locInfo[loc].vacancies"><span class = "glyphicon glyphicon-warning-sign"></span></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Total Cost</td>
+					<td>{{ locInfo[loc].cost * ir }}</td>
 				</tr>
 			</table>
-			<p><a class="btn btn-primary" href="#" ng-click="deduct()">Process Deduction</a></p>
-			<br>
-			<p>Use this reservation code: {{ codeReserved }}</p>
+			<a class="btn btn-primary" href="#" ng-click="deduct();return false;" ng-hide = "rcode">Process Deduction</a>
+			<p ng-show = "rcode">Use this reservation code: {{ rcode }}</p>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
