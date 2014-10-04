@@ -65,7 +65,7 @@
 									<td>{{ meal.nutrition.calorie }} kcal</td>
 								</tr>
 								<tr>
-									<td>{{ meal.nutrition.calorie * 4.18 }} kJ</td>
+									<td>{{ meal.nutrition.calorie * 4.2 }} kJ</td>
 								<tr>
 									<td>Carbohydrates</td>
 									<td>{{ meal.nutrition.carbohydrate / 5 }} g</td>
