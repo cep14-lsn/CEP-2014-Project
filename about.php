@@ -5,10 +5,10 @@
 </head>
 <body>
     !ipp[_cep14_insert components/_navbar.html]
-    <div class = "page-header">
-        <h1>About <small>so you can get to know more about us and have more confidence in eating our food</small></h1>
-    </div>
     <div class = "container">
+        <div class = "page-header">
+                <h1>About <small>so you can get to know more about us and have more confidence in eating our food</small></h1>
+            </div>
         <div class="container-fluid">
             <h1>So, who are we?</h1>
             <p>We are a group of pioneers who want to get rid of the notion of oily fast food.</p>
@@ -63,7 +63,7 @@
             </tr>
             <tr>
                 <td>2014</td>
-                <td>Food Association for Trade and Safety</td>
+                <td><abbr title="FATS">Food Association for Trade and Safety</abbr></td>
                 <td>Cleanest Restaurants Award</td>
                 <td>1st</td>
                 <td>For the 20th year running</td>
@@ -91,7 +91,7 @@
             </tr>
             <tr>
                 <td>2014</td>
-                <td><abbr title="F&eacute;d&eacute;ration Internationale de Food Association">FIFA</abbr></td>
+                <td><abbr title="FIFA">F&eacute;d&eacute;ration Internationale de Food Association</abbr></td>
                 <td>Quad-yearly Grand Tournament</td>
                 <td>1st</td>
                 <td></td>

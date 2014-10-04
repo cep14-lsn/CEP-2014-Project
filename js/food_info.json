@@ -134,7 +134,7 @@
 			"qty": 0
         },
 		{
-			"name": "Asparagus Ice Cream <span class='label label-primary'>NEW!</span>"
+			"name": "Asparagus Ice Cream <span class='label label-primary'>NEW!</span>",
 			"img": "asparagus_ice_cream.jpg",
 			"nutrition": {
 				"calorie": 35,
