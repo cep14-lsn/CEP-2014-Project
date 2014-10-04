@@ -113,7 +113,7 @@
 				<tr>
 					<td>Reserve tables</td>
 					<td>
-						<input type = "number" class = "form-control" ng-model = "ir" ng-class = "{{ ir <= locInfo[loc].vacancies ? 'bg-success' : 'bg-warning' }}" />
+						<input type = "number" class = "form-control" ng-model = "ir" class = "{{ ir <= locInfo[loc].vacancies ? 'bg-success' : 'bg-warning' }}" />
 					</td>
 				</tr>
 				<tr>
