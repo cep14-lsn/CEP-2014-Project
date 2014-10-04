@@ -114,7 +114,7 @@
 				</tr>
 				<tr>
 					<td>Total Cost</td>
-					<td>{{ locInfo[loc].cost * ir }}</td>
+					<td>{{ locInfo[loc].cost * ir | currency }}</td>
 				</tr>
 			</table>
 			<a class="btn btn-primary" href="#" ng-click="deduct()" ng-hide = "rcode">Process Deduction</a>
