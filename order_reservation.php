@@ -67,7 +67,7 @@
 					$scope.reservations.push( reservation );
 				}
 				$scope.locInfo = {};
-				$scope.loc = "The Abyss";
+				$scope.loc = "/dev/null";
 				$scope.ir = 0;
 				$scope.reservations = [];
 				$scope.changeLocation();
@@ -85,21 +85,28 @@
 					<td>Select Location</td>
 					<td>
 						<select ng-model = "loc" ng-change = "changeLocation()" class = "form-control">
-							<option>The Abyss</option>
+							<option>/dev/null</option>
 							<option>Foo Bar</option>
+							<hr>
 							<option>Mausoleum at Halicarnassus</option>
 							<option>Hanging Gardens of Babylon</option>
 							<option>Temple of Artemis at Epheus</option>
 							<option>Colossus of Rhodes</option>
 							<option>Statue of Zeus at Olympia</option>
 							<option>Lighthouse of Alexandra</option>
+							<hr>
 							<option>Minotaur Labyrinth</option>
 							<option>Bermuda Triangle</option>
-							<option>Sagittarius A*</option>
-							<option>Luskan</option>
 							<option>In the Mariana Trench</option>
-							<option>The Nautilius</option>
+							<hr>
+							<option>Sagittarius A*</option>
 							<option>Proxima Centauri</option>
+							<hr>
+							<option>The Rude Sandstorm</option>
+							<option>Area 51</option>
+							<hr>
+							<option>The Nautilius</option>
+							<option>The Nine Hells</option>
 							<option>Diagon Alley</option>
 							<option>Lumiose City</option>
 							<option>The Matrix</option>
@@ -111,8 +118,6 @@
 							<option>Ba Sing Se Middle Ring</option>
 							<option>Atlantis South</option>
 							<option>Mt. Vesuvius</option>
-							<option>The Rude Sandstorm</option>
-							<option>The Capitol</option>
 						</select>
 					</td>
 				</tr>
