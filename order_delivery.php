@@ -27,7 +27,7 @@
 			xhr.open("GET", "js/food_info.json", false);
 			xhr.send();
 			infoFood = JSON.parse(xhr.responseText);
-			function deliCont( $scope ) {
+			function deliCont( $scope , $filter ) {
 				$scope.itemclick = function( item ) {
 					item.handler( item );
 				}
@@ -94,7 +94,7 @@
 					}
 				}
 				$scope.itemcost = function( item ) {
-					return item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side;
+					return item.food ? item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side : 0;
 				}
 				$scope.addcart = function() {
 					$scope.items.push( $scope.newcartitem );
@@ -124,6 +124,23 @@
 						$scope.distance = Math.floor( hash( s ).charCodeAt( 0 ) * hash( r ).charCodeAt( 0 ) / 100 ) / 10;
 						$scope.distancecharge = $scope.distance * COST_PER_KM * ( 1 + GST ) * ( 1 + SVC );
 					}
+				}
+				$scope.order = function () {
+					if ( !confirm("Are you sure you want to place this order?") ) {
+						tellUser("Order cancelled.");
+						return;
+					}
+					tellUser( $filter("currency")( $scope.totalcost ) + " has been deducted from your account. Please enjoy your food." );
+					$scope.totalcost = 0;
+					$scope.distance = 0;
+					$scope.distancecharge = 0;
+					$scope.pc = 0;
+					$scope.addcart();
+					$scope.foods = [];
+					$scope.items = [];
+				}
+				$scope.canorder = function () {
+					return $scope.pc.length == 6 && $scope.pc < 1000000 && $scope.items.length > 0;
 				}
 				$scope.foodinfo = infoFood;
 				$scope.totalcost = 0;
@@ -231,7 +248,8 @@
 						<td>{{ totalcost + distancecharge | currency }}</td>
 					</tr>
 				</table>
-				<a href = "#" ng-click = "order()" class = "btn btn-primary">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+				<a href = "#" onclick = "return false;" ng-click = "order()" class = "btn btn-primary" ng-show = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+				<a class = "btn btn-primary" disabled = "disabled" ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
