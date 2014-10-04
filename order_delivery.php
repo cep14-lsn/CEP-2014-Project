@@ -102,8 +102,9 @@
 				<div class="container-fluid" data-ng-repeat="mealSet in infoFood.mealSet">
 					<h3>{{ mealSet.name }}</h3>
 					<img data-ng-src="mealSet.img">
-					<p>{{ mealSet.cost.meal | currency }} | <span class="alc">{{ mealSet.cost.alc | currency }}</span></p>
+					<p>Unit Cost: <abbr title="As a set">{{ mealSet.cost.meal | currency }}</abbr> | <abbr title="As &agrave; la carte at a branch"><span class="alc">{{ mealSet.cost.alc | currency }}</span></abbr></p>
 					<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name)"></p>
+					<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty }} </p>
 				</div>
 			</div>
 			<br>
@@ -111,10 +112,11 @@
 				<h2>B. Side Meals</h2>
 				<p>A quick snack when watching something exciting, be it movies, football, anime...</p>
 				<div class="container-fluid" data-ng-repeat="mealSide in infoFood.mealSide">
-					<h3>{{ mealSide.name | currency }}</h3>
+					<h3>{{ mealSide.name }}</h3>
 					<img data-ng-src="mealSide.img">
-					<p>{{ mealSet.cost.side | currency }}</p>
+					<p>Unit Cost: {{ mealSide.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="mealSide.qty" data-ng-change="updateCart('mealSide', mealSide.qty, mealSide.name)"></p>
+					<p>Total Cost: {{ mealSide.cost.side * mealSide.qty }}</p>
 				</div>
 			</div>
 			<br>
@@ -122,10 +124,11 @@
 				<h2>C. Drinks</h2>
 				<p>Satisfying thirst quenchers!</p>
 				<div class="container-fluid" data-ng-repeat="mealDrink in infoFood.mealDrink">
-					<h3>{{ mealDrink.name | currency }}</h3>
+					<h3>{{ mealDrink.name }}</h3>
 					<img data-ng-src="mealDrink.img">
-					<p>{{  mealDrink.cost.side | currency }}</p>
+					<p>Unit Cost: {{  mealDrink.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="mealDrink.qty" data-ng-change="updateCart('drinks', mealDrink.qty, mealDrink.name)"></p>
+					<p>Total Cost: {{ mealDrink.cost.side * mealDrink.qty }}</p>
 				</div>
 			</div>
 			<hr>
