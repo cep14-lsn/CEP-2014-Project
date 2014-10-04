@@ -2,21 +2,7 @@
 <html>
 	<head>
 		!ipp[_cep14_insert components/_head.html]
-		<style>
-		.food-item {
-			background-color : #222;
-			border-radius : 10px;
-			padding : 10px;
-			margin : 10px;
-		}
-		.food-item > .food-pic {
-			text-align : center;
-		}
-		.food-item > .food-pic > img {
-			max-height : 500px;
-			max-width : 100%;
-		}
-		</style>
+		<link rel = "stylesheet" href = "css/_food_img.css" type="text/css"/>
 	</head>
 	<script>
 		var infoFood;
