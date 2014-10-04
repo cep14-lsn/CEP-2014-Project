@@ -110,14 +110,28 @@
 					<td><select ng-model="rLocation" ng-change="updateLocation()">
 						<option>The Abyss</option>
 						<option>Foo Bar</option>
+						<option>Mausoleum at Halicarnassus</option>
+						<option>Hanging Gardens of Babylon</option>
+						<option>Temple of Artemis at Epheus</option>
+						<option>Colossus of Rhodes</option>
+						<option>Statue of Zeus at Olympia</option>
+						<option>Lighthouse of Alexandra</option>
+						<option>Minotaur Labyrinth</option>
 						<option>Bermuda Triangle</option>
+						<option>Sagittarius A*</option>
+						<option>Luskan</option>
+						<option>In the Mariana Trench</option>
+						<option>The Nautilius</option>
+						<option>Proxima Centauri</option>
+						<option>Diagon Alley</option>
+						<option>Lumiose City</option>
+						<option>The Matrix</option>
 						<option>Airstrip One</option>
 						<option>Mordor</option>
 						<option>USS Enterprise</option>
 						<option>Cybertron</option>
 						<option>Death Star II</option>
-						<option>Hogsmeade</option>
-						<option>Ba Sing Se</option>
+						<option>Ba Sing Se Middle Ring</option>
 						<option>Atlantis South</option>
 						<option>Mt. Vesuvius</option>
 						<option>The Rude Sandstorm</option>
