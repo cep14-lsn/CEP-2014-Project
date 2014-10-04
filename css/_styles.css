@@ -51,6 +51,10 @@ span.bold, th {
 span.text-small {
     font-size:12px;
 }
+span.text-strong {
+    color:#bbb;
+    font-weight:700;
+}
 
 /* Table properties */
 .table > tbody > tr > th {

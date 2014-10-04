@@ -101,9 +101,12 @@
 					text-align : center;
 				}
 			}
+			.email {
+				font-style:italics;
+			}
 			.phone-num {
 				font-size:15px;
-				color:#999;
+				color:#eee;
 			}
 		</style>
 	</head>
@@ -112,15 +115,15 @@
 		<div class = "page-header">
 			<h1>Contacts <span class="text-small">should you like to thank us for our overwhelming service</span></h1>
 		</div>
-		<div class = "container" ng-app = "" ng-controller = "clCont">
-			<div class = "row contact" ng-repeat = "p in contactList">
+		<div class = "container" data-ng-app = "" data-ng-controller = "clCont">
+			<div class = "row contact" data-ng-repeat = "p in contactList">
 				<div class = "col-xs-12 col-sm-2 contact-pic">
-					<img ng-src = "{{ p['profile-pic'] }}" alt = "Profile Picture" class = "img-circle" />
+					<img data-ng-src = "{{ p['profile-pic'] }}" alt = "Profile Picture" class = "img-circle" />
 				</div>
 				<div class = "col-xs-12 col-sm-9 contact-info">
-					<strong>{{ p.name }}</strong>
-					<p><i><a ng-href = "mailto:{{ p.email }}" class = "text-muted">{{ p.email }}</a></i></p>
-					<p>H <span class="phone-num"{{ p.contact.home }}</span> | M <span class="phone-num">{{ p.contact.mobile}}</span></p>
+					<span class="text-strong">{{ p.name }}</span>
+					<p><a data-ng-href = "mailto:{{ p.email }}" class = "text-muted email">{{ p.email }}</a></p>
+					<p>H <span class="phone-num">{{ p.contact.home }}</span> | M <span class="phone-num">{{ p.contact.mobile}}</span></p>
 				</div>
 			</div>
 		</div>
