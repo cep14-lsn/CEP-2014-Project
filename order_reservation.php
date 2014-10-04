@@ -53,8 +53,9 @@
 						tellUser("Reservation cancelled.");
 						return;
 					}
-					var rcode = pad( new Date().getTime().toString(16) , 16 );
-					rcode += pad( $scope.ir.toString( 16 ) , 4 );
+					var rcode = "MekDoornels Reservation :: ";
+					rcode += pad( new Date().getTime().toString(16) , 16 ) + " :: ";
+					rcode += pad( $scope.ir.toString( 16 ) , 4 ) + " :: ";
 					rcode += $scope.loc;
 					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost * $scope.ir) + " has been deducted from your account. Keep the reservation code and show it when entering." );
 					reservation = {};
@@ -140,7 +141,7 @@
 					Reservation
 				</div>
 				<div class = "panel-body">
-					<div class = "container" ng-repeat = "reservation in reservations">
+					<div ng-repeat = "reservation in reservations">
 						<p>{{ reservation.text }}</p>
 						<p class = "well">{{ reservation.rcode }}</p>
 					</div>
