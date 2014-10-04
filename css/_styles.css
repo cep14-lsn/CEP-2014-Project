@@ -80,6 +80,9 @@ table, th, td {
 .panel > .panel-body {
 	background-color : #222;
 }
+.panel {
+	margin : 20px;
+}
 
 /* Wells */
 .well {
