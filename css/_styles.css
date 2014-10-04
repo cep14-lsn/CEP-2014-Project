@@ -47,24 +47,22 @@ a.btn[disabled=disabled] {
 	border-color : transparent;
 }
 span.bold, th {
-    font-weight:700;
-    color:#ffc;
-}
-.food-lore {
-    font-style:italic;
-    color:#aaa;
-    font-size:14px;
+	font-weight:700;
+	color:#ffc;
 }
 span.text-small {
-    color:#999;
-    font-size:65%;
+	color:#999;
+	font-size:65%;
 }
 span.text-strong {
-    color:#666;
-    font-weight:700;
+	color:#666;
+	font-weight:700;
 }
 span.text-strike, option.option-divider {
-    text-decoration:line-through;
+	text-decoration:line-through;
+}
+input.data-ng-invalid {
+	background-color : #d88;
 }
 
 /* Table properties */
@@ -125,7 +123,7 @@ span.text-strike, option.option-divider {
 }
 .navbar-default .navbar-nav>.active:hover>a, .navbar-default .navbar-nav>.active:focus>a {
 	color : #fff;
-    background-color:#555;
+	background-color:#555;
 }
 .navbar-default .navbar-nav>li.active>a, .navbar-nav>.open:hover>a, .navbar-nav>.open:focus>a {
 	color:#fff;
