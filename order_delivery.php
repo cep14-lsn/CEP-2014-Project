@@ -147,8 +147,15 @@
 						}
 					}
 				}
+				$scope.itemcost = function( item ) {
+					return item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side;
+				}
 				$scope.addcart = function() {
 					$scope.items.push( $scope.newcartitem );
+					$scope.totalcost = 0;
+					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
+						$scope.totalcost += $scope.itemcost( $scope.items[i] );
+					}
 					$scope.newcartitem = {};
 					$scope.dds = [{
 						"name" : "Choose a food item ...",
@@ -162,6 +169,7 @@
 					return $scope.newcartitem.food && !( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side && $scope.newcartitem.drink ) );
 				}
 				$scope.foodinfo = infoFood;
+				$scope.totalcost = 0;
 				$scope.foods = [];
 				$scope.items = [];
 				$scope.newcartitem = {}
@@ -234,7 +242,11 @@
 							</tr>
 							<tr ng-repeat = "item in items">
 								<td>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
-								<td>{{ item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side | currency }}</td>
+								<td>{{ itemcost(item) | currency }}</td>
+							</tr>
+							<tr>
+								<td>Total Cost</td>
+								<td>{{ totalcost | currency }}</td>
 							</tr>
 						</table>
 					</div>
