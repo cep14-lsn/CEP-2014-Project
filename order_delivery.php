@@ -1,17 +1,17 @@
 !ipp[setv pagename Delivery]
 <html>
-    <head>
-        !ipp[_cep14_insert components/_head.html]
-        <script src="js/hash.js"></script>
+	<head>
+	!ipp[_cep14_insert components/_head.html]
+	<script src="js/hash.js"></script>
 		<style>
 			.alc {
 				color:#999;
 				font-size:14px;
 			}
 			img.food-icon {
-                max-height: 200px;
-                max-width: 100%
-            }
+				max-height: 200px;
+				max-width: 100%
+			}
 		</style>
 		<script>
 			var infoFood;
@@ -22,15 +22,12 @@
 					infoFood = JSON.parse(xhr.responseText);
 				}
 			};
-
 			xhr.open("GET", "js/food_info.json", false);
 			xhr.send();
 			infoFood = JSON.parse(xhr.responseText);
-
 			deliverMeal = function($scope) {
 				GST = 0.07;
 				SVC = 0.10;
-
 				$scope.infoFood = infoFood;
 				$scope.displayMeals = false;
 				$scope.dDist = 42;
@@ -43,27 +40,22 @@
 					"drinks": []
 				};
 				$scope.dLocation = Math.floor(Math.random() * 1000000);
-
 				$scope.calcCosts = function(){
 					$scope.expenseFood = 0;
 					var itemStack;
 					var itemType;
-
 					for(itemType in $scope.cart){
 						for(itemStack in itemType){
 							$scope.expenseFood += itemStack.number * $scope["infoFood"][itemStack.name]["cost"][itemStack.type];
 						}
 					}
-
 					$scope.expenseDelivery = $scope.dDist * 2.5 + 1;
 					$scope.expenseTotal = ($scope.expenseDelivery + $scope.expenseFood) * (1 + GST) * (1 + SVC);
 				};
-
 				$scope.updateCart = function(category, number, name, type) {
 					var itemType;
 					var itemStack;
 					var found = false;
-
 					for(itemType in $scope.cart){
 						for(itemStack in itemType){
 							if(itemType.name == name){
@@ -73,7 +65,6 @@
 							}
 						}
 					}
-
 					if(!found){
 						$scope.cart[category].push({
 							"number": number,
@@ -81,108 +72,85 @@
 							"type": type
 						});
 					}
-
+	
 					$scope.calcCosts();
 				}
-
 				$scope.calcDist = function(){
 					$scope.dDist = Math.round(hash($scope.dLocation).charCodeAt(0) / 2) / 10;
 				}
-
 				$scope.dDist = $scope.calcDist;
-
 			}
 		</script>
-    </head>
-    <body>
-        !ipp[_cep14_insert components/_navbar.html]
-        <div class="container-fluid" data-ng-app="" data-ng-controller="deliverMeal">
-	        <h1>Why deliver?</h1>
-	        <p>Exhausted after a long day of school/work? Or do you want to just laze at home with your friends and family?</p>
-	        <p>No problem - we can deliver the food straight to your house!</p>
-	        <p>For a small extra fee based on your distance from our nearest branch, you can enjoy MekDoornels&rsquo; wonderful food in the comfort of your home.</p>
-	        <hr>
-	        <h1>Step 1: Look through the Menu</h1>
-	        <p>Look for one of our wonderful and suitable meal set that suits your dietary choices here.</p>
-	        <p><a class="btn btn-primary" href="menu.php">Menu <span class="glyphicon glyphicon-chevron-right"></span></a></p>
-	        <hr>
-	        <h1>Step 2: Choose your food</h1>
-			<p>Which one of those meals just beg to be eaten? (Answer: it's all of them!)</p>
-			<p>Current cost: {{ expenseTotal | currency }}</p>
-			<p>So choose any of them now!</p><br>
-			<div class="container-fluid">
-				<h2>A. Set Meals</h2>
-				<p>Fun for the whole family! Order one per person. Available only as a set.</p>
-				<div class="container-fluid" data-ng-repeat="mealSet in infoFood.mealSet">
-					<div class="row food-item">
-						<div class="col-xs-1 col-md-1 food-pic"><img data-ng-src="{{ mealSet.img }}" class="food-icon" alt="Meal icon"></div>
-						<div class="col-xs-4 col-md-4 food-pic">
-							<h3>{{ mealSet.name }}</h3>
-							<p>Unit Cost: <abbr title="As a set">{{ mealSet.cost.meal | currency }}</abbr> | <abbr title="As &agrave; la carte at a branch"><span class="alc">{{ mealSet.cost.alc | currency }}</span></abbr></p>
-							<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name, 'meal')"></p>
-							<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty | currency }} </p>
-						</div>
+	</head>
+	<body>
+		!ipp[_cep14_insert components/_navbar.html]
+		<div class="container-fluid" data-ng-app="" data-ng-controller="deliverMeal">
+			<div class = "page-header">
+				<h1>Delivery <small>for your convenience of having your food anywhere you like</small></h1>
+			</div>
+			<!--<h1>Why deliver?</h1>
+			<p>Exhausted after a long day of school/work? Or do you want to just laze at home with your friends and family?</p>
+			<p>No problem - we can deliver the food straight to your house!</p>
+			<p>For a small extra fee based on your distance from our nearest branch, you can enjoy MekDoornels&rsquo; wonderful food in the comfort of your home.</p>
+			<hr>-->
+			<div class = "container">
+				<div class = "page-header">
+					<h2>Step 1 <small>look through the menu</small></h2>
+				</div>
+				<p>Look for one of our wonderful and suitable meal set that suits your dietary choices here.</p>
+				<p><a class="btn btn-primary" href="menu.php">Menu <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+				<div class = "page-header">
+					<h2>Step 2 <small>choose your food</small></h2>
+				</div>
+				<abbr title = "All of them!">Which one of those meals just beg to be eaten?</abbr>
+				<p>So choose any of them now!</p>
+				<div>placeholder</div>
+				<a href = "#" ng-click = "addrow()" class = "btn btn-primary">Add to Cart</a>
+				<div class = "panel panel-primary">
+					<div class = "panel-heading">
+						Items in Cart
+					</div>
+					<div class = "panel-body">
+						<table class = "table">
+							<tr>
+								<th>Item</th>
+								<th>Cost</th>
+								<th>Qty</th>
+								<th>Price</th>
+							</tr>
+							<tr ng-repeat = "item in items">
+								<th>{{ item.name }}</th>
+								<th>{{ item.cost }}</th>
+								<th>{{ item.qty }}</th>
+								<th>{{ item.price }}</th>
+							</tr>
+						</table>
 					</div>
 				</div>
-			</div>
-			<br>
-	        <div class="container-fluid">
-				<h2>B. Side Meals</h2>
-				<p>A quick snack when watching something exciting, be it movies, football, anime...</p>
-				<div class="container-fluid" data-ng-repeat="mealSide in infoFood.mealSide">
-					<div class="row food-item">
-						<div class="col-xs-1 col-md-1 food-pic"><img data-ng-src="{{ mealSide.img }}" class="food-icon" alt="Meal icon"></div>
-						<div class="col-xs-4 col-md-4 food-pic">
-							<h3>{{ mealSide.name }}</h3>
-							<p>Unit Cost: {{ mealSide.cost.side | currency }}</p>
-							<p>Quantity: <input type="number" data-ng-model="mealSide.qty" data-ng-change="updateCart('mealSide', mealSide.qty, mealSide.name, 'side')"></p>
-							<p>Total Cost: {{ mealSide.cost.side * mealSide.qty | currency }}</p>
-						</div>
-					</div>
+				<div class = "page-header">
+					<h2>Step 3 <small>choose where you are eating</small></h2>
 				</div>
+				<p>Select where you want to eat!</p>
+				<table class = "table">
+					<tr>
+						<td>Postal Code</td>
+					</tr>
+					<tr>
+						<td>Distance</td>
+					</tr>
+					<tr>
+						<td>Delivery Expenses</td>
+					</tr>
+					<tr>
+						<td>Food Expenditure</td>
+					</tr>
+					<tr>
+						<td>Total Expenditure</td>
+					</tr>
+				</table>
+				<a href = "#" ng-click = "order()" class = "btn btn-primary">Place order</a>
 			</div>
-			<br>
-			<div class="container-fluid">
-				<h2>C. Drinks</h2>
-				<p>Satisfying thirst quenchers!</p>
-				<div class="container-fluid" data-ng-repeat="drinks in infoFood.drinks">
-					<div container="row food-item">
-						<div class="col-xs-1 col-md-1 food-pic"><img data-ng-src="{{ drinks.img }}" class="food-icon" alt="Meal icon"></div>
-						<div class="col-xs-1 col-md-1 food-pic">
-							<h3>{{ drinks.name }}</h3>
-							<p>Unit Cost: {{  drinks.cost.side | currency }}</p>
-							<p>Quantity: <input type="number" data-ng-model="drinks.qty" data-ng-change="updateCart('drinks', drinks.qty, drinks.name, 'side')"></p>
-							<p>Total Cost: {{ drinks.cost.side * drinks.qty | currency }}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<hr>
-			<h1>Step 3: Choose where you are eating</h1>
-			<p>Select where you would like to eat!</p>
-			<table class="table">
-				<tr>
-					<td>Postal Code</td>
-					<td><input type="number" data-ng-model="dLocation" data-ng-change="calcDist()"></td>
-				</tr>
-				<tr>
-					<td>Distance</td>
-					<td>{{ dDist }} km</td>
-				</tr>
-				<tr>
-					<td>Delivery Expenses</td>
-					<td>{{ expenseDelivery | currency }}</td>
-				</tr>
-				<tr>
-					<td>Food Expenditure</td>
-					<td>{{ expenseFood | currency }}</td>
-				</tr>
-				<tr>
-					<td>Total Expenditure</td>
-					<td>{{ expenseTotal | currency }}</td>
-				</td>
-			</table>
-        </div>
-        !ipp[_cep14_insert components/_footer.html]
-    </body>
+		</div>
+		!ipp[_cep14_insert components/_footer.html]
+	</body>
 </html>
