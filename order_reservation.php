@@ -78,7 +78,7 @@
 		!ipp[_cep14_insert components/_navbar.html]
 		<div class="container-fluid" ng-app="" ng-controller="resvCont">
 			<div class = "page-header">
-				<h1>Reservation Services <small>for your convenience of getting a seat</small></h1>
+				<h1>Reservation Services <span class="text-small">for your convenience of getting a seat</span></h1>
 			</div>
 			<table class = "table">
 				<tr>
@@ -88,6 +88,7 @@
 							<option>/dev/null</option>
 							<option>Foo Bar</option>
 							<option disabled></option>
+
 							<option>Mausoleum at Halicarnassus</option>
 							<option>Hanging Gardens of Babylon</option>
 							<option>Temple of Artemis at Epheus</option>
@@ -95,16 +96,22 @@
 							<option>Statue of Zeus at Olympia</option>
 							<option>Lighthouse of Alexandra</option>
 							<option disabled></option>
+
 							<option>Minotaur Labyrinth</option>
 							<option>Bermuda Triangle</option>
 							<option>In the Mariana Trench</option>
+							<option>Krakatoa, Indonesia</option>
 							<option disabled></option>
+							
 							<option>Sagittarius A*</option>
 							<option>Proxima Centauri</option>
 							<option disabled></option>
+
 							<option>The Rude Sandstorm</option>
 							<option>Area 51</option>
+							<option>Atlantis South</option>
 							<option disabled></option>
+
 							<option>The Nautilius</option>
 							<option>The Nine Hells</option>
 							<option>Diagon Alley</option>
@@ -116,8 +123,6 @@
 							<option>Cybertron</option>
 							<option>Death Star II</option>
 							<option>Ba Sing Se Middle Ring</option>
-							<option>Atlantis South</option>
-							<option>Mt. Vesuvius</option>
 						</select>
 					</td>
 				</tr>

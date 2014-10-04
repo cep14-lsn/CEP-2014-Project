@@ -105,8 +105,8 @@
 				font-style:italics;
 			}
 			.phone-num {
-				font-size:15px;
-				color:#eee;
+				font-size:14px;
+				color:#ccc;
 			}
 		</style>
 	</head>
