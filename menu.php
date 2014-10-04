@@ -17,15 +17,9 @@
 				max-width : 100%;
 			}
 			.alc {
-                color:#999;
-                font-size:14px;
-            }
-            .menu-top-row {
-                float:clear;
-            }
-            .menu-top-cell {
-                float:left;
-            }
+				color:#999;
+				font-size:14px;
+			}
 		</style>
 	</head>
 	<script>
@@ -60,13 +54,8 @@
 							<img data-ng-src = "{{meal.img}}" alt = "Meal image" />
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
-							<div class="menu-top-row">
-								<div class="menu-top-cell"><h2>{{ meal.name }} </h2></div>
-								<div class="menu-top-cell">
-									<span data-ng-show="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.meal | currency }} | <span data-ng-show="{{ categoryinfo[0] == 'mealSet' }}" class="alc">{{ meal.cost.alc | currency }}</span></span>
-									<span data-ng-hide="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.side | currency }}</span>
-								</div>
-								<div class="menu-top-cell"><span class="label label-primary meal-label" data-ng-show="{{ meal.new }}">NEW!</span></div>
+							<div class = "page-header">
+								<h2>{{ meal.name }} <small data-ng-show = "meal.cost.meal">{{ meal.cost.meal | currency }} | {{ meal.cost.alc }}</small><small data-ng-hide = "meal.cost.meal">{{ meal.cost.side | currency }}</small><span class = "label label-primary meal-label" data-ng-show = "meal.new">NEW!</span></h2>
 							</div>
 							<p class = "linebreak">{{ process( meal.desc ) }}</p>
 							<p class="tex-muted food-lore linebreak">{{ process( meal.lore ) }}</p>
