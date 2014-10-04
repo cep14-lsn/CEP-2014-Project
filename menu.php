@@ -52,7 +52,7 @@
 						<div class = "col-xs-12 col-md-6 food-info">
 							<strong>{{ meal.name }}</strong>
 							<p class = "text-muted linebreak">{{ process( meal.desc ) }}</p>
-							<p class="text-muted linebreak">{{ process( meal.lore ) }}</p>
+							<p class="text-muted linebreak"><i>{{ process( meal.lore ) }}</i></p>
 							<table class="table">
 								<tr>
 									<th>Nutritional Information</th>
@@ -63,7 +63,7 @@
 									<td>{{ meal.nutrition.calorie }} kcal</td>
 								</tr>
 								<tr>
-									<td>{{ meal.nutrition.calorie * 4.18 }} kJ</td>
+									<td>{{ meal.nutrition.calorie * 4.2 }} kJ</td>
 								<tr>
 									<td>Carbohydrates</td>
 									<td>{{ meal.nutrition.carbohydrate / 5 }} g</td>
