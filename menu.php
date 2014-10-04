@@ -63,7 +63,7 @@
 							<div class="menu-top-row">
 								<div class="menu-top-cell"><h2>{{ meal.name }} </h2></div>
 								<div class="menu-top-cell">
-									<span data-ng-show="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.meal | currency }} | <span class="alc">{{ meal.cost.alc | currency }}</span></span>
+									<span data-ng-show="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.meal | currency }} | <span data-ng-show="{{ categoryinfo[0] == 'mealSet' }}" class="alc">{{ meal.cost.alc | currency }}</span></span>
 									<span data-ng-hide="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.side | currency }}</span>
 								</div>
 								<div class="menu-top-cell"><span class="label label-primary meal-label" data-ng-show="{{ meal.new }}">NEW!</span></div>
