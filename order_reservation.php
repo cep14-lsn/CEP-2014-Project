@@ -63,7 +63,7 @@
 					$scope.locInfo[ $scope.loc ].vacancies -= $scope.ir;
 					$scope.ir = 0;
 					$scope.refreshCost();
-					reservations.push( reservation );
+					$scope.reservations.push( reservation );
 				}
 				$scope.locInfo = {};
 				$scope.loc = "The Abyss";
