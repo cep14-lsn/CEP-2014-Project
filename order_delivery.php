@@ -153,10 +153,10 @@
 					$scope.dds = [{
 						"name" : "Choose a food item ...",
 						"options" : []
-						for ( var i = 0 ; i < $scope.foods.length ; i++ ) {
-							$scope.dds[0].options.push( {"food":$scope.foods[i],"display":$scope.foods[i].name,"handler":$scope.newcartitem_choose} );
-						}
 					}];
+					for ( var i = 0 ; i < $scope.foods.length ; i++ ) {
+						$scope.dds[0].options.push( {"food":$scope.foods[i],"display":$scope.foods[i].name,"handler":$scope.newcartitem_choose} );
+					}
 				}
 				$scope.foodinfo = infoFood;
 				$scope.foods = [];
