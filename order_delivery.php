@@ -82,21 +82,8 @@
 				$scope.dDist = $scope.calcDist;
 			}
 			function deliCont( $scope ) {
-				$scope.foodinfo = infoFood;
-				$scope.foods = [];
-				$scope.newcartitem = {}
-				$scope.dds = [{
-					"name" : "Choose a food item ...",
-					"options" : []
-				}];
-				for ( k in infoFood ) {
-					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
-						$scope.foods.push( infoFood[k][i] );
-						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name,"handle":$scope.newcartitem_choose} );
-					}
-				}
 				$scope.newcartitem_choose = function( item ) {
-				console.log(item);
+					console.log(item);
 					var f = item.food;
 					$scope.dds[0].name = f.name
 					if ( f.cost.meal ) {
@@ -128,6 +115,20 @@
 						while ( $scope.dds.length > 1 ) {
 							$scope.dds.pop();
 						}
+					}
+				}
+				$scope.foodinfo = infoFood;
+				$scope.foods = [];
+				$scope.newcartitem = {}
+				$scope.dds = [{
+					"name" : "Choose a food item ...",
+					"options" : [],
+					"itemclick" : $scope.newcartitem_choose
+				}];
+				for ( k in infoFood ) {
+					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
+						$scope.foods.push( infoFood[k][i] );
+						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name} );
 					}
 				}
 			}
@@ -167,7 +168,7 @@
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
 								<li ng-repeat = "c in dd.options">
-									<a href = "#" ng-click = "itemclick( c )">
+									<a href = "#" ng-click = "c.itemclick( c )">
 										{{ c.display }}
 									</a>
 								</li>
