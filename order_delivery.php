@@ -91,7 +91,7 @@
 						$scope.newcartitem_choose( {"food":$scope.newcartitem.food} );
 					} else {
 						$scope.newcartitem.mode = "alc";
-						while ( $scope.dds.length > 1 ) {
+						while ( $scope.dds.length > 2 ) {
 							$scope.dds.pop();
 						}
 					}
