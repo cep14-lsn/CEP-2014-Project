@@ -45,7 +45,7 @@ span.bold, th {
 }
 
 /* Table properties */
-.table.table-hover tr:hover {
+.table.table-hover > tbody > tr:hover > td , .table.table-hover > tbody > tr:hover > th {
 	background-color : #222;
 }
 /*table {
