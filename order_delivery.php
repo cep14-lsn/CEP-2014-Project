@@ -84,18 +84,50 @@
 			function deliCont( $scope ) {
 				$scope.foodinfo = infoFood;
 				$scope.foods = [];
-				$scope.newcartitem = {
-					"name" : "Choose a food item...",
-					"mode" : "Meal",
-				}
+				$scope.newcartitem = {}
 				$scope.dds = [{
-					"name" : "Choose a food item...",
-					"options" : []
+					"name" : "Choose a food item ...",
+					"options" : [],
+					"itemclick" : $scope.newcartitem_choose
 				}];
 				for ( k in infoFood ) {
 					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
 						$scope.foods.push( infoFood[k][i] );
 						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name} );
+					}
+				}
+				$scope.newcartitem_choose = function( item ) {
+					var f = item.food;
+					$scope.dds[0].name = f.name
+					if ( f.cost.meal ) {
+						$scope.dds.push({
+							"name" : "Set Meal",
+							"options" : [
+								{"display" : "Set Meal"},
+								{"display" : "À la carte"},
+							],
+							"itemclick" : $scope.newcartitem_ordermode
+						});
+						var sd = {
+							"name" : "Select a Side Dish ...",
+							"options" : []
+						};
+						for ( var i = 0 ; i < infoFood.mealSide.length ; i++ ) {
+							sd.options.push( {"food":infoFood.mealSide[i],"display":infoFood.drinks[i].name} );
+						}
+						var drink = {
+							"name" : "Select a Drink ...",
+							"options" : []
+						}
+						for ( var i = 0 ; i < infoFood.drinks.length ; i++ ) {
+							drink.options.push( {"food":infoFood.drinks[i],"display":infoFood.drinks[i].name} );
+						}
+						$scope.dds.push( sd );
+						$scope.dds.push( drink );
+					} else {
+						while ( $scope.dds.length > 1 ) {
+							$scope.dds.pop();
+						}
 					}
 				}
 			}
@@ -135,7 +167,7 @@
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
 								<li ng-repeat = "c in dd.options">
-									<a href = "#" ng-click = "newcartitem_choose( c )">
+									<a href = "#" ng-click = "c.itemclick( c )">
 										{{ c.display }}
 									</a>
 								</li>
