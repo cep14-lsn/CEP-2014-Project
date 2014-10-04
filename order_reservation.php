@@ -56,16 +56,19 @@
 					var rcode = pad( new Date().getTime().toString(16) , 16 );
 					rcode += pad( $scope.ir.toString( 16 ) , 4 );
 					rcode += $scope.loc;
-					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost * $scope.ir) + " has been deducted from your account. Keep the reservation code and show it when entering." )
-					$scope.rcode = btoa( rcode );
-					$scope.text = "Reservation for " + $scope.ir + " tables at " + $scope.loc;
-					$scope.vacancies -= $scope.ir;
+					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost * $scope.ir) + " has been deducted from your account. Keep the reservation code and show it when entering." );
+					reservation = {};
+					reservation.rcode = btoa( rcode );
+					reservation.text = "Reservation for " + $scope.ir + " tables at " + $scope.loc;
+					$scope.locInfo[ $scope.loc ].vacancies -= $scope.ir;
 					$scope.ir = 0;
 					$scope.refreshCost();
+					reservations.push( reservation );
 				}
 				$scope.locInfo = {};
 				$scope.loc = "The Abyss";
 				$scope.ir = 0;
+				$scope.reservations = [];
 				$scope.changeLocation();
 			}
 		</script>
@@ -131,14 +134,16 @@
 					<td>{{ locInfo[loc].cost * ir | currency }}</td>
 				</tr>
 			</table>
-			<a class="btn btn-primary" href="#" ng-click="reserve()" ng-hide = "rcode">Process Deduction</a>
-			<div class = "panel panel-primary" ng-show = "rcode">
+			<a class="btn btn-primary" href="#" ng-click="reserve()">Process Deduction</a>
+			<div class = "panel panel-primary" ng-show = "reservations.length > 0">
 				<div class = "panel-heading">
 					Reservation
 				</div>
 				<div class = "panel-body">
-					<p>{{ text }}</p>
-					<p class = "well">{{ rcode }}</p>
+					<div class = "container" ng-repeat = "reservation in reservations">
+						<p>{{ reservation.text }}</p>
+						<p class = "well">{{ reservation.rcode }}</p>
+					</div>
 				</div>
 			</div>
 		</div>
