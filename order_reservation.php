@@ -65,7 +65,7 @@
 				<tr>
 					<td>Select Location</td>
 					<td>
-						<select ng-model = "loc" ng-change = "changeLocation">
+						<select ng-model = "loc" ng-change = "changeLocation()">
 							<option>The Abyss</option>
 							<option>Foo Bar</option>
 							<option>Mausoleum at Halicarnassus</option>
