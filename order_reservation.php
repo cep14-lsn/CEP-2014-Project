@@ -43,12 +43,13 @@
 				$scope.reserve = function () {
 					if ( $scope.ir <= 0 ) {
 						tellUser("Invalid reservation");
+						return;
 					}
 					if ( $scope.ir > $scope.locInfo[ $scope.loc ].vacancies ) {
 						tellUser("Unable to reserve more tables than vacancies.");
 						return;
 					}
-					if ( ! confirm("Do you want to reserve " + $scope.ir + " tables at " + $scope.loc + "?" ) ) {
+					if ( !confirm("Do you want to reserve " + $scope.ir + " tables at " + $scope.loc + "?" ) ) {
 						tellUser("Reservation cancelled.");
 						return;
 					}
