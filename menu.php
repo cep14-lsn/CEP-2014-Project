@@ -16,6 +16,11 @@
 				max-height : 500px;
 				max-width : 100%;
 			}
+			.food-lore {
+				font-style:italic;
+				color:#aaa;
+				font-size:14px;
+			}
 		</style>
 	</head>
 	<script>
