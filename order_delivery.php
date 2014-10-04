@@ -234,7 +234,7 @@
 							</tr>
 							<tr ng-repeat = "item in items">
 								<td>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
-								<td>{{ item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side }}</td>
+								<td>{{ item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side | currency }}</td>
 							</tr>
 						</table>
 					</div>
