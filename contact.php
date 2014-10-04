@@ -106,7 +106,7 @@
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
 		<div class = "page-header">
-			<h1>Contacts <small>should you have any enquiries or complaints</small></h1>
+			<h1>Contacts <small>should you like to thank us for our overwhelming service</small></h1>
 		</div>
 		<div class = "container" ng-app = "" ng-controller = "clCont">
 			<div class = "row contact" ng-repeat = "p in contactList">
