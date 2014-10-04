@@ -32,12 +32,19 @@ a.btn {
 	background-color:#daa520;
 	color:#000;
 	font-size:20px;
-	margin: 2px 2px 2px 2px;
+	margin: 2px;
 	border-color:transparent;
 }
 a.btn:hover, a.btn:focus {
 	background-color:#ff8;
 	color:#000;
+}
+a.btn[disabled=disabled] {
+	background-color : #b88300;
+	color : #000;
+	font-size : 20px;
+	margin : 2px;
+	border-color : transparent;
 }
 span.bold, th {
     font-weight:700;
