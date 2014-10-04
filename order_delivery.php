@@ -212,7 +212,7 @@
 				<table class = "table">
 					<tr>
 						<td>Postal Code</td>
-						<td><input type = "number" data-ng-model = "pc" class = "form-control{{ pc > 99999 && pc < 1000000 ? '' : 'data-ng-invalid' }}" onchange = "updatePostalCode()" /></td>
+						<td><input type = "number" data-ng-model = "pc" class = "form-control{{ pc > 99999 && pc < 1000000 ? '' : ' data-ng-invalid' }}" onchange = "updatePostalCode()" /></td>
 					</tr>
 					<tr>
 						<td>Distance</td>
