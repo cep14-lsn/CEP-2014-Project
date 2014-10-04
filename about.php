@@ -53,7 +53,7 @@
         <div class="container-fluid" id="link-awards">
             <h1>Our Awards</h1>
             <p>Since 2009, our amazing food has won over 40 prizes! Here are some of them which we are most proud of.</p>
-            <table id="awards">
+            <table id="awards" class="table">
             <tr>
                 <th>Year</th>
                 <th>Organization</th>
