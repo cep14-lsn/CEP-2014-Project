@@ -53,7 +53,7 @@
 						tellUser("Reservation cancelled.");
 						return;
 					}
-					var rcode = pad( Date().getTime().toString(16) , 16 );
+					var rcode = pad( new Date().getTime().toString(16) , 16 );
 					rcode += pad( $scope.ir.toString( 16 ) , 4 );
 					rcode += $scope.loc;
 					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost) + " has been deducted from your account. Keep the reservation code and show it when entering." )
