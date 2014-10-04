@@ -23,7 +23,8 @@
                 "alc": 3.50,
                 "meal": 4.50
             },
-			"qty": 0
+			"qty": 0,
+			"new": false
         },
         {
             "name": "MultiBurger (TM)",
@@ -49,7 +50,8 @@
                 "alc": 4.50,
                 "meal": 5.50
             },
-			"qty": 0
+			"qty": 0,
+			"new": false
         },
         {
             "name": "PizzaCake",
@@ -74,7 +76,8 @@
 				"alc": 7.25,
 				"meal": 8.75
 			},
-			"qty": 0
+			"qty": 0,
+			"new": true
         }
     ],
     "mealSide": [
@@ -99,7 +102,8 @@
             "cost": {
                 "side": 1.20
             },
-			"qty": 0
+			"qty": 0,
+			"new": false
         },
         {
             "name": "Fresh Lemon Fruit",
@@ -131,7 +135,8 @@
             "cost": {
                 "side": 4.00
             },
-			"qty": 0
+			"qty": 0,
+			"new": false
         },
 		{
 			"name": "Asparagus Ice Cream",
@@ -154,7 +159,8 @@
 			"cost": {
 				"side": 0.90
 			},
-			"qty": 0
+			"qty": 0,
+			"new": true
 		}
     ],
     "drinks": [
@@ -182,7 +188,8 @@
             "cost": {
                 "side": 1.20
             },
-			"qty": 0
+			"qty": 0,
+			"new": true
         },
         {
             "name": "Moonshine",
@@ -207,7 +214,8 @@
             "cost": {
                 "side": 2.00
             },
-			"qty": 0
+			"qty": 0,
+			"new": false
         }
     ]
 }

@@ -39,18 +39,18 @@
 	</script>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
-		<div ng-app = "" ng-controller = "menuCont" class="container-fluid">
-			<div class = "container" ng-repeat = "categoryinfo in [['mealSet','Set meals','to be had anywhere; à la carte or as a set meal','setmeals'],['mealSide','Side Dishes','to eat on the go, or as supplements to a fantastic meal','sidedishes'],['drinks','Drinks','thirst quenchers','drinks']]">
+		<div data-ng-app = "" data-ng-controller = "menuCont" class="container-fluid">
+			<div class = "container" data-ng-repeat = "categoryinfo in [['mealSet','Set meals','to be had anywhere; à la carte or as a set meal','setmeals'],['mealSide','Side Dishes','to eat on the go, or as supplements to a fantastic meal','sidedishes'],['drinks','Drinks','thirst quenchers','drinks']]">
 				<div class = "page-header" id = "{{ categoryinfo[3] }}">
 					<h1>{{ categoryinfo[1] }} <small>{{ categoryinfo[2] }}</small></h1>
 				</div>
-				<div ng-repeat = "meal in foods[categoryinfo[0]]">
+				<div data-ng-repeat = "meal in foods[categoryinfo[0]]">
 					<div class = "row food-item">
 						<div class = "col-xs-12 col-md-6 food-pic">
-							<img ng-src = "{{meal.img}}" alt = "Meal image" />
+							<img data-ng-src = "{{meal.img}}" alt = "Meal image" />
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
-							<strong>{{ meal.name }}</strong>
+							<h2>{{ meal.name }}</h2><span class="label label-primary" data-ng-show="{{ meal.new }}">NEW!</span>
 							<p class = "text-muted">{{ process( meal.desc ) }}</p>
 							<p class="tex-muted food-lore">{{ process( meal.lore ) }}</p>
 							<table class="table">
