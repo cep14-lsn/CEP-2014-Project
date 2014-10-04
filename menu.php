@@ -55,7 +55,7 @@
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
 							<div class = "page-header">
-								<h2>{{ meal.name }} <small data-ng-show = "meal.cost.meal">{{ meal.cost.meal | currency }} | {{ meal.cost.alc }}</small><small data-ng-hide = "meal.cost.meal">{{ meal.cost.side | currency }}</small><span class = "label label-primary meal-label" data-ng-show = "meal.new">NEW!</span></h2>
+								<h2>{{ meal.name }} <small data-ng-show = "meal.cost.meal">{{ meal.cost.meal | currency }} | {{ meal.cost.alc | currency }}</small><small data-ng-hide = "meal.cost.meal">{{ meal.cost.side | currency }}</small> <span class = "label label-primary meal-label" data-ng-show = "meal.new">NEW!</span></h2>
 							</div>
 							<p class = "linebreak">{{ process( meal.desc ) }}</p>
 							<p class="tex-muted food-lore linebreak">{{ process( meal.lore ) }}</p>
