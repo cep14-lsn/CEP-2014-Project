@@ -120,14 +120,11 @@
 								<span class = "caret"></span>
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
-								<div ng-repeat = "foodclass in foodinfo">
-									<li role = "presentation" class = "divider"></li>
-									<li ng-repeat = "food in foodclass">
-										<a href = "#" ng-click = "newcartitem_choose( food )">
-											{{ food.name }}
-										</a>
-									</li>
-								</div>
+								<li ng-repeat = "food in foodclass in foodinfo">
+									<a href = "#" ng-click = "newcartitem_choose( food )">
+										{{ food.name }}
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
