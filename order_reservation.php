@@ -55,6 +55,7 @@
 				}
 				$scope.locInfo = {};
 				$scope.loc = "The Abyss";
+				$scope.ir = 0;
 				$scope.changeLocation();
 			}
 		</script>
