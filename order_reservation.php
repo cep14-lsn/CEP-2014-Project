@@ -108,8 +108,10 @@
 				<tr>
 					<td>Reserve tables</td>
 					<td>
-						<input type = "number" class = "form-control" ng-model = "ir" ng-class = "{{ ir <= locInfo[loc].vacancies ? 'bg-success' : 'bg-warning' }}" />
-						<span class = "input-group-addon" ng-show = "ir > locInfo[loc].vacancies"><span class = "glyphicon glyphicon-warning-sign"></span></span>
+						<div class = "input-group">
+							<input type = "number" class = "form-control" ng-model = "ir" ng-class = "{{ ir <= locInfo[loc].vacancies ? 'bg-success' : 'bg-warning' }}" />
+							<span class = "input-group-addon" ng-show = "ir > locInfo[loc].vacancies"><span class = "glyphicon glyphicon-warning-sign"></span></span>
+						</div>
 					</td>
 				</tr>
 				<tr>
