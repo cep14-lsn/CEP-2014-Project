@@ -9,6 +9,13 @@
 			deduct = function() {return null;};
 
 			reserver = function($scope){
+				// Default values
+				$scope.rLocation = "The Abyss";
+				$scope.tablesTotal = 42;
+				$scope.vacancies = 24;
+				$scope.intended = 0;
+				$scope.cost = 0;
+
 				$scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)) * 20, 150));
 				$scope.vacancies = Math.round($scope.tablesTotal * Math.random());
 
