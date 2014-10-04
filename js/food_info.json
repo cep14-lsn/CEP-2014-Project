@@ -92,7 +92,7 @@
                 "Mmm... tasty, mouthwatering fries. Made from somewhat freshly harvested potatoes and near-oceanic salt only."
             ],
             "lore": [
-                "'I believe you speak French?' ~ Host<br>",
+                "'I believe you speak French?' ~ Host ",
                 "'Yes, french fries and french toast!' ~ Maury"
             ],
             "stock": 1337,
@@ -134,7 +134,7 @@
 			"qty": 0
         },
 		{
-			"name": "Asparagus Ice Cream <span class='label label-primary'>NEW!</span>",
+			"name": "Asparagus Ice Cream",
 			"img": "asparagus_ice_cream.jpg",
 			"nutrition": {
 				"calorie": 35,
@@ -144,7 +144,7 @@
 				"salt": 2
 			},
 			"desc": [
-				"Many delightful things are green, such as this ice cream!<br>",
+				"Many delightful things are green, such as this ice cream! ",
 				"DISCLAIMER: Not our fault if your face turns green. Not to be confused with Asperger's Syndrome."
 			],
 			"lore": [
@@ -175,7 +175,7 @@
                 "Yah, bro."
             ],
             "lore": [
-                "'Roses are red, <br> Violets are blue. <br> Purple drank is purple, <br> Wait, violets aren't blue.'<br>",
+                "'Roses are red, Violets are blue. Purple drank is purple, Wait, violets aren't blue.' ",
                 "~ Gammer Gurton's Garland"
             ],
             "stock": 9001,
