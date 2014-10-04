@@ -106,8 +106,9 @@ span.text-strike, option.option-divider {
 .navbar-nav>li:hover, .navbar-nav>li:focus {
 	background-color : #222;
 	border-bottom: #ff8 solid 5px;
-    background-image: -webkit-gradient(#000, #666);
-    background-image: linear-gradient(#000, #666);
+    background: -webkit-linear-gradient(#000, #666);
+    background: -moz-linear-gradient(#000, #666);
+    background: linear-gradient(#000, #666);
 }
 .navbar-nav > li.dropdown.open > a.dropdown-toggle {
 	color : #fff;
