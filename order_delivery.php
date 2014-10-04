@@ -97,6 +97,8 @@
 							$scope.dds.pop();
 						}
 						$scope.newcartitem.mode = "alc";
+						delete $scope.newcartitem.drink;
+						delete $scope.newcartitem.side;
 					}
 				}
 				$scope.newcartitem_mealside = function( item ) {
@@ -105,12 +107,15 @@
 				}
 				$scope.newcartitem_drink = function( item ) {
 					$scope.dds[3].name = item.display;
-					$scope.newcartitem.side = item.food;
+					$scope.newcartitem.drink = item.food;
 				}
 				$scope.newcartitem_choose = function( item ) {
 					var f = item.food;
 					$scope.dds[0].name = f.name;
 					$scope.newcartitem.food = f;
+					delete $scope.newcartitem.drink;
+					delete $scope.newcartitem.side;
+					delete $scope.newcartitem.mode;
 					if ( f.cost.meal ) {
 						$scope.dds.push({
 							"name" : "Set Meal",
@@ -142,13 +147,24 @@
 						}
 					}
 				}
+				$scope.addcart = function() {
+					$scope.items.push( $scope.newcartitem );
+					$scope.newcartitem = {};
+					$scope.dds = [{
+						"name" : "Choose a food item ...",
+						"options" : []
+						for ( var i = 0 ; i < $scope.foods.length ; i++ ) {
+							$scope.dds[0].options.push( {"food":$scope.foods[i],"display":$scope.foods[i].name,"handler":$scope.newcartitem_choose} );
+						}
+					}];
+				}
 				$scope.foodinfo = infoFood;
 				$scope.foods = [];
+				$scope.items = [];
 				$scope.newcartitem = {}
 				$scope.dds = [{
 					"name" : "Choose a food item ...",
-					"options" : [],
-					"itemclick" : $scope.newcartitem_choose
+					"options" : []
 				}];
 				for ( k in infoFood ) {
 					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
@@ -201,7 +217,7 @@
 						</div>
 					</div>
 				</div>
-				<a href = "#" ng-click = "addrow()" class = "btn btn-primary">Add to Cart</a>
+				<a href = "#" ng-click = "addcart()" class = "btn btn-primary">Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
 						Items in Cart
@@ -210,16 +226,12 @@
 						<table class = "table">
 							<tr>
 								<th>Item</th>
-								<th>Cost</th>
-								<th>Qty</th>
 								<th>Price</th>
 							</tr>
-							<!--<tr ng-repeat = "item in items">
+							<tr ng-repeat = "item in items">
 								<th>{{ item.name }}</th>
-								<th>{{ item.cost }}</th>
-								<th>{{ item.qty }}</th>
 								<th>{{ item.price }}</th>
-							</tr>-->
+							</tr>
 						</table>
 					</div>
 				</div>
