@@ -58,6 +58,7 @@
 					rcode += $scope.loc;
 					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost) + " has been deducted from your account. Keep the reservation code and show it when entering." )
 					$scope.rcode = btoa( rcode );
+					$scope.text = "Reservation for " + $scope.ir + " tables at " + $scope.loc;
 					$scope.vacancies -= $scope.ir;
 					$scope.ir = 0;
 					$scope.refreshCost();
@@ -131,7 +132,10 @@
 				</tr>
 			</table>
 			<a class="btn btn-primary" href="#" ng-click="reserve()" ng-hide = "rcode">Process Deduction</a>
-			<p ng-show = "rcode">Use this reservation code: {{ rcode }}</p>
+			<div class = "panel panel-primary" ng-show = "rcode">
+				<p>{{ text }}</p>
+				<p class = "well">{{ rcode }}</p>
+			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
