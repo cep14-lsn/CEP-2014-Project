@@ -24,7 +24,7 @@
 				"meal": 4.50
 			},
 			"qty": 0,
-			"new": false,
+			"new": false
 		},
 		{
 			"name": "MultiBurger (TM)",
@@ -77,7 +77,7 @@
 				"meal": 8.75
 			},
 			"qty": 0,
-			"new": true;
+			"new": true
 		}
 	],
 	"mealSide": [
