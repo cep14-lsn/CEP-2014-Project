@@ -23,3 +23,6 @@ function hashdigest( h ) {
 	var d = h.charCodeAt( 0 );
 	return d % 2 == 0 ? ( d ^ 127 ) % 256 : d % 256;
 }
+function tellUser( s ) {
+	alert( s );
+}
