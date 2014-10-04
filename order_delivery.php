@@ -16,7 +16,7 @@
 		<script>
 			var GST = 0.07;
 			var SVC = 0.10;
-			var COST_PER_KM = 0.0000001;
+			var COST_PER_KM = 0.000001;
 			var infoFood;
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
@@ -121,7 +121,7 @@
 						for ( var i = 0 ; i < s.length ; i++ ) {
 							r += s[ s.length - i - 1 ];
 						}
-						$scope.distance = hash( s ).charCodeAt( 0 ) * hash( r ).charCodeAt( 0 );
+						$scope.distance = Math.floor( hash( s ).charCodeAt( 0 ) * hash( r ).charCodeAt( 0 ) / 100 ) / 10;
 						$scope.distancecharge = $scope.distance * COST_PER_KM * ( 1 + GST ) * ( 1 + SVC );
 					}
 				}
