@@ -103,11 +103,11 @@ table, th, td {
 .navbar-nav>li.active, .navbar-nav>li.active:hover, .navbar-nav>li.active:focus {
 	border-bottom: #daa520 solid 5px;
 	background-color: #444;
-    background-image: linear-gradient(#000, #666);
 }
 .navbar-nav>li:hover, .navbar-nav>li:focus {
 	background-color : #222;
 	border-bottom: #ff8 solid 5px;
+    background-image: linear-gradient(#000, #444);
 }
 .navbar-nav > li.dropdown.open > a.dropdown-toggle {
 	color : #fff;
