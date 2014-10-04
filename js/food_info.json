@@ -138,6 +138,7 @@
 			"qty": 0,
 			"new": false
         },
+
 		{
 			"name": "Asparagus Ice Cream",
 			"img": "asparagus_ice_cream.jpg",
@@ -153,7 +154,8 @@
 				"DISCLAIMER: Not our fault if your face turns green. Not to be confused with Asperger's Syndrome."
 			],
 			"lore": [
-				"'Asparagus is love, asparagus is life. Oh, and so is ice cream.' ~ Mr. X"
+				"'Asparagus is love, asparagus is life. Oh, and so is ice cream.'",
+				"~ Mr. X"
 			],
 			"stock": 724,
 			"cost": {
