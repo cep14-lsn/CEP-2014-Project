@@ -132,7 +132,7 @@
 				for ( k in infoFood ) {
 					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
 						$scope.foods.push( infoFood[k][i] );
-						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name,"itemclick":$scope.newcartitem_choose} );
+						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name,"handler":$scope.newcartitem_choose} );
 					}
 				}
 			}
