@@ -88,12 +88,15 @@
 				$scope.newcartitem_ordermode = function( item ) {
 					$scope.dds[1].name = item.display;
 					if ( item.display == "Set Meal" ) {
+						while ( $scope.dds.length > 1 ) {
+							$scope.dds.pop();
+						}
 						$scope.newcartitem_choose( {"food":$scope.newcartitem.food} );
 					} else {
-						$scope.newcartitem.mode = "alc";
 						while ( $scope.dds.length > 2 ) {
 							$scope.dds.pop();
 						}
+						$scope.newcartitem.mode = "alc";
 					}
 				}
 				$scope.newcartitem_choose = function( item ) {
