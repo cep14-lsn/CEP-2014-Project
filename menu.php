@@ -4,18 +4,18 @@
 		!ipp[_cep14_insert components/_head.html]
 		<style>
 			.food-item {
-                background-color : #222;
-                border-radius : 10px;
-                padding : 10px;
-                margin : 10px;
-            }
-            .food-item > .food-pic {
-                text-align : center;
-            }
-            .food-item > .food-pic > img {
-                max-height : 500px;
-                max-width : 100%;
-            }
+				background-color : #222;
+				border-radius : 10px;
+				padding : 10px;
+				margin : 10px;
+			}
+			.food-item > .food-pic {
+				text-align : center;
+			}
+			.food-item > .food-pic > img {
+				max-height : 500px;
+				max-width : 100%;
+			}
 		</style>
 	</head>
 	<script>
@@ -51,8 +51,8 @@
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
 							<strong>{{ meal.name }}</strong>
-							<p class = "text-muted">{{ process( meal.desc ) }}</p>
-							<p class="tex-muted food-lore">{{ process( meal.lore ) }}</p>
+							<p class = "text-muted linebreak">{{ process( meal.desc ) }}</p>
+							<p class="text-muted linebreak">{{ process( meal.lore ) }}</p>
 							<table class="table">
 								<tr>
 									<th>Nutritional Information</th>
