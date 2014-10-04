@@ -20,7 +20,10 @@
                 color:#999;
                 font-size:14px;
             }
-            .menu-top {
+            .menu-top-row {
+                float:clear;
+            }
+            .menu-top-cell {
                 float:left;
             }
 		</style>
@@ -57,13 +60,13 @@
 							<img data-ng-src = "{{meal.img}}" alt = "Meal image" />
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
-							<div>
-								<div class="menu-top"><h2>{{ meal.name }}</h2></div>
-								<div class="menu-top">
-									<span data-ng-show="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.meal }} | <span class="alc">{{ meal.cost.alc }}</span></span>
-									<span data-ng-hide="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.side }}</span>
+							<div class="menu-top-row">
+								<div class="menu-top-cell"><h2>{{ meal.name }} </h2></div>
+								<div class="menu-top-cell">
+									<span data-ng-show="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.meal | currency }} | <span class="alc">{{ meal.cost.alc | currency }}</span></span>
+									<span data-ng-hide="{{ categoryinfo[0] == 'mealSet' }}">{{ meal.cost.side | currency }}</span>
 								</div>
-								<div class="menu-top"><span class="label label-primary meal-label" data-ng-show="{{ meal.new }}">NEW!</span></div>
+								<div class="menu-top-cell"><span class="label label-primary meal-label" data-ng-show="{{ meal.new }}">NEW!</span></div>
 							</div>
 							<p class = "linebreak">{{ process( meal.desc ) }}</p>
 							<p class="tex-muted food-lore linebreak">{{ process( meal.lore ) }}</p>
