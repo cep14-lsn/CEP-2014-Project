@@ -54,7 +54,7 @@
 						return;
 					}
 					var rcode = "MekDoornels Reservation :: ";
-					rcode += "" + new Date().getTime()
+					rcode += "" + new Date().getTime() + " :: ";
 					rcode += pad( "" + $scope.ir , 4 ) + " :: ";
 					rcode += $scope.loc;
 					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost * $scope.ir) + " has been deducted from your account. Keep the reservation code and show it when entering." );
