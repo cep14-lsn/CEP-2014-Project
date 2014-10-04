@@ -195,5 +195,5 @@ table, th, td {
 
 /* Other */
 .linebreak {
-	white-space : pre;
+	white-space : pre-wrap;
 }
