@@ -11,7 +11,7 @@
     max-height : 500px;
     max-width : 100%;
 }
-.food-icon {
-    max-width:200px;
-    max-height:100%;
+img .food-icon {
+    max-height: 160px;
+    max-width: 100%
 }
