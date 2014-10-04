@@ -90,7 +90,7 @@
 				<div class="container-fluid" data-ng-repeat="mealSet in infoFood.mealSet">
 					<h3>{{ mealSet.name }}</h3>
 					<img data-ng-src="mealSet.img">
-					<p>{{ mealSet.cost.meal }} | <span class="alc">{{ mealSet.cost.alc }}</span></p>
+					<p>{{ mealSet.cost.meal | currency }} | <span class="alc">{{ mealSet.cost.alc | currency }}</span></p>
 					<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name)"></p>
 				</div>
 			</div>
@@ -99,9 +99,9 @@
 				<h2>B. Side Meals</h2>
 				<p>A quick snack when watching something exciting, be it movies, football, anime...</p>
 				<div class="container-fluid" data-ng-repeat="mealSide in infoFood.mealSide">
-					<h3>{{ mealSide.name }}</h3>
+					<h3>{{ mealSide.name | currency }}</h3>
 					<img data-ng-src="mealSide.img">
-					<p>{{ mealSet.cost.side }}</p>
+					<p>{{ mealSet.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="mealSide.qty" data-ng-change="updateCart('mealSide', mealSide.qty, mealSide.name)"></p>
 				</div>
 			</div>
@@ -110,10 +110,10 @@
 				<h2>C. Drinks</h2>
 				<p>Satisfying thirst quenchers!</p>
 				<div class="container-fluid" data-ng-repeat="mealDrink in infoFood.mealDrink">
-					<h3>{{ mealDrink.name }}</h3>
+					<h3>{{ mealDrink.name | currency }}</h3>
 					<img data-ng-src="mealDrink.img">
-					<p>{{  mealDrink.cost.side }}</p>
-					<p>Quantity: <input type="number" data-ng-model="mealDrink.qty" data-ng-change="updateCart('mealDrink', mealDrink.qty, mealDrink.name)"></p>
+					<p>{{  mealDrink.cost.side | currency }}</p>
+					<p>Quantity: <input type="number" data-ng-model="mealDrink.qty" data-ng-change="updateCart('drinks', mealDrink.qty, mealDrink.name)"></p>
 				</div>
 			</div>
 			<hr>
@@ -134,8 +134,12 @@
 				</tr>
 				<tr>
 					<td>Food Expenditure</td>
-					<td>{{ expenseFood }}</td>
+					<td>{{ expenseFood | currency }}</td>
 				</tr>
+				<tr>
+					<td>Total Expenditure</td>
+					<td></td>
+				</td>
 			</table>
         </div>
         !ipp[_cep14_insert components/_footer.html]
