@@ -84,14 +84,19 @@
 			function deliCont( $scope ) {
 				$scope.foodinfo = infoFood;
 				$scope.foods = [];
-				for ( k in infoFood ) {
-					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
-						$scope.foods.push( infoFood[k][i] );
-					}
-				}
 				$scope.newcartitem = {
 					"name" : "Choose a food item...",
 					"mode" : "Meal",
+				}
+				$scope.dds = [{
+					"name" : "Choose a food item...",
+					"options" : []
+				}];
+				for ( k in infoFood ) {
+					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
+						$scope.foods.push( infoFood[k][i] );
+						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name} );
+					}
 				}
 			}
 		</script>
@@ -123,15 +128,15 @@
 						New Item
 					</div>
 					<div class = "panel-body">
-						<div class = "btn-group">
+						<div class = "btn-group" ng-repeat = "dd in dds">
 							<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
-								{{ newcartitem.name }}
+								{{ dd.name }}
 								<span class = "caret"></span>
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
-								<li ng-repeat = "food in foods">
-									<a href = "#" ng-click = "newcartitem_choose( food )">
-										{{ food.name }}
+								<li ng-repeat = "c in dd.options">
+									<a href = "#" ng-click = "newcartitem_choose( c )">
+										{{ c.display }}
 									</a>
 								</li>
 							</ul>
