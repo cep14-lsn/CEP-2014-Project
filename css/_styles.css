@@ -103,6 +103,7 @@ table, th, td {
 .navbar-nav>li.active, .navbar-nav>li.active:hover, .navbar-nav>li.active:focus {
 	border-bottom: #daa520 solid 5px;
 	background-color: #444;
+    background-image: linear-gradient(#000, #666);
 }
 .navbar-nav>li:hover, .navbar-nav>li:focus {
 	background-color : #222;
@@ -118,7 +119,6 @@ table, th, td {
 .navbar-default .navbar-nav>.active:hover>a, .navbar-default .navbar-nav>.active:focus>a {
 	color : #fff;
     background-color:#555;
-    background-image: linear-gradient(#000, #777);
 }
 .navbar-default .navbar-nav>li.active>a, .navbar-nav>.open:hover>a, .navbar-nav>.open:focus>a {
 	color:#fff;
