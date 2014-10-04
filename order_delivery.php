@@ -16,6 +16,7 @@
 		<script>
 			var GST = 0.07;
 			var SVC = 0.10;
+			var COST_PER_KM = 0.0000001;
 			var infoFood;
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
@@ -26,61 +27,6 @@
 			xhr.open("GET", "js/food_info.json", false);
 			xhr.send();
 			infoFood = JSON.parse(xhr.responseText);
-			deliverMeal = function($scope) {
-				GST = 0.07;
-				SVC = 0.10;
-				$scope.infoFood = infoFood;
-				$scope.displayMeals = false;
-				$scope.dDist = 42;
-				$scope.expenseDelivery = 0;
-				$scope.expenseFood = 0;
-				$scope.expenseGT = 0;
-				$scope.cart = {
-					"mealSet": [],
-					"mealSide": [],
-					"drinks": []
-				};
-				$scope.dLocation = Math.floor(Math.random() * 1000000);
-				$scope.calcCosts = function(){
-					$scope.expenseFood = 0;
-					var itemStack;
-					var itemType;
-					for(itemType in $scope.cart){
-						for(itemStack in itemType){
-							$scope.expenseFood += itemStack.number * $scope["infoFood"][itemStack.name]["cost"][itemStack.type];
-						}
-					}
-					$scope.expenseDelivery = $scope.dDist * 2.5 + 1;
-					$scope.expenseTotal = ($scope.expenseDelivery + $scope.expenseFood) * (1 + GST) * (1 + SVC);
-				};
-				$scope.updateCart = function(category, number, name, type) {
-					var itemType;
-					var itemStack;
-					var found = false;
-					for(itemType in $scope.cart){
-						for(itemStack in itemType){
-							if(itemType.name == name){
-								found = true;
-								itemType.number = number;
-								break;
-							}
-						}
-					}
-					if(!found){
-						$scope.cart[category].push({
-							"number": number,
-							"name": name,
-							"type": type
-						});
-					}
-	
-					$scope.calcCosts();
-				}
-				$scope.calcDist = function(){
-					$scope.dDist = Math.round(hash($scope.dLocation).charCodeAt(0) / 2) / 10;
-				}
-				$scope.dDist = $scope.calcDist;
-			}
 			function deliCont( $scope ) {
 				$scope.itemclick = function( item ) {
 					item.handler( item );
@@ -168,8 +114,21 @@
 				$scope.canaddcart = function () {
 					return $scope.newcartitem.food && !( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side && $scope.newcartitem.drink ) );
 				}
+				$scope.updatePostalCode = function () {
+					if ( parseInt( $scope.pc ) && $scope.pc > 99999 && $scope.pc < 1000000 ) {
+						var s = "" + $scope.pc;
+						var r = "";
+						for ( var i = 0 ; i < s.length ; i++ ) {
+							r += s[ s.length - i - 1 ];
+						}
+						$scope.distance = hash( s ).charCodeAt( 0 ) * hash( r ).charCodeAt( 0 );
+						$scope.distancecharge = $scope.distance * COST_PER_KM * ( 1 + GST ) * ( 1 + SVC );
+					}
+				}
 				$scope.foodinfo = infoFood;
 				$scope.totalcost = 0;
+				$scope.distance = 0;
+				$scope.distancecharge = 0;
 				$scope.foods = [];
 				$scope.items = [];
 				$scope.newcartitem = {}
@@ -192,11 +151,6 @@
 			<div class = "page-header">
 				<h1>Delivery <small>for your convenience of having your food anywhere you like</small></h1>
 			</div>
-			<!--<h1>Why deliver?</h1>
-			<p>Exhausted after a long day of school/work? Or do you want to just laze at home with your friends and family?</p>
-			<p>No problem - we can deliver the food straight to your house!</p>
-			<p>For a small extra fee based on your distance from our nearest branch, you can enjoy MekDoornels&rsquo; wonderful food in the comfort of your home.</p>
-			<hr>-->
 			<div class = "container">
 				<div class = "page-header">
 					<h2>Step 1 <small>look through the menu</small></h2>
@@ -258,18 +212,23 @@
 				<table class = "table">
 					<tr>
 						<td>Postal Code</td>
+						<td><input type = "number" data-ng-model = "pc" class = "form-control{{ pc > 99999 && pc < 1000000 ? '' : 'data-ng-invalid' }}" onchange = "updatePostalCode()" /></td>
 					</tr>
 					<tr>
 						<td>Distance</td>
+						<td>{{ distance }} km</td>
 					</tr>
 					<tr>
 						<td>Delivery Expenses</td>
+						<td>{{ distancecharge | currency }}</td>
 					</tr>
 					<tr>
 						<td>Food Expenditure</td>
+						<td>{{ totalcost | currency }}</td>
 					</tr>
 					<tr>
 						<td>Total Expenditure</td>
+						<td>{{ totalcost + distancecharge | currency }}</td>
 					</tr>
 				</table>
 				<a href = "#" ng-click = "order()" class = "btn btn-primary">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
