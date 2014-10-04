@@ -144,7 +144,7 @@
 			"img": "asparagus_ice_cream.jpg",
 			"nutrition": {
 				"calorie": 35,
-				"carbohydrate": 68.9,
+				"carbohydrate": 69,
 				"fats": 2,
 				"protein": 5,
 				"salt": 2
@@ -210,7 +210,8 @@
             ],
 			"lore": [
 				"'MY NAME IS FR***IN MOON MOON. I'D BE THE MOST RETARDED WOLF. ",
-				"\"OH SH** WHO BROUGHT F**KING MOON MOON ALONG?\" ' ~ Kitchki (Tumblr)"
+				"\"OH SH** WHO BROUGHT F**KING MOON MOON ALONG?\"'",
+				"~ Kitchki (Tumblr)"
 			],
             "stock": 2014,
             "cost": {
