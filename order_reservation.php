@@ -5,7 +5,7 @@
 		<script src="js/md5.js"></script>
 		<script>
 			var GST = 0.07;
-			var SVCT = 0.10;
+			var SVC = 0.10;
 			deduct = function() {return null;};
 
 			reserver = function($scope){
@@ -16,25 +16,30 @@
 				$scope.intended = 0;
 				$scope.cost = 0;
 
-				$scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)) * 20, 150));
-				$scope.vacancies = Math.round($scope.tablesTotal * Math.random());
-
-				if($scope.vacancies == 0){
-					$("#vacancy").css("color", "#f30");
-				} else {
-					$("#vacancy").css("color", "#fff");
+				$scope.updateCosts = function() {
+					if($scope.intended > $scope.vacancies) {
+						$scope.intended = 0;
+						alert("There are not enough tables!")
+					} else {
+						$scope.cost = $scope.intended * 12.5 * (1 + GST) * (1 + SVC);
+					}
 				}
 
-				if($scope.intended > $scope.vacancies) {
-					$scope.intended = 0;
-					alert("There are not enough tables!")
-				} else {
-					$scope.cost = $scope.intended * 12.5 * (1 + GST) * (1 + SVCT);
-				}
+				$scope.updateLocation = function() {
+                    $scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)) * 20, 150));
+                    $scope.vacancies = Math.round($scope.tablesTotal * Math.random());
+                    $scope.updateCosts();
+
+                    if($scope.vacancies == 0){
+                        $("#vacancy").css("color", "#f30");
+                    } else {
+                        $("#vacancy").css("color", "#fff");
+                    }
+                }
 
 				deduct = function() {
 					var now = Date();
-					alert($scope.cost + " has been deducted from your account.");
+					alert($filter("currency")($scope.cost) + " has been deducted from your account.");
 					var codeFinal = $scope.tablesTotal.toString(16) + $scope.vacancies.toString(16) + $scope.intended.toString(16);
 					$scope.reservation_code = md5(now.toSource() + codeFinal);
 				}
@@ -55,7 +60,7 @@
 			<table id="reserve">
 				<tr>
 					<td>Store Location</td>
-					<td><select ng-model="rLocation">
+					<td><select ng-model="rLocation" ng-change="updateLocation()">
 						<option>The Abyss</option>
 						<option>Foo Bar</option>
 						<option>Bermuda Triangle</option>
@@ -79,7 +84,7 @@
 					<td><span id="vacancies">{{ vacancies }}</span></td>
 				</tr><tr>
 					<td>Reserve Tables</td>
-					<td><input type="number" ng-model="intended"></td>
+					<td><input type="number" ng-model="intended" ng-change="updateCosts()"></td>
 				</tr><tr>
 					<td>Cost</td>
 					<td>{{ cost|currency }}</td>
