@@ -138,7 +138,7 @@
 			<a class="btn btn-primary" href="#" ng-click="reserve()">Process Deduction</a>
 			<div class = "panel panel-primary" ng-show = "reservations.length > 0">
 				<div class = "panel-heading">
-					<h3>Reservation</h3>
+					Reservation
 				</div>
 				<div class = "panel-body">
 					<div ng-repeat = "reservation in reservations">
