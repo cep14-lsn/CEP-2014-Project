@@ -25,7 +25,7 @@
 			function tellUser( s ) {
 				alert( s );
 			}
-			function resvCont( $scope ) {
+			function resvCont( $scope , $filter ) {
 				$scope.changeLocation = function () {
 					if ( !$scope.locInfo[ $scope.loc ] ) {
 						var tables = Math.min( Math.max( hashdigest( hash( $scope.loc ) ) , 15 ) , 150 ) , vacancies = Math.round( tables * Math.random() );
