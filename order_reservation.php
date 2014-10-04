@@ -28,7 +28,7 @@
 			function resvCont( $scope , $filter ) {
 				$scope.changeLocation = function () {
 					if ( !$scope.locInfo[ $scope.loc ] ) {
-						var tables = Math.min( Math.max( hashdigest( hash( $scope.loc ) ) , 15 ) , 150 ) , vacancies = Math.round( tables * Math.random() );
+						var tables = Math.max( hashdigest( hash( $scope.loc ) ) , 10 ) , vacancies = Math.round( tables * Math.random() );
 						$scope.locInfo[ $scope.loc ] = {
 							"tables" : tables,
 							"vacancies" : vacancies,
