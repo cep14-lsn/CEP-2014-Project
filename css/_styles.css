@@ -81,6 +81,11 @@ table, th, td {
 	background-color : #222;
 }
 
+/* Wells */
+.well {
+	background-color : #444;
+}
+
 /* Navbar styles*/
 .navbar-default {
 	background-color: #000;
