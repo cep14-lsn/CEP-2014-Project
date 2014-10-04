@@ -148,7 +148,7 @@
 						<td>Total Expenditure</td>
 					</tr>
 				</table>
-				<a href = "#" ng-click = "order()" class = "btn btn-primary">Place order</a>
+				<a href = "#" ng-click = "order()" class = "btn btn-primary">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
