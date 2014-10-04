@@ -36,6 +36,10 @@
 					li.cost = ( BASE_COST + ( 1 - li.vacancies / li.tables ) * ADDITIONAL_CHARGE ) * ( 1 + GST ) * ( 1 + SVC );
 				}
 				$scope.reserve = function () {
+					if ( $scope.ir > $scope.locInfo[ $scope.loc ].vacancies ) {
+						tellUser("Unable to reserve more tables than vacancies.");
+						return;
+					}
 					if ( ! confirm("Do you want to reserve " + $scope.ir + " tables at " + $scope.loc + "?" ) ) {
 						tellUser("Reservation cancelled.");
 						return;
@@ -65,7 +69,7 @@
 				<tr>
 					<td>Select Location</td>
 					<td>
-						<select ng-model = "loc" ng-change = "changeLocation()">
+						<select ng-model = "loc" ng-change = "changeLocation()" class = "form-control">
 							<option>The Abyss</option>
 							<option>Foo Bar</option>
 							<option>Mausoleum at Halicarnassus</option>
@@ -110,7 +114,6 @@
 					<td>
 						<div class = "input-group">
 							<input type = "number" class = "form-control" ng-model = "ir" ng-class = "{{ ir <= locInfo[loc].vacancies ? 'bg-success' : 'bg-warning' }}" />
-							<span class = "input-group-addon" ng-show = "ir > locInfo[loc].vacancies"><span class = "glyphicon glyphicon-warning-sign"></span></span>
 						</div>
 					</td>
 				</tr>
