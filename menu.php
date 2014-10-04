@@ -60,11 +60,10 @@
 								</tr>
 								<tr>
 									<td rowspan=2>Energy</td>
-									<td>{{ meal.nutrition.calorie }} cal</td>
+									<td>{{ meal.nutrition.calorie }} kcal</td>
 								</tr>
 								<tr>
-									<td></td>
-									<td>{{ meal.nutrition.calorie * 4.18 }} J</td>
+									<td>{{ meal.nutrition.calorie * 4.18 }} kJ</td>
 								<tr>
 									<td>Carbohydrates</td>
 									<td>{{ meal.nutrition.carbohydrate / 5 }} g</td>
