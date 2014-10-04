@@ -50,7 +50,7 @@ span.bold, th {
 }
 span.text-small {
     color:#999;
-    font-size:14px;
+    font-size:smaller;
 }
 span.text-strong {
     color:#666;
