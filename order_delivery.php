@@ -134,9 +134,9 @@
 				<div class="container-fluid" data-ng-repeat="drinks in infoFood.drinks">
 					<h3>{{ drinks.name }}</h3>
 					<img data-ng-src="drinks.img">
-					<p>Unit Cost: {{  mealDrink.cost.side | currency }}</p>
+					<p>Unit Cost: {{  drinks.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="drinks.qty" data-ng-change="updateCart('drinks', drinks.qty, drinks.name, 'side')"></p>
-					<p>Total Cost: {{ mealDrink.cost.side * mealDrink.qty | currency }}</p>
+					<p>Total Cost: {{ drinks.cost.side * drinks.qty | currency }}</p>
 				</div>
 			</div>
 			<hr>
