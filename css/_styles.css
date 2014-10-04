@@ -105,9 +105,9 @@ span.text-strike, option.option-divider {
 }
 .navbar-nav>li:hover, .navbar-nav>li:focus {
 	border-bottom: #ff8 solid 5px;
-    background: -webkit-linear-gradient(#000, #666);
-    background: -moz-linear-gradient(#000, #666);
-    background: linear-gradient(#000, #666);
+    background: -webkit-linear-gradient(0deg, #000000, #666666);
+    background: -moz-linear-gradient(0deg, #00000, #666666);
+    background: linear-gradient(0deg, #000000, #666666);
 }
 .navbar-nav > li.dropdown.open > a.dropdown-toggle {
 	color : #fff;
