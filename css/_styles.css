@@ -104,7 +104,6 @@ span.text-strike, option.option-divider {
 	background-color: #444;
 }
 .navbar-nav>li:hover, .navbar-nav>li:focus {
-	background-color : #222;
 	border-bottom: #ff8 solid 5px;
     background: -webkit-linear-gradient(#000, #666);
     background: -moz-linear-gradient(#000, #666);
