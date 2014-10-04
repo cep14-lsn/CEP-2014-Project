@@ -97,6 +97,7 @@
 					}
 				}
 				$scope.newcartitem_choose = function( item ) {
+				console.log(item);
 					var f = item.food;
 					$scope.dds[0].name = f.name
 					if ( f.cost.meal ) {
