@@ -38,7 +38,7 @@
 					"mealSide": [],
 					"drinks": []
 				};
-				$scope.dLocation = "Summit of Olympus Mon";
+				$scope.dLocation = Math.floor(Math.random() * 1000000);
 
 				$scope.calcCosts = function(){
 					$scope.expenseFood = 0;
@@ -82,7 +82,7 @@
 				}
 
 				$scope.calcDist = function(){
-					$scope.dDist = parseInt(hashdigest(hash($scope.dLocation)), 16) / 10;
+					$scope.dDist = Math.round(parseInt(hashdigest(hash($scope.dLocation)), 16) / 100) / 10;
 				}
 
 			}
