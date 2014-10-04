@@ -36,7 +36,7 @@
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
-		<div class="container-fluid" ng-app="svcReserve" ng-controller="reserver">
+		<div class="container-fluid" ng-app="" ng-controller="reserver">
 			<h1>Why reserve?</h1>
 			<p>Sometimes, it can be difficult for you and your friends or family to find a space just for you at the MekDoornels restaurant.</p>
 			<p>Popularity can be both a blessing and a curse.</p>

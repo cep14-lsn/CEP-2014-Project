@@ -22,7 +22,7 @@
             <p>The restaurant chain was intended to produce food for customers as fast as possible.</p>
             <p>In the first 6 years of our operation, just as the world struggled to survive through one of the most deadly wars ever, we struggled to stay competitive in the ever-changing restaurant industry.</p>
             <p>However, ever since Pear Inc. sponsored our growth in the year 1965, our business has continued to skyrocket, until you see the success that is us today.</p>
-            <p>By the year 1984, we have expanded to 3 continents <!--Oceania, Eurasia, Eastasia (1984 reference)--> and our yearly revenue had increased to USD 1 quadrillion!</p>
+            <p>By the year 1984, we have expanded to 3 continents <!--Oceania, Eurasia, Eastasia (1984 reference)--> and our yearly revenue had increased to USD 1 000 000 000 000!</p>
             <p>Till today, our business still flourishes everywhere we are. We look forward to building a brighter future with you.</p>
         </div>
         <hr>
