@@ -58,13 +58,13 @@
 							<table class = "table">
 								<tr>
 									<th>Nutritional Information</th>
+									<th></th>
 								</tr>
 								<tr>
-									<td>Energy</td>
+									<td rowspan = "2">Energy</td>
 									<td>{{ mealset.nutrition.calorie }} kcal</td>
 								</tr>
 								<tr>
-									<td></td>
 									<td>{{ mealset.nutrition.calorie * 4.2 }} kJ</td>
 								<tr>
 									<td>Carbohydrates</td>
