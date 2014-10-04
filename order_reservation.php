@@ -87,7 +87,7 @@
 						<select ng-model = "loc" ng-change = "changeLocation()" class = "form-control">
 							<option>/dev/null</option>
 							<option>Foo Bar</option>
-							<option disabled></option>
+							<option disabled class="option-divider"></option>
 
 							<option>Mausoleum at Halicarnassus</option>
 							<option>Hanging Gardens of Babylon</option>
@@ -95,22 +95,22 @@
 							<option>Colossus of Rhodes</option>
 							<option>Statue of Zeus at Olympia</option>
 							<option>Lighthouse of Alexandra</option>
-							<option disabled></option>
+							<option disabled class="option-divider"></option>
 
 							<option>Minotaur Labyrinth</option>
 							<option>Bermuda Triangle</option>
 							<option>In the Mariana Trench</option>
 							<option>Krakatoa, Indonesia</option>
-							<option disabled></option>
+							<option disabled class="option-divider"></option>
 							
 							<option>Sagittarius A*</option>
 							<option>Proxima Centauri</option>
-							<option disabled></option>
+							<option disabled class="option-divider"></option>
 
 							<option>The Rude Sandstorm</option>
 							<option>Area 51</option>
 							<option>Atlantis South</option>
-							<option disabled></option>
+							<option disabled class="option-divider"></option>
 
 							<option>The Nautilius</option>
 							<option>The Nine Hells</option>
