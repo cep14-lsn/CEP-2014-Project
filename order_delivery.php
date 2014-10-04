@@ -9,7 +9,7 @@
 				font-size:14px;
 			}
 			img.food-icon {
-                max-height: 160px;
+                max-height: 200px;
                 max-width: 100%
             }
 		</style>
@@ -114,11 +114,15 @@
 				<h2>A. Set Meals</h2>
 				<p>Fun for the whole family! Order one per person. Available only as a set.</p>
 				<div class="container-fluid" data-ng-repeat="mealSet in infoFood.mealSet">
-					<h3>{{ mealSet.name }}</h3>
-					<img data-ng-src="{{ mealSet.img }}" class="food-icon" alt="Meal icon">
-					<p>Unit Cost: <abbr title="As a set">{{ mealSet.cost.meal | currency }}</abbr> | <abbr title="As &agrave; la carte at a branch"><span class="alc">{{ mealSet.cost.alc | currency }}</span></abbr></p>
-					<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name, 'meal')"></p>
-					<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty | currency }} </p>
+					<div class="row food-item">
+						<div class="col-xs-12 col-md-6 food-pic"><img data-ng-src="{{ mealSet.img }}" class="food-icon" alt="Meal icon"></div>
+						<div class="col-xs-12 col-md-6 food-pic">
+							{{ mealSet.name }}</h3>
+							<p>Unit Cost: <abbr title="As a set">{{ mealSet.cost.meal | currency }}</abbr> | <abbr title="As &agrave; la carte at a branch"><span class="alc">{{ mealSet.cost.alc | currency }}</span></abbr></p>
+							<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name, 'meal')"></p>
+							<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty | currency }} </p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<br>
@@ -148,7 +152,7 @@
 			<hr>
 			<h1>Step 3: Choose where you are eating</h1>
 			<p>Select where you would like to eat!</p>
-			<table>
+			<table class="table">
 				<tr>
 					<td>Postal Code</td>
 					<td><input type="number" data-ng-model="dLocation" data-ng-change="calcDist()"></td>
