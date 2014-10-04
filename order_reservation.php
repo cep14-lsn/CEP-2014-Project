@@ -56,7 +56,7 @@
                 }
 
 				$scope.deduct = function() {
-					if(!confirm("Are you sure you want to reserve " + $scope.intended + " tables at " + $scope.rLocation + " for " + $scope.cost + "?")){
+					if(!confirm("Are you sure you want to reserve " + $scope.intended + " tables at " + $scope.rLocation + "?")){
 						alert("Not reserved.");
 						return null;
 					}
