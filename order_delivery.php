@@ -88,7 +88,7 @@
 				$scope.newcartitem_ordermode = function( item ) {
 					$scope.dds[1].name = item.display;
 					if ( item.display == "Set Meal" ) {
-						$scope.newcartitem_choose( {"food":$scope.newcartitem.food} );)
+						$scope.newcartitem_choose( {"food":$scope.newcartitem.food} );
 					} else {
 						$scope.newcartitem.mode = "alc";
 						while ( $scope.dds.length > 1 ) {
