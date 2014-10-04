@@ -86,10 +86,19 @@
 					console.log( item )
 					item.handler( item );
 				}
+				$scope.newcartitem_ordermode = function( item ) {
+					$scope.dds[1].name = item.display;
+					if ( item.display == "Set Meal" ) {
+						$scope.newcartitem.mode = "set";
+					} else {
+						$scope.newcartitem.mode = "alc";
+					}
+				}
 				$scope.newcartitem_choose = function( item ) {
 					console.log(item);
 					var f = item.food;
-					$scope.dds[0].name = f.name
+					$scope.dds[0].name = f.name;
+					$scope.newcartitem.food = f;
 					if ( f.cost.meal ) {
 						$scope.dds.push({
 							"name" : "Set Meal",
@@ -98,6 +107,7 @@
 								{ "display" : "À la carte" , "handler" : $scope.newcartitem_ordermode },
 							]
 						});
+						$scope.newcartitem.mode = "set";
 						var sd = {
 							"name" : "Select a Side Dish ...",
 							"options" : []
