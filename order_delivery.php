@@ -115,7 +115,7 @@
 					return $scope.newcartitem.food && !( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side && $scope.newcartitem.drink ) );
 				}
 				$scope.updatePostalCode = function () {
-					if ( $scope.pc > 99999 && $scope.pc < 1000000 ) {
+					if ( $scope.pc > 0 && $scope.pc < 1000000 ) {
 						var s = "" + $scope.pc;
 						var r = "";
 						for ( var i = 0 ; i < s.length ; i++ ) {
