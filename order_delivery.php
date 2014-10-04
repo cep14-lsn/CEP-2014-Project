@@ -148,9 +148,6 @@
 					}
 				}
 				$scope.addcart = function() {
-					if ( !$scope.newcartitem.food || ( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side || $scope.newcartitem.drink ) ) ) {
-						return;
-					}
 					$scope.items.push( $scope.newcartitem );
 					$scope.newcartitem = {};
 					$scope.dds = [{
@@ -162,7 +159,7 @@
 					}
 				}
 				$scope.canaddcart = function () {
-					return $scope.newcartitem.food && !( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side || $scope.newcartitem.drink ) );
+					return $scope.newcartitem.food && !( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side && $scope.newcartitem.drink ) );
 				}
 				$scope.foodinfo = infoFood;
 				$scope.foods = [];
