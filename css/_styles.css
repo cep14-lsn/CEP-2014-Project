@@ -35,7 +35,7 @@ a.btn {
 	margin: 2px 2px 2px 2px;
 	border-color:transparent;
 }
-a.btn:hover {
+a.btn:hover, a.btn:focus {
 	background-color:#ff8;
 	color:#000;
 }
@@ -106,7 +106,8 @@ span.text-strike, option.option-divider {
 .navbar-nav>li:hover, .navbar-nav>li:focus {
 	background-color : #222;
 	border-bottom: #ff8 solid 5px;
-    background-image: linear-gradient(#000, #444);
+    background-image: -webkit-gradient(#000, #666);
+    background-image: linear-gradient(#000, #666);
 }
 .navbar-nav > li.dropdown.open > a.dropdown-toggle {
 	color : #fff;

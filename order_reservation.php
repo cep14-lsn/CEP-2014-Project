@@ -76,7 +76,7 @@
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
-		<div class="container-fluid" ng-app="" ng-controller="resvCont">
+		<div class="container-fluid" data-ng-app="" data-ng-controller="resvCont">
 			<div class = "page-header">
 				<h1>Reservation Services <span class="text-small">for your convenience of getting a seat</span></h1>
 			</div>
@@ -84,7 +84,7 @@
 				<tr>
 					<td>Select Location</td>
 					<td>
-						<select ng-model = "loc" ng-change = "changeLocation()" class = "form-control">
+						<select data-ng-model = "loc" data-ng-change = "changeLocation()" class = "form-control">
 							<option>/dev/null</option>
 							<option>Foo Bar</option>
 							<option disabled class="option-divider"></option>
@@ -137,7 +137,7 @@
 				<tr>
 					<td>Reserve tables</td>
 					<td>
-						<input type = "number" ng-model = "ir" class = "{{ 'form-control' + ( ir <= locInfo[loc].vacancies && ir > 0 ? '' : ' ng-invalid' ) }}" />
+						<input type = "number" data-ng-model = "ir" class = "{{ 'form-control' + ( ir <= locInfo[loc].vacancies && ir > 0 ? '' : ' data-ng-invalid' ) }}" />
 					</td>
 				</tr>
 				<tr>
@@ -145,13 +145,13 @@
 					<td>{{ locInfo[loc].cost * ir | currency }}</td>
 				</tr>
 			</table>
-			<a class="btn btn-primary" href="#" ng-click="reserve()">Process Deduction</a>
-			<div class = "panel panel-primary" ng-show = "reservations.length > 0">
+			<a class="btn btn-primary" href="#" data-ng-click="reserve()">Process Deduction</a>
+			<div class = "panel panel-primary" data-ng-show = "reservations.length > 0">
 				<div class = "panel-heading">
 					Reservation
 				</div>
 				<div class = "panel-body">
-					<div ng-repeat = "reservation in reservations">
+					<div data-ng-repeat = "reservation in reservations">
 						<p>{{ reservation.text }}</p>
 						<p class = "well">{{ reservation.rcode }}</p>
 					</div>
