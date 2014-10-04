@@ -83,7 +83,12 @@
 			}
 			function deliCont( $scope ) {
 				$scope.foodinfo = infoFood;
-				//$scope.
+				$scope.foods = [];
+				for ( k in infoFood ) {
+					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
+						$scope.foods.push( infoFood[k][i] );
+					}
+				}
 			}
 		</script>
 	</head>
@@ -120,7 +125,7 @@
 								<span class = "caret"></span>
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
-								<li ng-repeat = "food in foodclass in foodinfo">
+								<li ng-repeat = "food in foods">
 									<a href = "#" ng-click = "newcartitem_choose( food )">
 										{{ food.name }}
 									</a>
