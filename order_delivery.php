@@ -82,6 +82,10 @@
 				$scope.dDist = $scope.calcDist;
 			}
 			function deliCont( $scope ) {
+				$scope.itemclick = function( item ) {
+					console.log( item )
+					item.handler( item );
+				}
 				$scope.newcartitem_choose = function( item ) {
 					console.log(item);
 					var f = item.food;
@@ -128,7 +132,7 @@
 				for ( k in infoFood ) {
 					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
 						$scope.foods.push( infoFood[k][i] );
-						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name} );
+						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name,"itemclick":$scope.newcartitem_choose} );
 					}
 				}
 			}
@@ -168,7 +172,7 @@
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
 								<li ng-repeat = "c in dd.options">
-									<a href = "#" ng-click = "c.itemclick( c )">
+									<a href = "#" ng-click = "itemclick( c )">
 										{{ c.display }}
 									</a>
 								</li>
