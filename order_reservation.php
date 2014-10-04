@@ -6,7 +6,25 @@
 		<script>
 			var GST = 0.07;
 			var SVC = 0.10;
-			deduct = function() {return null;};
+
+			pad = function(str, desired, padChar){
+				// Pads a string to a desired length with char
+				if(padChar === undefined){padChar = "0"};
+
+				if(str.length > desired){
+					throw new Error("input string is longer than desired length");
+				} else if(str.length == desired){
+					return str;
+				} else {
+					var padded = str;
+
+					for(var i = str.length; i < desired; i++){
+						padded = padChar + padded;
+					}
+
+					return padded;
+				}
+			}
 
 			reserver = function($scope){
 				// Default values
@@ -26,7 +44,7 @@
 				}
 
 				$scope.updateLocation = function() {
-                    $scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)) * 20, 150));
+                    $scope.tablesTotal = Math.ceil(Math.min(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)), 15), 150));
                     $scope.vacancies = Math.round($scope.tablesTotal * Math.random());
                     $scope.updateCosts();
 
@@ -37,11 +55,19 @@
                     }
                 }
 
-				deduct = function() {
-					var now = Date();
-					alert($filter("currency")($scope.cost) + " has been deducted from your account.");
-					var codeFinal = $scope.tablesTotal.toString(16) + $scope.vacancies.toString(16) + $scope.intended.toString(16);
-					$scope.reservation_code = md5(now.toSource() + codeFinal);
+				$scope.deduct = function() {
+					if(!confirm("Are you sure you want to reserve " + $scope.intended + " tables at " + $scope.rLocation + " for " + $filter("currency")($scope.cost) + "?")){
+						return null;
+					}
+
+					var rCode = pad(Date().getTime().toString(16), 16); // Timestamp as Unix time
+					rCode += pad($scope.intended.toString(16), 4);
+					rCode += $scope.rLocation();
+					$scope.codeReserved = md5(rCode);
+					// Presumably, a server-side database would be updated here with the hash and the information.
+					// A function would also be called to check if the time slot was available.
+
+					alert($filter("currency")($scope.cost) + " has been deducted from your account. Use the reservation code and keep it safe.");
 				}
 			}
 		</script>
@@ -54,6 +80,7 @@
 			<p>Popularity can be both a blessing and a curse.</p>
 			<p>However, for you, we have just the right solution - Seat Reservation!</p>
 			<p>For just a few dollars, we can find you an available seat and reserve it for you.</p>
+			<p>Note: All reservations are limited to 2 hours.</p>
 			<hr>
 
 			<h1>Reservation Services</h1>
@@ -90,9 +117,9 @@
 					<td>{{ cost|currency }}</td>
 				</tr>
 			</table>
-			<p><a class="btn btn-primary" href="#" onclick="deduct()">Process Deduction</a></p>
+			<p><a class="btn btn-primary" href="#" ng-click="deduct()">Process Deduction</a></p>
 			<br>
-			<p>Use this reservation code: {{ reservation_code }}</p>
+			<p>Use this reservation code: {{ codeReserved }}</p>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
 	</body>
