@@ -32,7 +32,7 @@
             <p>We intend to pioneer the food industry to bring food to new levels of <span style="font-size: 1pt">questionable </span>enjoyability and <span style="font-size:1pt">zero </span>nutrition.</p>
             <p>Our breakthrough invention, the <span class="span-topSecret">[REDACTED]</span> technology allows us to reduce fat values in foot to near zero levels, elevating our foodstuffs to a even greater level in health.</p>
             <p><a class="btn btn-primary" href="menu.php" role="button">Try a Sample <span class="glyphicon glyphicon-chevron-right"></span></a></p>
-            <p>We are also looking for people to take part in our culinary experiments! All our released-for-testing foodstuffs have been extensively tested and proven safe by over 100 organizations, including the Food Action for Trade and Security a.k.a. FATS. Join us to contribute your valuable advice and opinion to help make our food the best for everyone!</p>
+            <p>We are also looking for people to take part in our culinary experiments! All our released-for-testing foodstuffs have been extensively tested and proven safe by over 100 organizations, including the <abbr title="FATS">Food Association for Trade and Security</abbr>. Join us to contribute your valuable advice and opinion to help make our food the best for everyone!</p>
             <p><a class="btn btn-primary" href="contact.php" role="button">Sign up as Culinary Test Subject <span class="glyphicon glyphicon-chevron-right"></span></a></p>
         </div>
         <hr>
