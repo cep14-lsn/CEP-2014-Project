@@ -121,7 +121,7 @@
 					<td>{{ locInfo[loc].cost * ir | currency }}</td>
 				</tr>
 			</table>
-			<a class="btn btn-primary" href="#" ng-click="deduct()" ng-hide = "rcode">Process Deduction</a>
+			<a class="btn btn-primary" href="#" ng-click="reserve()" ng-hide = "rcode">Process Deduction</a>
 			<p ng-show = "rcode">Use this reservation code: {{ rcode }}</p>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
