@@ -94,24 +94,23 @@
 						$scope.dds.push({
 							"name" : "Set Meal",
 							"options" : [
-								{"display" : "Set Meal"},
-								{"display" : "À la carte"},
-							],
-							"itemclick" : $scope.newcartitem_ordermode
+								{ "display" : "Set Meal" , "handler" : $scope.newcartitem_ordermode },
+								{ "display" : "À la carte" , "handler" : $scope.newcartitem_ordermode },
+							]
 						});
 						var sd = {
 							"name" : "Select a Side Dish ...",
 							"options" : []
 						};
 						for ( var i = 0 ; i < infoFood.mealSide.length ; i++ ) {
-							sd.options.push( {"food":infoFood.mealSide[i],"display":infoFood.drinks[i].name} );
+							sd.options.push( {"food":infoFood.mealSide[i],"display":infoFood.mealSide[i].name,"handler":$scope.newcartitem_mealside} );
 						}
 						var drink = {
 							"name" : "Select a Drink ...",
 							"options" : []
 						}
 						for ( var i = 0 ; i < infoFood.drinks.length ; i++ ) {
-							drink.options.push( {"food":infoFood.drinks[i],"display":infoFood.drinks[i].name} );
+							drink.options.push( {"food":infoFood.drinks[i],"display":infoFood.drinks[i].name,"handler":$scope.newcartitem_drink} );
 						}
 						$scope.dds.push( sd );
 						$scope.dds.push( drink );
