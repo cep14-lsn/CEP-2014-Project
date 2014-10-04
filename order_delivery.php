@@ -2,7 +2,7 @@
 <html>
     <head>
         !ipp[_cep14_insert components/_head.html]
-        <script src="js/md5.js"></script>
+        <script src="js/hash.js"></script>
 		<style>
 			.alc {
 				color:#999;
@@ -29,7 +29,7 @@
 
 				$scope.infoFood = infoFood;
 				$scope.displayMeals = false;
-				$scope.dDist = 0;
+				$scope.dDist = 42;
 				$scope.expenseDelivery = 0;
 				$scope.expenseFood = 0;
 				$scope.expenseGT = 0;
@@ -82,7 +82,7 @@
 				}
 
 				$scope.calcDist = function(){
-					// Hash dLocation
+					$scope.dDist = parseInt(hashdigest(hash($scope.dLocation)), 16) / 10;
 				}
 
 			}
