@@ -22,9 +22,6 @@
 					return str;
 				}
 			}
-			function tellUser( s ) {
-				alert( s );
-			}
 			function resvCont( $scope , $filter ) {
 				$scope.changeLocation = function () {
 					if ( !$scope.locInfo[ $scope.loc ] ) {
