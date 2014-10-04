@@ -50,7 +50,7 @@
 							<img data-ng-src = "{{meal.img}}" alt = "Meal image" />
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
-							<h2>{{ meal.name }}</h2><span class="label label-primary" data-ng-show="{{ meal.new }}">NEW!</span>
+							<h2>{{ meal.name }} <span class="label label-primary" data-ng-show="{{ meal.new }}">NEW!</span></h2>
 							<p class = "text-muted linebreak">{{ process( meal.desc ) }}</p>
 							<p class="tex-muted food-lore linebreak">{{ process( meal.lore ) }}</p>
 							<table class="table">
