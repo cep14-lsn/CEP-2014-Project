@@ -109,7 +109,7 @@
 						<option>Proxima Centauri</option>
 						<option>Death Star II</option>
 						<option>Diagon Alley</option>
-						<option>Ba Sing Se</option>
+						<option>Ba Sing Se Middle Ring</option>
 						<option>Atlantis South</option>
 						<option>Mt. Vesuvius</option>
 						<option>The Rude Sandstorm</option>
