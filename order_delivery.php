@@ -82,8 +82,10 @@
 				}
 
 				$scope.calcDist = function(){
-					$scope.dDist = Math.round(parseInt(hashdigest(hash($scope.dLocation)), 16) / 100) / 10;
+					$scope.dDist = Math.round(parseInt(hashdigest(hash($scope.dLocation)), 16) / 2) / 10;
 				}
+
+				$scope.dDist = $scope.calcDist;
 
 			}
 		</script>
