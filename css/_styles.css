@@ -43,6 +43,11 @@ span.bold, th {
     font-weight:700;
     color:#ffc;
 }
+.lore {
+    font-style:italic;
+    color:#999;
+    font-size:12px;
+}
 
 /* Table properties */
 table {

@@ -16,13 +16,14 @@
             ],
             "lore": [
                 "'My kingdom for a burger!'",
-                "~ Rich Ard IV"
+                "~ Rich Ardiii"
             ],
             "stock": 200,
             "cost": {
-                "a la carte": 3,
-                "meal": 4
-            }
+                "alc": 3.50,
+                "meal": 4.50
+            },
+			"qty": 0
         },
         {
             "name": "MultiBurger (TM)",
@@ -37,7 +38,7 @@
             "desc": [
                 "Order your very own customized MultiBurger (TM) today. Each layer consists of a (post) - succulent beef steak with (once) fresh cheddar cheese, with (suspiciously) crunchy lettuce and tomato at the top.",
                 "NOTE: Nutrition values and cost values above are given per layer of burger. Add $1, 20 calories, 5 g of carbohydrate for the lettuce and tomato.",
-                "Only available a la carte."
+                "Only available a la carte. Comes as 3 layers when ordered by delivery, un-negotiable."
             ],
             "lore": [
                 "'We are many, we are one.'",
@@ -45,9 +46,10 @@
             ],
             "stock": 500,
             "cost": {
-                "layer": 1.50,
-                "base": 1
-            }
+                "alc": 4.50,
+                "meal": 5.50
+            },
+			"qty": 0
         },
         {
             "name": "PizzaCake",
@@ -67,7 +69,12 @@
             "lore": [
                 "'PizzaCake Delivery, 6-222-6-111!' (Disclaimer: not a valid phone number)",
                 "~ Anonymous"
-            ]
+            ],
+			"cost": {
+				"alc": 7.25,
+				"meal": 8.75
+			},
+			"qty": 0
         }
     ],
     "mealSide": [
@@ -91,7 +98,8 @@
             "stock": 1337,
             "cost": {
                 "side": 1.20
-            }
+            },
+			"qty": 0
         },
         {
             "name": "Fresh Lemon Fruit",
@@ -122,7 +130,8 @@
             "stock": 200,
             "cost": {
                 "side": 4.00
-            }
+            },
+			"qty": 0
         }
     ],
     "drinks": [
@@ -149,7 +158,8 @@
             "stock": 9001,
             "cost": {
                 "side": 1.20
-            }
+            },
+			"qty": 0
         },
         {
             "name": "Moonshine",
@@ -169,7 +179,8 @@
             "stock": 2014,
             "cost": {
                 "side": 2.00
-            }
+            },
+			"qty": 0
         }
     ]
 }
