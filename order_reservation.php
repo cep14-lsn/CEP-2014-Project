@@ -6,24 +6,16 @@
 		<script>
 			var GST = 0.07;
 			var SVC = 0.10;
-
-			pad = function(str, desired, padChar){
-				// Pads a string to a desired length with char
-				if(padChar === undefined){padChar = "0"};
-
-				if(str.length > desired){
-					throw new Error("input string is longer than desired length");
-				} else if(str.length == desired){
-					return str;
+			
+			function pad( str , dl , c ) {
+				if ( dl <= str.length ) {
+					return str.substring( 0 , dl );
 				} else {
-					var padded = str;
-
-					for(var i = str.length; i < desired; i++){
-						padded = padChar + padded;
-					}
-
-					return padded;
+					while ( str.length < dl ) str = ( c ? c : "0" ) + str;
+					return str;
 				}
+			}
+			function resvCont( $scope ) {
 			}
 
 			reserver = function($scope){
