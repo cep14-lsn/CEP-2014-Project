@@ -92,7 +92,7 @@
                 "Mmm... tasty, mouthwatering fries. Made from somewhat freshly harvested potatoes and near-oceanic salt only."
             ],
             "lore": [
-                "'I believe you speak French?' ~ Host",
+                "'I believe you speak French?' ~ Host<br>",
                 "'Yes, french fries and french toast!' ~ Maury"
             ],
             "stock": 1337,
@@ -132,7 +132,30 @@
                 "side": 4.00
             },
 			"qty": 0
-        }
+        },
+		{
+			"name": "Asparagus Ice Cream <span class='label label-primary'>NEW!</span>"
+			"img": "asparagus_ice_cream.jpg",
+			"nutrition": {
+				"calorie": 35,
+				"carbohydrate": 68.9,
+				"fats": 2,
+				"protein": 5,
+				"salt": 2
+			},
+			"desc": [
+				"Many delightful things are green, such as this ice cream!<br>",
+				"DISCLAIMER: Not our fault if your face turns green. Not to be confused with Asperger's Syndrome."
+			],
+			"lore": [
+				"'Asparagus is love, asparagus is life. Oh, and so is ice cream.' ~ Mr. X"
+			],
+			"stock": 724,
+			"cost": {
+				"side": 0.90
+			},
+			"qty": 0
+		}
     ],
     "drinks": [
         {

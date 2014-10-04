@@ -86,7 +86,7 @@
 				}
 
 				$scope.calcDist = function(){
-					$scope.dDist = Math.round(parseInt(hashdigest(hash($scope.dLocation)), 16) / 2) / 10;
+					$scope.dDist = Math.round(hash($scope.dLocation).charCodeAt(0) / 2) / 10;
 				}
 
 				$scope.dDist = $scope.calcDist;
@@ -115,9 +115,9 @@
 				<p>Fun for the whole family! Order one per person. Available only as a set.</p>
 				<div class="container-fluid" data-ng-repeat="mealSet in infoFood.mealSet">
 					<div class="row food-item">
-						<div class="col-xs-12 col-md-6 food-pic"><img data-ng-src="{{ mealSet.img }}" class="food-icon" alt="Meal icon"></div>
-						<div class="col-xs-12 col-md-6 food-pic">
-							{{ mealSet.name }}</h3>
+						<div class="col-xs-1 col-md-1 food-pic"><img data-ng-src="{{ mealSet.img }}" class="food-icon" alt="Meal icon"></div>
+						<div class="col-xs-4 col-md-4 food-pic">
+							<h3>{{ mealSet.name }}</h3>
 							<p>Unit Cost: <abbr title="As a set">{{ mealSet.cost.meal | currency }}</abbr> | <abbr title="As &agrave; la carte at a branch"><span class="alc">{{ mealSet.cost.alc | currency }}</span></abbr></p>
 							<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name, 'meal')"></p>
 							<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty | currency }} </p>
@@ -130,11 +130,15 @@
 				<h2>B. Side Meals</h2>
 				<p>A quick snack when watching something exciting, be it movies, football, anime...</p>
 				<div class="container-fluid" data-ng-repeat="mealSide in infoFood.mealSide">
-					<h3>{{ mealSide.name }}</h3>
-					<img data-ng-src="{{ mealSide.img }}" class="food-icon" alt="Meal icon">
-					<p>Unit Cost: {{ mealSide.cost.side | currency }}</p>
-					<p>Quantity: <input type="number" data-ng-model="mealSide.qty" data-ng-change="updateCart('mealSide', mealSide.qty, mealSide.name, 'side')"></p>
-					<p>Total Cost: {{ mealSide.cost.side * mealSide.qty | currency }}</p>
+					<div class="row food-item">
+						<div class="col-xs-1 col-md-1 food-pic"><img data-ng-src="{{ mealSide.img }}" class="food-icon" alt="Meal icon"></div>
+						<div class="col-xs-4 col-md-4 food-pic">
+							<h3>{{ mealSide.name }}</h3>
+							<p>Unit Cost: {{ mealSide.cost.side | currency }}</p>
+							<p>Quantity: <input type="number" data-ng-model="mealSide.qty" data-ng-change="updateCart('mealSide', mealSide.qty, mealSide.name, 'side')"></p>
+							<p>Total Cost: {{ mealSide.cost.side * mealSide.qty | currency }}</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<br>
@@ -142,11 +146,15 @@
 				<h2>C. Drinks</h2>
 				<p>Satisfying thirst quenchers!</p>
 				<div class="container-fluid" data-ng-repeat="drinks in infoFood.drinks">
-					<h3>{{ drinks.name }}</h3>
-					<img data-ng-src="{{ drinks.img }}" class="food-icon" alt="Meal icon">
-					<p>Unit Cost: {{  drinks.cost.side | currency }}</p>
-					<p>Quantity: <input type="number" data-ng-model="drinks.qty" data-ng-change="updateCart('drinks', drinks.qty, drinks.name, 'side')"></p>
-					<p>Total Cost: {{ drinks.cost.side * drinks.qty | currency }}</p>
+					<div container="row food-item">
+						<div class="col-xs-1 col-md-1 food-pic"><img data-ng-src="{{ drinks.img }}" class="food-icon" alt="Meal icon"></div>
+						<div class="col-xs-1 col-md-1 food-pic">
+							<h3>{{ drinks.name }}</h3>
+							<p>Unit Cost: {{  drinks.cost.side | currency }}</p>
+							<p>Quantity: <input type="number" data-ng-model="drinks.qty" data-ng-change="updateCart('drinks', drinks.qty, drinks.name, 'side')"></p>
+							<p>Total Cost: {{ drinks.cost.side * drinks.qty | currency }}</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<hr>
