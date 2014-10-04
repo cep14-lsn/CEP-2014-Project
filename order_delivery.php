@@ -109,7 +109,7 @@
 				<p>Fun for the whole family! Order one per person. Available only as a set.</p>
 				<div class="container-fluid" data-ng-repeat="mealSet in infoFood.mealSet">
 					<h3>{{ mealSet.name }}</h3>
-					<img data-ng-src="mealSet.img">
+					<img data-ng-src="{{ mealSet.img }}">
 					<p>Unit Cost: <abbr title="As a set">{{ mealSet.cost.meal | currency }}</abbr> | <abbr title="As &agrave; la carte at a branch"><span class="alc">{{ mealSet.cost.alc | currency }}</span></abbr></p>
 					<p>Quantity: <input type="number" data-ng-model="mealSet.qty" data-ng-change="updateCart('mealSet', mealSet.qty, mealSet.name, 'meal')"></p>
 					<p>Total Cost: {{ mealSet.cost.meal * mealSet.qty | currency }} </p>
@@ -121,7 +121,7 @@
 				<p>A quick snack when watching something exciting, be it movies, football, anime...</p>
 				<div class="container-fluid" data-ng-repeat="mealSide in infoFood.mealSide">
 					<h3>{{ mealSide.name }}</h3>
-					<img data-ng-src="mealSide.img">
+					<img data-ng-src="{{ mealSide.img }}">
 					<p>Unit Cost: {{ mealSide.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="mealSide.qty" data-ng-change="updateCart('mealSide', mealSide.qty, mealSide.name, 'side')"></p>
 					<p>Total Cost: {{ mealSide.cost.side * mealSide.qty | currency }}</p>
@@ -133,7 +133,7 @@
 				<p>Satisfying thirst quenchers!</p>
 				<div class="container-fluid" data-ng-repeat="drinks in infoFood.drinks">
 					<h3>{{ drinks.name }}</h3>
-					<img data-ng-src="drinks.img">
+					<img data-ng-src="{{ drinks.img }}">
 					<p>Unit Cost: {{  drinks.cost.side | currency }}</p>
 					<p>Quantity: <input type="number" data-ng-model="drinks.qty" data-ng-change="updateCart('drinks', drinks.qty, drinks.name, 'side')"></p>
 					<p>Total Cost: {{ drinks.cost.side * drinks.qty | currency }}</p>
