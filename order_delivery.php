@@ -36,7 +36,7 @@
 				$scope.cart = {
 					"mealSet": [],
 					"mealSide": [],
-					"mealDrink": []
+					"drinks": []
 				};
 				$scope.dLocation = "Summit of Olympus Mon";
 
@@ -49,14 +49,26 @@
 					}
 
 					$scope.expenseDelivery = $scope.dDist * 2.5 + 1;
-					$scope.expenseTotal = ($scope.expenseDelivery + $scope.expenseFood);
+					$scope.expenseTotal = ($scope.expenseDelivery + $scope.expenseFood) * (1 + GST) * (1 + SVC);
 				};
 
 				$scope.updateCart = function(category, number, name) {
-					$scope.cart[category].push({
-						"number": number,
-						"name": name
-					});
+					var itemType;
+					var found = false;
+					for(itemType in $scope.cart){
+						if(itemType.name == name){
+							found = true;
+							itemType.number = number;
+							break;
+						}
+					}
+
+					if(!found){
+						$scope.cart[category].push({
+							"number": number,
+							"name": name
+						});
+					}
 
 					$scope.calcCosts();
 				}
@@ -74,7 +86,7 @@
 	        <h1>Why deliver?</h1>
 	        <p>Exhausted after a long day of school/work? Or do you want to just laze at home with your friends and family?</p>
 	        <p>No problem - we can deliver the food straight to your house!</p>
-	        <p>For a small extra fee based on your distance from our nearest branch, you can enjoy MekDoornel&rsquo; wonderful food in the comfort of your home.</p>
+	        <p>For a small extra fee based on your distance from our nearest branch, you can enjoy MekDoornels&rsquo; wonderful food in the comfort of your home.</p>
 	        <hr>
 	        <h1>Step 1: Look through the Menu</h1>
 	        <p>Look for one of our wonderful and suitable meal set that suits your dietary choices here.</p>
@@ -82,7 +94,7 @@
 	        <hr>
 	        <h1>Step 2: Choose your food</h1>
 			<p>Which one of those meals just beg to be eaten? (Answer: it's all of them!)</p>
-			<p>Current cost: {{ grandTotal }}</p>
+			<p>Current cost: {{ expenseTotal | currency }}</p>
 			<p>So choose any of them now!</p><br>
 			<div class="container-fluid">
 				<h2>A. Set Meals</h2>
@@ -138,7 +150,7 @@
 				</tr>
 				<tr>
 					<td>Total Expenditure</td>
-					<td></td>
+					<td>{{ expenseTotal | currency }}</td>
 				</td>
 			</table>
         </div>
