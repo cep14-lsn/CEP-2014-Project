@@ -99,6 +99,14 @@
 						$scope.newcartitem.mode = "alc";
 					}
 				}
+				$scope.newcartitem_mealside = function( item ) {
+					$scope.dds[2].name = item.display;
+					$scope.newcartitem.side = item.food;
+				}
+				$scope.newcartitem_drink = function( item ) {
+					$scope.dds[3].name = item.display;
+					$scope.newcartitem.side = item.food;
+				}
 				$scope.newcartitem_choose = function( item ) {
 					var f = item.food;
 					$scope.dds[0].name = f.name;
