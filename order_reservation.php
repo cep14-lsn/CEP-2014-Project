@@ -2,6 +2,11 @@
 <html>
 	<head>
 		!ipp[_cep14_insert components/_head.html]
+		<style>
+			input.form-control.ng-invalid {
+				background-color : #d77;
+			}
+		</style>
 		<script src="js/hash.js"></script>
 		<script>
 			var BASE_COST = 6;
@@ -113,7 +118,7 @@
 				<tr>
 					<td>Reserve tables</td>
 					<td>
-						<input type = "number" ng-model = "ir" class = "{{ 'form-control' + ( ir <= locInfo[loc].vacancies ? ' bg-success' : ' bg-warning' ) }}" />
+						<input type = "number" ng-model = "ir" class = "{{ 'form-control' + ( ir <= locInfo[loc].vacancies ? '' : ' ng-invalid' ) }}" />
 					</td>
 				</tr>
 				<tr>
