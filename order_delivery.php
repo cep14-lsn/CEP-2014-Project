@@ -87,13 +87,12 @@
 				$scope.newcartitem = {}
 				$scope.dds = [{
 					"name" : "Choose a food item ...",
-					"options" : [],
-					"itemclick" : $scope.newcartitem_choose
+					"options" : []
 				}];
 				for ( k in infoFood ) {
 					for ( var i = 0 ; i < infoFood[k].length ; i++ ) {
 						$scope.foods.push( infoFood[k][i] );
-						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name} );
+						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name,"handle":$scope.newcartitem_choose} );
 					}
 				}
 				$scope.newcartitem_choose = function( item ) {
@@ -168,7 +167,7 @@
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
 								<li ng-repeat = "c in dd.options">
-									<a href = "#" ng-click = "c.itemclick( c )">
+									<a href = "#" ng-click = "itemclick( c )">
 										{{ c.display }}
 									</a>
 								</li>
