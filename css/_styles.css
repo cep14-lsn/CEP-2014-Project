@@ -117,9 +117,9 @@ table, th, td {
 }
 .navbar-default .navbar-nav>.active:hover>a, .navbar-default .navbar-nav>.active:focus>a {
 	color : #fff;
-	background-color: -webkit-linear-gradient(#000, #888);
-    background-color: -moz-linear-gradient(#000, #888);
-    background-color: linear-gradient(#000, #888);
+	background-color: -webkit-linear-gradient(#000, #555);
+    background-color: -moz-linear-gradient(#000, #555);
+    background-color: linear-gradient(#000, #555);
 }
 .navbar-default .navbar-nav>li.active>a, .navbar-nav>.open:hover>a, .navbar-nav>.open:focus>a {
 	color:#fff;
