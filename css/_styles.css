@@ -72,6 +72,10 @@ table, th, td {
 /* Panels */
 .panel.panel-primary > .panel-heading {
 	background-color : #daa520;
+	border-color : #daa520;
+}
+.panel.panel-primary {
+	border-color : #daa520;
 }
 .panel > .panel-body {
 	background-color : #222;
