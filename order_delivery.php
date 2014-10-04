@@ -148,6 +148,9 @@
 					}
 				}
 				$scope.addcart = function() {
+					if ( !$scope.newcartitem.food || ( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side || $scope.newcartitem.drink ) ) ) {
+						return;
+					}
 					$scope.items.push( $scope.newcartitem );
 					$scope.newcartitem = {};
 					$scope.dds = [{
@@ -157,6 +160,9 @@
 					for ( var i = 0 ; i < $scope.foods.length ; i++ ) {
 						$scope.dds[0].options.push( {"food":$scope.foods[i],"display":$scope.foods[i].name,"handler":$scope.newcartitem_choose} );
 					}
+				}
+				$scope.canaddcart = function () {
+					return $scope.newcartitem.food && !( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side || $scope.newcartitem.drink ) );
 				}
 				$scope.foodinfo = infoFood;
 				$scope.foods = [];
@@ -217,7 +223,8 @@
 						</div>
 					</div>
 				</div>
-				<a href = "#" ng-click = "addcart()" class = "btn btn-primary">Add to Cart</a>
+				<a href = "#" onclick = "return false;" ng-click = "addcart()" class = "btn btn-primary" ng-show = "canaddcart()">Add to Cart</a>
+				<a href = "#" onclick = "return false;" class = "btn btn-primary" disabled = "disabled" ng-hide = "canaddcart()">Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
 						Items in Cart
@@ -229,8 +236,8 @@
 								<th>Price</th>
 							</tr>
 							<tr ng-repeat = "item in items">
-								<th>{{ item.food.name }}</th>
-								<th>{{ item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side }}</th>
+								<tr>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</tr>
+								<tr>{{ item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side }}</tr>
 							</tr>
 						</table>
 					</div>
