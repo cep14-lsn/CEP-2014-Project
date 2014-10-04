@@ -6,16 +6,23 @@
 		<script>
 			var GST = 0.07;
 			var SVCT = 0.10;
-			var r_location = "nowhere";
-
 			deduct = function() {return null;};
 
 			reserver = function($scope){
+				// Default values
+				$scope.rLocation = "The Abyss";
+				$scope.tablesTotal = 42;
+				$scope.vacancies = 24;
+				$scope.intended = 0;
+				$scope.cost = 0;
+
 				$scope.tablesTotal = Math.ceil(Math.max(Math.log(parseInt(md5($scope.rLocation), 16)) * 20, 150));
 				$scope.vacancies = Math.round($scope.tablesTotal * Math.random());
 
 				if($scope.vacancies == 0){
 					$("#vacancy").css("color", "#f30");
+				} else {
+					$("#vacancy").css("color", "#fff");
 				}
 
 				if($scope.intended > $scope.vacancies) {
@@ -49,14 +56,20 @@
 				<tr>
 					<td>Store Location</td>
 					<td><select ng-model="rLocation">
+						<option>The Abyss</option>
 						<option>Foo Bar</option>
-						<option>Bermuda Triangle Branch</option>
-						<option>Mordor Branch</option>
-						<option>Hogsmeade Branch</option>
+						<option>Bermuda Triangle</option>
+						<option>Airstrip One</option>
+						<option>Mordor</option>
+						<option>USS Enterprise</option>
+						<option>Cybertron</option>
+						<option>Death Star II</option>
+						<option>Hogsmeade</option>
 						<option>Ba Sing Se</option>
-						<option>Atlantis Branch</option>
-						<option>Mt. Vesuvius Branch</option>
+						<option>Atlantis South</option>
+						<option>Mt. Vesuvius</option>
 						<option>The Rude Sandstorm</option>
+						<option>The Capitol</option>
 					</select></td>
 				</tr><tr>
 					<td>Total Tables</td>
