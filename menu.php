@@ -42,7 +42,7 @@
 		<div data-ng-app = "" data-ng-controller = "menuCont" class="container-fluid">
 			<div class = "container" data-ng-repeat = "categoryinfo in [['mealSet','Set meals','to be had anywhere; à la carte or as a set meal','setmeals'],['mealSide','Side Dishes','to eat on the go, or as supplements to a fantastic meal','sidedishes'],['drinks','Drinks','thirst quenchers','drinks']]">
 				<div class = "page-header" id = "{{ categoryinfo[3] }}">
-					<h1>{{ categoryinfo[1] }} <small>{{ categoryinfo[2] }}</small></h1>
+					<h1>{{ categoryinfo[1] }} <span class="text-small">{{ categoryinfo[2] }}</span></h1>
 				</div>
 				<div data-ng-repeat = "meal in foods[categoryinfo[0]]">
 					<div class = "row food-item">
@@ -51,7 +51,7 @@
 						</div>
 						<div class = "col-xs-12 col-md-6 food-info">
 							<div class = "page-header">
-								<h2>{{ meal.name }} <small data-ng-show = "meal.cost.meal">{{ meal.cost.meal | currency }} | {{ meal.cost.alc | currency }}</small><small data-ng-hide = "meal.cost.meal">{{ meal.cost.side | currency }}</small> <span class = "label label-primary" data-ng-show = "meal.new">NEW!</span></h2>
+								<h2>{{ meal.name }} <span class="text-small" data-ng-show = "meal.cost.meal"><abbr title="Set Meal">{{ meal.cost.meal | currency }}</abbr> | <abbr title="&Agrave; la carte">{{ meal.cost.alc | currency }}</abbr></span><span class="text-small" data-ng-hide = "meal.cost.meal">{{ meal.cost.side | currency }}</span> <span class = "label label-primary" data-ng-show = "meal.new">NEW!</span></h2>
 							</div>
 							<p class = "linebreak">{{ process( meal.desc ) }}</p>
 							<p class="tex-muted food-lore linebreak">{{ process( meal.lore ) }}</p>
