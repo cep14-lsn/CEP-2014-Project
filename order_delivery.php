@@ -229,8 +229,8 @@
 								<th>Price</th>
 							</tr>
 							<tr ng-repeat = "item in items">
-								<th>{{ item.name }}</th>
-								<th>{{ item.price }}</th>
+								<th>{{ item.food.name }}</th>
+								<th>{{ item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side }}</th>
 							</tr>
 						</table>
 					</div>
