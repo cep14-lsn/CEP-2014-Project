@@ -121,6 +121,8 @@
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
 								<div ng-repeat = "foodtype in foodinfo">
+									{{ foodtype }}
+									{{ foodinfo[foodtype] }}
 									<li role = "presentation" class = "divider"></li>
 									<li ng-repeat = "food in foodinfo[foodtype]">
 										<a href = "#" ng-click = "newcartitem_choose( food )">
