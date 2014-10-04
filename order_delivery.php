@@ -224,7 +224,7 @@
 					</div>
 				</div>
 				<a href = "#" onclick = "return false;" ng-click = "addcart()" class = "btn btn-primary" ng-show = "canaddcart()">Add to Cart</a>
-				<a href = "#" onclick = "return false;" class = "btn btn-primary" disabled = "disabled" ng-hide = "canaddcart()">Add to Cart</a>
+				<a onclick = "return false;" class = "btn btn-primary" disabled = "disabled" ng-hide = "canaddcart()">Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
 						Items in Cart
