@@ -55,7 +55,7 @@
 						<div class = "col-xs-12 col-md-6 food-info">
 							<strong>{{ mealset.name }}</strong>
 							<p class = "text-muted"><i>{{ process( mealset.desc ) }}</i></p>
-							<table class = "table">
+							<table class = "table table-hover">
 								<tr>
 									<th>Nutritional Information</th>
 								</tr>
