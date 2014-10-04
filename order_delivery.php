@@ -115,7 +115,7 @@
 					return $scope.newcartitem.food && !( $scope.newcartitem.mode == "set" && !( $scope.newcartitem.side && $scope.newcartitem.drink ) );
 				}
 				$scope.updatePostalCode = function () {
-					if ( $scope.pc > 0 && $scope.pc < 1000000 ) {
+					if ( $scope.pc.length == 6 && $scope.pc < 1000000 ) {
 						var s = "" + $scope.pc;
 						var r = "";
 						for ( var i = 0 ; i < s.length ; i++ ) {
@@ -212,7 +212,7 @@
 				<table class = "table">
 					<tr>
 						<td>Postal Code</td>
-						<td><input type = "number" data-ng-model = "pc" class = "form-control{{ pc > 99999 && pc < 1000000 ? '' : ' data-ng-invalid' }}" ng-change = "updatePostalCode()" /></td>
+						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 ? '' : ' data-ng-invalid' }}" ng-change = "updatePostalCode()" /></td>
 					</tr>
 					<tr>
 						<td>Distance</td>
