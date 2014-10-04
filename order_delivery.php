@@ -131,11 +131,11 @@
 			<div class="container-fluid">
 				<h2>C. Drinks</h2>
 				<p>Satisfying thirst quenchers!</p>
-				<div class="container-fluid" data-ng-repeat="mealDrink in infoFood.mealDrink">
-					<h3>{{ mealDrink.name }}</h3>
-					<img data-ng-src="mealDrink.img">
+				<div class="container-fluid" data-ng-repeat="drinks in infoFood.drinks">
+					<h3>{{ drinks.name }}</h3>
+					<img data-ng-src="drinks.img">
 					<p>Unit Cost: {{  mealDrink.cost.side | currency }}</p>
-					<p>Quantity: <input type="number" data-ng-model="mealDrink.qty" data-ng-change="updateCart('drinks', mealDrink.qty, mealDrink.name, 'side')"></p>
+					<p>Quantity: <input type="number" data-ng-model="drinks.qty" data-ng-change="updateCart('drinks', drinks.qty, drinks.name, 'side')"></p>
 					<p>Total Cost: {{ mealDrink.cost.side * mealDrink.qty | currency }}</p>
 				</div>
 			</div>
