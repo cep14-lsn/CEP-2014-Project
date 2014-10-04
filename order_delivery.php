@@ -14,6 +14,8 @@
 			}
 		</style>
 		<script>
+			var GST = 0.07;
+			var SVC = 0.10;
 			var infoFood;
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
@@ -80,11 +82,15 @@
 				}
 				$scope.dDist = $scope.calcDist;
 			}
+			function deliCont( $scope ) {
+				$scope.foodinfo = infoFood;
+				//$scope.
+			}
 		</script>
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
-		<div class="container-fluid" data-ng-app="" data-ng-controller="deliverMeal">
+		<div class="container-fluid" data-ng-app="" data-ng-controller="deliCont">
 			<div class = "page-header">
 				<h1>Delivery <small>for your convenience of having your food anywhere you like</small></h1>
 			</div>
@@ -104,7 +110,26 @@
 				</div>
 				<abbr title = "All of them!">Which one of those meals just beg to be eaten?</abbr>
 				<p>So choose any of them now!</p>
-				<div>placeholder</div>
+				<div class = "panel panel-primary">
+					<div class = "panel-heading">
+						New Item
+					</div>
+					<div class = "panel-body">
+						<div class = "btn-group">
+							<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
+								{{ newcartitem.name }}
+								<span class = "caret"></span>
+							</button>
+							<ul class = "dropdown-menu" role = "menu">
+								<li ng-repeat = "food in foodinfo">
+									<a href = "#" ng-click = "newcartitem_choose(food)">
+										{{ food.name }}
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<a href = "#" ng-click = "addrow()" class = "btn btn-primary">Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
@@ -118,12 +143,12 @@
 								<th>Qty</th>
 								<th>Price</th>
 							</tr>
-							<tr ng-repeat = "item in items">
+							<!--<tr ng-repeat = "item in items">
 								<th>{{ item.name }}</th>
 								<th>{{ item.cost }}</th>
 								<th>{{ item.qty }}</th>
 								<th>{{ item.price }}</th>
-							</tr>
+							</tr>-->
 						</table>
 					</div>
 				</div>
