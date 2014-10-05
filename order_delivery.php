@@ -248,7 +248,7 @@
 						<td>{{ totalcost + distancecharge | currency }}</td>
 					</tr>
 				</table>
-				<a href = "#" onclick = "return false;" ng-click = "order()" class = "btn btn-primary" ng-show = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+
 				<a class = "btn btn-primary" disabled = "disabled" ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
