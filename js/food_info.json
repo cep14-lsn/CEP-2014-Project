@@ -369,7 +369,7 @@
 		},
 		{
 			"name": "Water (500ml)",
-			"img": "f_water.png",
+			"img": "f_water_dark.png",
 			"nutrition": {
 				"calorie": 200,
 				"carbohydrate": 1,
