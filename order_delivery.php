@@ -247,7 +247,7 @@
 				<p>Select where you want to eat!</p>
 				<table class = "table">
 					<tr>
-						<td>Postal Code</td>
+						<td><abbr title="Must be a 6-digit postal code number">Postal Code</abbr></td>
 						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 ? '' : ' data-ng-invalid' }}" data-ng-change = "updatePostalCode()" /></td>
 					</tr>
 					<tr>
