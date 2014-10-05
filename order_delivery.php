@@ -218,7 +218,7 @@
 						</div>
 					</div>
 				</div>
-				<a href = "#" onclick = "return false;" data-ng-click = "addcart()" class = "btn btn-primary" data-ng-show = "canaddcart()">Add to Cart</a>
+				<a href = "#" onclick = "return false;" data-ng-click = "addcart()" class = "btn btn-primary" data-ng-show = "canaddcart()"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a>
 				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canaddcart()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
@@ -275,7 +275,7 @@
 						<td>{{ ( totalcost + distancecharge ) + foodgst + svccharge | currency }}</td>
 					</tr>
 				</table>
-				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span> Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"></span> Place order <span class = "glyphicon glyphicon-ok-circle"></span></a>
 				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
