@@ -62,6 +62,9 @@
 					delete $scope.newcartitem.drink;
 					delete $scope.newcartitem.side;
 					delete $scope.newcartitem.mode;
+					while ( $scope.dds.length > 1 ) {
+						$scope.dds.pop();
+					}
 					if ( f.cost.meal ) {
 						$scope.dds.push({
 							"name" : "Set Meal",
@@ -87,10 +90,6 @@
 						}
 						$scope.dds.push( sd );
 						$scope.dds.push( drink );
-					} else {
-						while ( $scope.dds.length > 1 ) {
-							$scope.dds.pop();
-						}
 					}
 				}
 				$scope.itemcost = function( item ) {
