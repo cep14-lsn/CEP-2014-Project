@@ -101,6 +101,7 @@
 					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
 						$scope.totalcost += $scope.itemcost( $scope.items[i] );
 					}
+					$scope.updatePostalCode()
 					$scope.newcartitem = {};
 					$scope.dds = [{
 						"name" : "Choose a food item ...",
@@ -123,7 +124,7 @@
 						$scope.distance = hashdigest( hash( s ) ) * hashdigest( hash( r ) ) / 100;
 						$scope.distancecharge = $scope.distance * COST_PER_KM;
 						$scope.foodgst = $scope.totalcost * ( 1 + GST );
-						$scope.svccharge = ( $scope.totalcost + $scope.distancecharge + $scope.FOOD_GST ) * ( 1 + SVC );
+						$scope.svccharge = ( $scope.totalcost + $scope.distancecharge + $scope.foodgst ) * ( 1 + SVC );
 					}
 				}
 				$scope.order = function () {
