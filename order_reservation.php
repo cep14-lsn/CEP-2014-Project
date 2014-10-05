@@ -142,7 +142,7 @@
 					<td>{{ locInfo[loc].cost * ir | currency }}</td>
 				</tr>
 			</table>
-			<a class="btn btn-primary" href="#" data-ng-click="reserve()">Process Deduction</a>
+			<a class="btn btn-primary" href="#" onclick = "return false;" data-ng-click="reserve()">Process Deduction</a>
 			<div class = "panel panel-primary" data-ng-show = "reservations.length > 0">
 				<div class = "panel-heading">
 					Reservation
