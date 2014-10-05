@@ -150,9 +150,14 @@
 					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
 						if ( $scope.items[i] == item ) {
 							$scope.items.splice( i , 1 );
-							return;
+							break;
 						}
 					}
+					$scope.totalcost = 0;
+					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
+						$scope.totalcost += $scope.itemcost( $scope.items[i] );
+					}
+					$scope.updatePostalCode()
 				}
 				$scope.foodinfo = infoFood;
 				$scope.totalcost = 0;
