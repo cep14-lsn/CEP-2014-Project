@@ -39,7 +39,7 @@
 			"desc": [
 				"Order your very own customized MultiBurger (TM) today. Each layer consists of a (post) - succulent beef steak with (once) fresh cheddar cheese, with (suspiciously) crunchy lettuce and tomato at the top.",
 				"NOTE: Nutrition values and cost values above are given per layer of burger. Add $1, 20 calories, 5 g of carbohydrate for the lettuce and tomato.",
-				"Only available a la carte. Comes as 3 layers when ordered by delivery, un-negotiable."
+				"Comes as 3 layers when ordered by delivery, un-negotiable."
 			],
 			"lore": [
 				"'We are many, we are one.'",
@@ -209,7 +209,8 @@
 			],
 			"lore": [
 				"'MY NAME IS FR***IN MOON MOON. I'D BE THE MOST RETARDED WOLF. ",
-				"\"OH SH** WHO BROUGHT F**KING MOON MOON ALONG?\" ' ~ Kitchki (Tumblr)"
+				"\"OH SH** WHO BROUGHT F**KING MOON MOON ALONG?\"'",
+				"~ Kitchki (Tumblr)"
 			],
 			"stock": 2014,
 			"cost": {
