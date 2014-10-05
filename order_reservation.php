@@ -64,7 +64,7 @@
 					$scope.reservations.push( reservation );
 				}
 				$scope.canreserve = function () {
-					return !( $scope.ir <= 0 || $scope.ir > $scope.locInfo[ $scope.loc ].vacancies );
+					return $scope.ir > 0 && $scope.ir <= $scope.locInfo[ $scope.loc ].vacancies;
 				}
 				$scope.locInfo = {};
 				$scope.loc = "/dev/null";
