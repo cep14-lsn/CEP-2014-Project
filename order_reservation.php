@@ -51,9 +51,9 @@
 						return;
 					}
 					var rcode = "MekDoornels Reservation :: ";
-					rcode += "" + new Date().getTime() + " :: ";
+					rcode += $scope.loc + " :: ";
 					rcode += pad( "" + $scope.ir , 4 ) + " :: ";
-					rcode += $scope.loc;
+					rcode += "" + new Date().getTime();
 					tellUser( $filter("currency")($scope.locInfo[$scope.loc].cost * $scope.ir) + " has been deducted from your account. Keep the reservation code and show it when entering." );
 					reservation = {};
 					reservation.rcode = btoa( rcode );
@@ -142,7 +142,7 @@
 					<td>{{ locInfo[loc].cost * ir | currency }}</td>
 				</tr>
 			</table>
-			<a class="btn btn-primary" href="#" data-ng-click="reserve()">Process Deduction</a>
+			<a class="btn btn-primary" href="#" onclick = "return false;" data-ng-click="reserve()">Process Deduction</a>
 			<div class = "panel panel-primary" data-ng-show = "reservations.length > 0">
 				<div class = "panel-heading">
 					Reservation
