@@ -73,10 +73,10 @@
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
+		<div class = "page-header">
+			<h1>Reservation Services <span class="text-small">for your convenience of getting a seat</span></h1>
+		</div>
 		<div class="container-fluid" data-ng-app="" data-ng-controller="resvCont">
-			<div class = "page-header">
-				<h1>Reservation Services <span class="text-small">for your convenience of getting a seat</span></h1>
-			</div>
 			<table class = "table">
 				<tr>
 					<td>Select Location</td>
