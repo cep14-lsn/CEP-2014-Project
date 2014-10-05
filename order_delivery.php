@@ -139,9 +139,12 @@
 					$scope.totalcost = 0;
 					$scope.distance = 0;
 					$scope.distancecharge = 0;
-					$scope.pc = 0;
 					$scope.foodgst = 0;
 					$scope.svccharge = 0;
+					$scope.pc = "";
+					for ( var i = 0 ; i < 6 ; i++ ) {
+						$scope.pc += Math.floor( Math.random() * 10 );
+					}
 				}
 				$scope.canorder = function () {
 					return $scope.pc && $scope.pc.length == 6 && $scope.pc < 1000000 && $scope.items.length > 0;
