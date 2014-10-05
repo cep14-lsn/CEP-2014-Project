@@ -227,7 +227,7 @@
 							</tr>
 							<tr ng-repeat = "item in items">
 								<td>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
-								<td>{{ itemcost(item) | currency }}<button type = "button" onclick = "removecart(item)" class = "close"><span data-aria-hidden = "true">&times;</span><span class = "sr-only">Close</span></button></td>
+								<td>{{ itemcost(item) | currency }}<button type = "button" ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true">&times;</span><span class = "sr-only">Close</span></button></td>
 							</tr>
 							<tr>
 								<td>Total Cost</td>
