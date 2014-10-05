@@ -132,17 +132,27 @@
 						tellUser("Order cancelled.");
 						return;
 					}
-					tellUser( $filter("currency")( $scope.totalcost ) + " has been deducted from your account. Please enjoy your food." );
+					tellUser( $filter("currency")( $scope.totalcost + $scope.distancecharge + $scope.foodgst + $scope.svccharge ) + " has been deducted from your account. Please enjoy your food." );
+					$scope.addcart();
+					$scope.foods = [];
+					$scope.items = [];
 					$scope.totalcost = 0;
 					$scope.distance = 0;
 					$scope.distancecharge = 0;
 					$scope.pc = 0;
-					$scope.addcart();
-					$scope.foods = [];
-					$scope.items = [];
+					$scope.foodgst = 0;
+					$scope.svccharge = 0;
 				}
 				$scope.canorder = function () {
 					return $scope.pc && $scope.pc.length == 6 && $scope.pc < 1000000 && $scope.items.length > 0;
+				}
+				$scope.removecart = function( item ) {
+					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
+						if ( $scope.items[i] == item ) {
+							$scope.items.splice( i , 1 );
+							return;
+						}
+					}
 				}
 				$scope.foodinfo = infoFood;
 				$scope.totalcost = 0;
@@ -216,7 +226,7 @@
 								<th>Price</th>
 							</tr>
 							<tr ng-repeat = "item in items">
-								<td>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
+								<td><button type = "button" onclick = "removeCart(item)" class = "close"><span data-aria-hidden = "true">&times;</span><span class = "sr-only">Close</span></button>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
 								<td>{{ itemcost(item) | currency }}</td>
 							</tr>
 							<tr>
