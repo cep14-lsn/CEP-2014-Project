@@ -191,7 +191,7 @@
 				<div class = "page-header">
 					<h2>Step 1 <small>look through the menu</small></h2>
 				</div>
-				<p>Look for one of our wonderful and suitable meal set that suits your dietary choices here.</p>
+				<p>Look for one of our wonderful and suitable meal sets that suits your dietary choices here.</p>
 				<p><a class="btn btn-primary" href="menu.php">Menu <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 				<div class = "page-header">
 					<h2>Step 2 <small>choose your food</small></h2>
