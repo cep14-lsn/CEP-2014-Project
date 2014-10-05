@@ -78,6 +78,32 @@
 			},
 			"qty": 0,
 			"new": true
+		},
+		{
+			"name": "Many-Flavored Meat Slab",
+			"img": "biotech_meat_slab.jpg",
+			"nutrition": {
+				"calorie": 50,
+				"carbohydrate": 2,
+				"fats": 2,
+				"protein": 1000,
+				"salt": 3
+			},
+			"desc": [
+				"Savor meat every time - in different flavors. Mmmm, the southwest bottom corner tastes like onion and banana juice. The northeast bottom corner tastes like cabbages!",
+				"Experience a surprise every bite. Perfect for all you meat lovers!",
+				"Special thanks goes to our suppliers in the biotech industry for providing us all these wonderful meat at budget costs."
+			],
+			"lore": [
+				"'One man's meat is another man's poison.'",
+				"~ Adage originating in 1576"
+			],
+			"cost": {
+				"alc": 1.20,
+				"meal": 2.10
+			},
+			"qty": 0,
+			"new": false
 		}
 	],
 	"mealSide": [
