@@ -178,6 +178,10 @@
 						$scope.dds[0].options.push( {"food":infoFood[k][i],"display":infoFood[k][i].name,"handler":$scope.newcartitem_choose} );
 					}
 				}
+				$scope.pc = "";
+				for ( var i = 0 ; i < 6 ; i++ ) {
+					$scope.pc += Math.floor( Math.random() * 10 );
+				}
 			}
 		</script>
 	</head>
@@ -218,7 +222,7 @@
 						</div>
 					</div>
 				</div>
-				<a href = "#" onclick = "return false;" data-ng-click = "addcart()" class = "btn btn-primary" data-ng-show = "canaddcart()">Add to Cart</a>
+				<a href = "#" onclick = "return false;" data-ng-click = "addcart()" class = "btn btn-primary" data-ng-show = "canaddcart()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
 				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canaddcart()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
@@ -247,7 +251,7 @@
 				<p>Select where you want to eat!</p>
 				<table class = "table">
 					<tr>
-						<td><abbr title="Must be a 6-digit postal code number">Postal Code</abbr></td>
+						<td>Postal Code</td>
 						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 ? '' : ' data-ng-invalid' }}" data-ng-change = "updatePostalCode()" /></td>
 					</tr>
 					<tr>
@@ -275,8 +279,8 @@
 						<td>{{ ( totalcost + distancecharge ) + foodgst + svccharge | currency }}</td>
 					</tr>
 				</table>
-				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span> Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
-				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span> Place order</a>
+				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span Place order</a>
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
