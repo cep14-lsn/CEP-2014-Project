@@ -247,11 +247,11 @@
 						<td>{{ totalcost | currency }}</td>
 					</tr>
 					<tr>
-						<td>GST ({{ GST * 100 }}%)</td>
+						<td>GST (7%)</td>
 						<td>{{ FOOD_GST }}</td>
 					</tr>
 					<tr>
-						<td>Service Charge ({{ SVC * 100 }}%)</td>
+						<td>Service Charge (10%)</td>
 						<td>{{ FOOD_SVC }}</td>
 					</tr>
 					<tr>
