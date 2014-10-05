@@ -214,7 +214,7 @@
 					</div>
 				</div>
 				<a href = "#" onclick = "return false;" ng-click = "addcart()" class = "btn btn-primary" ng-show = "canaddcart()">Add to Cart</a>
-				<a onclick = "return false;" class = "btn btn-primary" disabled = "disabled" ng-hide = "canaddcart()">Add to Cart</a>
+				<a class = "btn btn-primary" disabled = "disabled" ng-hide = "canaddcart()">Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
 						Items in Cart
@@ -226,8 +226,8 @@
 								<th>Price</th>
 							</tr>
 							<tr ng-repeat = "item in items">
-								<td><button type = "button" onclick = "removeCart(item)" class = "close"><span data-aria-hidden = "true">&times;</span><span class = "sr-only">Close</span></button>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
-								<td>{{ itemcost(item) | currency }}</td>
+								<td>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
+								<td>{{ itemcost(item) | currency }}<button type = "button" onclick = "removecart(item)" class = "close"><span data-aria-hidden = "true">&times;</span><span class = "sr-only">Close</span></button></td>
 							</tr>
 							<tr>
 								<td>Total Cost</td>
