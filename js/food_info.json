@@ -108,6 +108,29 @@
 	],
 	"mealSide": [
 		{
+			"name": "Amurican Cheeckun Fuudes",
+			"img": "amuricanfuudes.png",
+			"nutrition": {
+				"calorie": 9000,
+				"carbohydrate": 10,
+				"fats": 100000,
+				"protein": 2,
+				"salt": 12
+			},
+			"desc": [
+				"Ever needed that boost of calories and fat? Don't fret, try the authentic taste of Amurica in this bucket!",
+			],
+			"lore": [
+				"Get y'all kicks from dis awesom thang!",
+			],
+			"stock": 1492,
+			"cost": {
+				"side": 0.60
+			},
+			"qty": 0,
+			"new": true
+		},
+		{
 			"name": "Mega Fries",
 			"img": "megafries.png",
 			"nutrition": {
