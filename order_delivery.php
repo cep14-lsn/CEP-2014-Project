@@ -184,17 +184,17 @@
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
 		<div class = "page-header">
-			<h1>Delivery <small>for your convenience of having your food anywhere you like</small></h1>
+			<h1>Delivery <span class="text-small">for your convenience of having your food anywhere you like</span></h1>
 		</div>
 		<div class="container-fluid" data-ng-app="" data-ng-controller="deliCont">
 			<div class = "container">
 				<div class = "page-header">
-					<h2>Step 1 <small>look through the menu</small></h2>
+					<h2>Step 1 <span class="text-small">look through the menu</span></h2>
 				</div>
 				<p>Look for one of our wonderful and suitable meal sets that suits your dietary choices here.</p>
 				<p><a class="btn btn-primary" href="menu.php">Menu <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 				<div class = "page-header">
-					<h2>Step 2 <small>choose your food</small></h2>
+					<h2>Step 2 <span class="text-small">choose your food</span></h2>
 				</div>
 				<abbr title = "All of them!">Which one of those meals just beg to be eaten?</abbr>
 				<p>So choose any of them now!</p>
@@ -203,14 +203,14 @@
 						New Item
 					</div>
 					<div class = "panel-body">
-						<div class = "btn-group" ng-repeat = "dd in dds">
+						<div class = "btn-group" data-ng-repeat = "dd in dds">
 							<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
 								{{ dd.name }}
 								<span class = "caret"></span>
 							</button>
 							<ul class = "dropdown-menu" role = "menu">
-								<li ng-repeat = "c in dd.options">
-									<a href = "#" onclick = "return false;" ng-click = "itemclick( c )">
+								<li data-ng-repeat = "c in dd.options">
+									<a href = "#" onclick = "return false;" data-ng-click = "itemclick( c )">
 										{{ c.display }}
 									</a>
 								</li>
@@ -218,8 +218,8 @@
 						</div>
 					</div>
 				</div>
-				<a href = "#" onclick = "return false;" ng-click = "addcart()" class = "btn btn-primary" ng-show = "canaddcart()">Add to Cart</a>
-				<a class = "btn btn-primary" disabled = "disabled" ng-hide = "canaddcart()">Add to Cart</a>
+				<a href = "#" onclick = "return false;" data-ng-click = "addcart()" class = "btn btn-primary" data-ng-show = "canaddcart()">Add to Cart</a>
+				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canaddcart()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
 				<div class = "panel panel-primary">
 					<div class = "panel-heading">
 						Items in Cart
@@ -230,9 +230,9 @@
 								<th>Item</th>
 								<th>Price</th>
 							</tr>
-							<tr ng-repeat = "item in items">
+							<tr data-ng-repeat = "item in items">
 								<td>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
-								<td>{{ itemcost(item) | currency }}<button type = "button" ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true">&times;</span><span class = "sr-only">Close</span></button></td>
+								<td>{{ itemcost(item) | currency }}<button type = "button" data-ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true" class="glyphicon glyphicon-remove"></span><span class = "sr-only">Close</span></button></td>
 							</tr>
 							<tr>
 								<td>Total Cost</td>
@@ -242,13 +242,13 @@
 					</div>
 				</div>
 				<div class = "page-header">
-					<h2>Step 3 <small>choose where you are eating</small></h2>
+					<h2>Step 3 <span class="text-small">choose where you are eating</span></h2>
 				</div>
 				<p>Select where you want to eat!</p>
 				<table class = "table">
 					<tr>
 						<td>Postal Code</td>
-						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 ? '' : ' data-ng-invalid' }}" ng-change = "updatePostalCode()" /></td>
+						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 ? '' : ' data-ng-invalid' }}" data-ng-change = "updatePostalCode()" /></td>
 					</tr>
 					<tr>
 						<td>Distance</td>
@@ -275,8 +275,8 @@
 						<td>{{ ( totalcost + distancecharge ) + foodgst + svccharge | currency }}</td>
 					</tr>
 				</table>
-				<a href = "#" onclick = "return false;" ng-click = "order()" class = "btn btn-primary" ng-show = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
-				<a class = "btn btn-primary" disabled = "disabled" ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span> Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
