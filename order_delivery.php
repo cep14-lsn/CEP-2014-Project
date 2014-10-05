@@ -283,7 +283,7 @@
 					</tr>
 				</table>
 				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span> Place order</a>
-				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span Place order</a>
+				<a class = "btn btn-primary ng-hide" disabled = "disabled" data-ng-hide = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span Place order</a>
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
