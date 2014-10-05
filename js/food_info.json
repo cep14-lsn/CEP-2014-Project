@@ -105,6 +105,29 @@
 			"qty": 0,
 			"new": false
 		}
+		{
+			"name": "Fried Chicken Oreos",
+			"img": "friedchickenoreos.jpg",
+			"nutrition": {
+				"calorie": 100,
+				"carbohydrate": 10,
+				"fats": 10000000,
+				"protein": 2,
+				"salt": 12
+			},
+			"desc": [
+				"Literally a nugget in a biscuit!"
+			],
+			"lore": [
+				"Get y'all kicks from dis awesom thang!"
+			],
+			"stock": 1492,
+			"cost": {
+				"side": 50.95
+			},
+			"qty": 0,
+			"new": true
+		},
 	],
 	"mealSide": [
 		{
