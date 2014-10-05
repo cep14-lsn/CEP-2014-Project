@@ -63,6 +63,9 @@
 					$scope.refreshCost();
 					$scope.reservations.push( reservation );
 				}
+				$scope.canreserve = function () {
+					return $scope.ir > 0 && $scope.ir <= $scope.locInfo[ $scope.loc ].vacancies;
+				}
 				$scope.locInfo = {};
 				$scope.loc = "/dev/null";
 				$scope.ir = 0;
@@ -142,7 +145,8 @@
 					<td>{{ locInfo[loc].cost * ir | currency }}</td>
 				</tr>
 			</table>
-			<a class="btn btn-primary" href="#" onclick = "return false;" data-ng-click="reserve()">Process Deduction</a>
+			<a class="btn btn-primary" href="#" onclick = "return false;" data-ng-click="reserve()" data-ng-show = "canReserve()"><span class = "glyphicon glyphicon-ok-circle"></span> Process Deduction</a>
+			<a class="btn btn-primary" data-ng-hide = "canReserve" disabled = "disabled"><span class = "glyphicon glyphicon-ok-circle"></span> Process Deduction</a>
 			<div class = "panel panel-primary" data-ng-show = "reservations.length > 0">
 				<div class = "panel-heading">
 					Reservation
