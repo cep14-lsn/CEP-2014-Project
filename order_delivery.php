@@ -248,11 +248,11 @@
 					</tr>
 					<tr>
 						<td>GST (7%)</td>
-						<td>{{ FOOD_GST }}</td>
+						<td>{{ FOOD_GST | currency }}</td>
 					</tr>
 					<tr>
 						<td>Service Charge (10%)</td>
-						<td>{{ FOOD_SVC }}</td>
+						<td>{{ FOOD_SVC | currency }}</td>
 					</tr>
 					<tr>
 						<td>Total Expenditure</td>
