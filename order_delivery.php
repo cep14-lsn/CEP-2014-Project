@@ -279,13 +279,8 @@
 						<td>{{ ( totalcost + distancecharge ) + foodgst + svccharge | currency }}</td>
 					</tr>
 				</table>
-<<<<<<< HEAD
-				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"></span> Place order <span class = "glyphicon glyphicon-ok-circle"></span></a>
-				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
-=======
 				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary" data-ng-show = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span> Place order</a>
 				<a class = "btn btn-primary" disabled = "disabled" data-ng-hide = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span Place order</a>
->>>>>>> origin/master
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
