@@ -249,7 +249,7 @@
 					</tr>
 				</table>
 				<a href = "#" onclick = "return false;" ng-click = "order()" class = "btn btn-primary" ng-show = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
-				<a onclick = "return false;" class = "btn btn-primary" disabled = "disabled" ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
+				<a class = "btn btn-primary" disabled = "disabled" ng-hide = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
 		!ipp[_cep14_insert components/_footer.html]
