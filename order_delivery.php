@@ -122,8 +122,8 @@
 						}
 						$scope.distance = hashdigest( hash( s ) ) * hashdigest( hash( r ) ) / 100;
 						$scope.distancecharge = $scope.distance * COST_PER_KM;
-						$scope.FOOD_GST = $scope.totalcost * ( 1 + GST );
-						$scope.FOOD_SVC = ( $scope.totalcost + $scope.distancecharge + $scope.FOOD_GST ) * ( 1 + SVC );
+						$scope.foodgst = $scope.totalcost * ( 1 + GST );
+						$scope.svccharge = ( $scope.totalcost + $scope.distancecharge + $scope.FOOD_GST ) * ( 1 + SVC );
 					}
 				}
 				$scope.order = function () {
@@ -147,8 +147,6 @@
 				$scope.totalcost = 0;
 				$scope.distance = 0;
 				$scope.distancecharge = 0;
-				$scope.GST = GST;
-				$scope.SVC = SVC;
 				$scope.foods = [];
 				$scope.items = [];
 				$scope.newcartitem = {}
@@ -248,11 +246,11 @@
 					</tr>
 					<tr>
 						<td>GST (7%)</td>
-						<td>{{ FOOD_GST | currency }}</td>
+						<td>{{ foodgst | currency }}</td>
 					</tr>
 					<tr>
 						<td>Service Charge (10%)</td>
-						<td>{{ FOOD_SVC | currency }}</td>
+						<td>{{ svccharge | currency }}</td>
 					</tr>
 					<tr>
 						<td>Total Expenditure</td>
