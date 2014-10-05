@@ -140,7 +140,7 @@
 					$scope.items = [];
 				}
 				$scope.canorder = function () {
-					return $scope.pc.length == 6 && $scope.pc < 1000000 && $scope.items.length > 0;
+					return $scope.pc && $scope.pc.length == 6 && $scope.pc < 1000000 && $scope.items.length > 0;
 				}
 				$scope.foodinfo = infoFood;
 				$scope.totalcost = 0;
