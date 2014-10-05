@@ -113,4 +113,4 @@ Page Updating
 =============
 The pages on the server are updated with GitHub's version when it is requested. However, as caching may occur, the changes may take a while to be reflected.
 
-Current estimated waiting time for the changes to be reflected: About 5 - 10 minutes.
+Nay, live editing **_FTW_**.
