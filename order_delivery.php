@@ -123,8 +123,8 @@
 						}
 						$scope.distance = hashdigest( hash( s ) ) * hashdigest( hash( r ) ) / 100;
 						$scope.distancecharge = $scope.distance * COST_PER_KM;
-						$scope.foodgst = $scope.totalcost * ( 1 + GST );
-						$scope.svccharge = ( $scope.totalcost + $scope.distancecharge + $scope.foodgst ) * ( 1 + SVC );
+						$scope.foodgst = $scope.totalcost * GST;
+						$scope.svccharge = ( $scope.totalcost + $scope.distancecharge + $scope.foodgst ) * SVC;
 					}
 				}
 				$scope.order = function () {
@@ -148,6 +148,8 @@
 				$scope.totalcost = 0;
 				$scope.distance = 0;
 				$scope.distancecharge = 0;
+				$scope.foodgst = 0;
+				$scope.svccharge = 0;
 				$scope.foods = [];
 				$scope.items = [];
 				$scope.newcartitem = {}
@@ -255,7 +257,7 @@
 					</tr>
 					<tr>
 						<td>Total Expenditure</td>
-						<td>{{ ( totalcost + distancecharge ) + FOOD_GST + FOOD_SVC | currency }}</td>
+						<td>{{ ( totalcost + distancecharge ) + foodgst + svccharge | currency }}</td>
 					</tr>
 				</table>
 				<a href = "#" onclick = "return false;" ng-click = "order()" class = "btn btn-primary" ng-show = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
