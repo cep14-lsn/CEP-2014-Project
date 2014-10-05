@@ -5,25 +5,29 @@ Chosen topic: Food; specifically, a fast-food chain called Mekdoornels. [LIVE SI
 
 Current Repo:
 
-_styles.css
+css/_styles.css
 -----------
 The stylesheet for the entire website. If a specific page requires other styles please *don't* put it in here; use `<style>` tags instead.
 
-_head.html
+js/food_info.json
+-----------------
+JSON for the food.
+
+js/hash.js
+----------
+Hash algorithm for use in order pages.
+
+components/_head.html
 ----------
 The tags to be included in `<head>` for each document. This would mainly be stylesheet links and scripts, but can also include titles and meta tags.
 
-_navbar.html
+components/_navbar.html
 ------------
 The navbar to be included in each document.
 
-_footer.html
+components/_footer.html
 ------------
 The footer to be included in each document.
-
-_sandbox.html
--------------
-A random place where you can test all your `!ipp` stuff :D
 
 index.php
 ---------
@@ -40,6 +44,14 @@ The contact page (that requires AJS); pagename = Contact
 menu.php
 --------
 The menu page (that contains the list of food); pagename = Menu
+
+order_delivery.php
+------------------
+The delivery page; pagename = Delivery
+
+order_reservation.php
+---------------------
+The reservation page; pagename = Reservation
 
 iPreProcess Documentation
 =========================
