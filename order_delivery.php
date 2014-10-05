@@ -16,7 +16,7 @@
 		<script>
 			var GST = 0.07;
 			var SVC = 0.10;
-			var COST_PER_KM = 0.0001;
+			var COST_PER_KM = 0.01;
 			var infoFood;
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
@@ -120,8 +120,10 @@
 						for ( var i = 0 ; i < s.length ; i++ ) {
 							r += s[ s.length - i - 1 ];
 						}
-						$scope.distance = hashdigest( hash( s ) ) * hashdigest( hash( r ) ) / 10;
-						$scope.distancecharge = $scope.distance * COST_PER_KM * ( 1 + GST ) * ( 1 + SVC );
+						$scope.distance = hashdigest( hash( s ) ) * hashdigest( hash( r ) ) / 100;
+						$scope.distancecharge = $scope.distance * COST_PER_KM;
+						$scope.FOOD_GST = $scope.totalcost * ( 1 + GST );
+						$scope.FOOD_SVC = ( $scope.totalcost + $scope.distancecharge + $scope.FOOD_GST ) * ( 1 + SVC );
 					}
 				}
 				$scope.order = function () {
@@ -145,6 +147,8 @@
 				$scope.totalcost = 0;
 				$scope.distance = 0;
 				$scope.distancecharge = 0;
+				$scope.GST = GST;
+				$scope.SVC = SVC;
 				$scope.foods = [];
 				$scope.items = [];
 				$scope.newcartitem = {}
@@ -243,8 +247,16 @@
 						<td>{{ totalcost | currency }}</td>
 					</tr>
 					<tr>
+						<td>GST ({{ GST * 100 }}%)</td>
+						<td>{{ FOOD_GST }}</td>
+					</tr>
+					<tr>
+						<td>Service Charge ({{ SVC * 100 }}%)</td>
+						<td>{{ FOOD_SVC }}</td>
+					</tr>
+					<tr>
 						<td>Total Expenditure</td>
-						<td>{{ totalcost + distancecharge | currency }}</td>
+						<td>{{ ( totalcost + distancecharge ) + FOOD_GST + FOOD_SVC | currency }}</td>
 					</tr>
 				</table>
 				<a href = "#" onclick = "return false;" ng-click = "order()" class = "btn btn-primary" ng-show = "canorder()">Place order <span class = "glyphicon glyphicon-chevron-right"></span></a>
