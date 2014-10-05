@@ -235,7 +235,7 @@
 						<td>Distance</td>
 						<td>{{ distance }} km</td>
 					</tr>
-					tr>
+					<tr>
 						<td>Delivery Expenses</td>
 						<td>{{ distancecharge | currency }}</td>
 					</tr>
