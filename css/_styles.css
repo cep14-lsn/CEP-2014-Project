@@ -15,17 +15,15 @@ body::-webkit-scrollbar {
 h1, h2, h3 {
 	font-family:"Open Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-weight:bold;
+	color: #daa520;
 }
 h1 {
-	color: #9b7617;
 	font-size:28px;
 }
 h2 {
-	color: #daa520;
 	font-size:24px;
 }
 h3 {
-	color: #e6bf5b;
 	font-size:20px;
 }
 a.btn {
