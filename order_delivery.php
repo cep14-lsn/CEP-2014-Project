@@ -183,10 +183,10 @@
 	</head>
 	<body>
 		!ipp[_cep14_insert components/_navbar.html]
+		<div class = "page-header">
+			<h1>Delivery <small>for your convenience of having your food anywhere you like</small></h1>
+		</div>
 		<div class="container-fluid" data-ng-app="" data-ng-controller="deliCont">
-			<div class = "page-header">
-				<h1>Delivery <small>for your convenience of having your food anywhere you like</small></h1>
-			</div>
 			<div class = "container">
 				<div class = "page-header">
 					<h2>Step 1 <small>look through the menu</small></h2>
