@@ -16,7 +16,7 @@
 		<script>
 			var GST = 0.07;
 			var SVC = 0.10;
-			var COST_PER_KM = 0.000001;
+			var COST_PER_KM = 0.0001;
 			var infoFood;
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
@@ -231,10 +231,10 @@
 						<td>Postal Code</td>
 						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 ? '' : ' data-ng-invalid' }}" ng-change = "updatePostalCode()" /></td>
 					</tr>
-					<!--<tr>
+					<tr>
 						<td>Distance</td>
 						<td>{{ distance }} km</td>
-					</tr>-->
+					</tr>
 					tr>
 						<td>Delivery Expenses</td>
 						<td>{{ distancecharge | currency }}</td>
