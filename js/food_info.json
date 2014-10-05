@@ -104,7 +104,7 @@
 			},
 			"qty": 0,
 			"new": false
-		}
+		},
 		{
 			"name": "Fried Chicken Oreos",
 			"img": "friedchickenoreos.jpg",
@@ -128,6 +128,55 @@
 			"qty": 0,
 			"new": true
 		},
+		{
+			"name": "Low Sodium Diet (TM)",
+			"img": "low_sodium_diet.png",
+			"nutrition": {
+				"calorie": 20,
+				"carbohydrate": 60,
+				"fats": 3,
+				"protein": 4,
+				"salt": -10
+			},
+			"desc": [
+				"Feeling a little salty about some things? Resolve all those salt with our very Low Sodium Diet (TM)!",
+				"DISCLAIMER: Contrary to some... uh... popular rumors, our patented LSD(TM) should not contain any drugs. Any similarities in name is purely coincidental."
+			],
+			"lore": [
+				"'Na, we don't eat no sodium here!'",
+				"~ A customer who wished to be only identified as 'Mr. Shore'"
+			],
+			"stock": 1230,
+			"cost": {
+				"alc": 2.20,
+				"meal": 3.20
+			}
+		},
+		{
+			"name": "PSY(R) Shroom Sandwich",
+			"img": "psy_shroom_burgler.png",
+			"nutrition": {
+				"calorie": 25,
+				"carbohydrate": 45,
+				"fats": 1,
+				"protein": 15,
+				"salt": 2
+			},
+			"desc": [
+				"After the latest fan craze about the Korean celebrity PSY, one of his fans suggested that we create a burger in honor of him.",
+				"And so we did! Our shroom burger is now adorned with black... food coloring in the shape of sunglasses.",
+				"NOTE: Any disparity in mushroom color can be safely ignored."
+			],
+			"lore": [
+				"'I'm a mother father gentleman!'",
+				"~ PSY"
+			],
+			"stock": 130,
+			"cost": {
+				"alc": 4.05,
+				"meal": 5.10
+			}
+		}
 	],
 	"mealSide": [
 		{
@@ -289,6 +338,83 @@
 			"stock": 2014,
 			"cost": {
 				"side": 2.00
+			},
+			"qty": 0,
+			"new": false
+		},
+		{
+			"name": "Chum Bucket",
+			"img": "chum_bucket.png",
+			"nutrition": {
+				"calorie": 25,
+				"carbohydrate": 15,
+				"fats": 2,
+				"protein": 6,
+				"salt": 1
+			},
+			"desc": [
+				"MekDoornels supports the A-Less Foundation by providing buckets of chum to whoever wants to consume it or perform the Chum Bucket Challenge.",
+				"Bathrooms are available on site.",
+				"Credits to 9-year-old Bobby who suggested it to us, saying that he thought of it 'all by himself'."
+			],
+			"lore": [
+				"'omg!11!1!one!11 i thought of dis gr8 drink u shuld ad! its call chum bucket.'",
+				"~ Bobby, via email suggestions"
+			],
+			"stock": 100,
+			"cost": {
+				"side": 1.90
+			},
+			"qty": 0,
+			"new": true
+		},
+		{
+			"name": "Water (500ml)",
+			"img": "f_water.png",
+			"nutrition": {
+				"calorie": 200,
+				"carbohydrate": 1,
+				"fats": 0,
+				"protein": 0,
+				"salt": 4
+			},
+			"desc": [
+				"Deliciously flavored water from our suppliers off the coast of Fukushima Prefecture. Mmm, tasty water!",
+				"Served to you in a glass made from glass from... uh... high-risk trading on the Colombia River near Washington State.",
+				"(Note: water has been observed to glow faintly green in the dark. This is perfectly normal and safe)."
+			],
+			"lore": [
+				"Two scientists walk into a bar.",
+				"Scientist 1: 'I would like a glass of H2O.' (water, for our non-science-oriented customers)",
+				"Scientist 2: 'I would like a glass of H2O too!'"
+			],
+			"stock": 2147483647,
+			"cost": {
+				"side": 0.34
+			},
+			"qty": 0,
+			"new": false
+		},
+		{
+			"name": "Snake Blood",
+			"img": "snake_blood.png",
+			"nutrition": {
+				"calorie": 200,
+				"carbohydrate": 10,
+				"fats": 2,
+				"protein": 12,
+				"salt": 1
+			},
+			"desc": [
+				"After Professor A. P. W. B. Dumbledore discovered the 12 usages of dragon blood, we have decided to incorporate the magical properties of snake blood (a similar animal as discussed by Chinese homeopathic authorities) into our meal design."
+			],
+			"lore": [
+				"'No snakes were harmed in the making of this drink. I promise!'",
+				"~ Our supplier, OPHIDIOPHOBIA-CORP"
+			],
+			"stock": 555,
+			"cost": {
+				"side": 9.87
 			},
 			"qty": 0,
 			"new": false
