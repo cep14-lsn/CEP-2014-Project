@@ -89,7 +89,7 @@
 						for ( var i = 0 ; i < infoFood.drinks.length ; i++ ) {
 							drink.options.push( {"food":infoFood.drinks[i],"display":infoFood.drinks[i].name,"handler":$scope.newcartitem_drink} );
 						}
-						sd.options.push( {"food":{"name":""},"display":"None","handler":$scope.newcartitem_drink} );
+						drink.options.push( {"food":{"name":""},"display":"None","handler":$scope.newcartitem_drink} );
 						$scope.dds.push( sd );
 						$scope.dds.push( drink );
 					}
