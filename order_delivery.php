@@ -133,7 +133,7 @@
 						tellUser("Order cancelled.");
 						return;
 					}
-					tellUser( $filter("currency")( $scope.totalcost + $scope.distancecharge + $scope.foodgst + $scope.svccharge ) + " has been deducted from your account. Please enjoy your food." );
+					tellUser( $filter("currency")( $scope.totalcost + $scope.distancecharge + $scope.foodgst + $scope.svccharge + 3 ) + " has been deducted from your account. Please enjoy your food." );
 					$scope.addcart();
 					$scope.foods = [];
 					$scope.items = [];
@@ -300,7 +300,7 @@
 					</tr>
 					<tr>
 						<td>Total Expenditure</td>
-						<td>{{ ( totalcost + distancecharge ) + foodgst + svccharge | currency }}</td>
+						<td>{{ totalcost + distancecharge + foodgst + svccharge + 3 | currency }}</td>
 					</tr>
 				</table>
 				<a href = "#" onclick = "return false;" data-ng-click = "order()" class = "btn btn-primary ng-hide" data-ng-show = "canorder()"><span class="glyphicon glyphicon-ok-circle"></span> Place order</a>
