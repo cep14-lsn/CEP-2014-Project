@@ -98,12 +98,14 @@
 					return item.food ? item.mode ? item.mode == "alc" ? item.food.cost.alc : item.food.cost.meal : item.food.cost.side : 0;
 				}
 				$scope.addcart = function() {
+					$scope.newcartitem.instr = $scope.instr;
 					$scope.items.push( $scope.newcartitem );
 					$scope.totalcost = 0;
 					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
 						$scope.totalcost += $scope.itemcost( $scope.items[i] );
 					}
 					$scope.updatePostalCode()
+					$scope.instr = "";
 					$scope.newcartitem = {};
 					$scope.dds = [{
 						"name" : "Choose a food item ...",
@@ -254,7 +256,7 @@
 								<th>Price</th>
 							</tr>
 							<tr data-ng-repeat = "item in items">
-								<td class = "linebreak">{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + ( item.side.name && item.drink.name ? " + " : "" ) + item.drink.name ) : "" ) + ( instr.trim() ? "\nSpecial Order: " + instr : "" ) }}</td>
+								<td class = "linebreak">{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + ( item.side.name && item.drink.name ? " + " : "" ) + item.drink.name ) : "" ) + ( item.instr.trim() ? "\nSpecial Order: " + item.instr : "" ) }}</td>
 								<td>{{ itemcost(item) | currency }}<button type = "button" data-ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true" class="glyphicon glyphicon-remove"></span><span class = "sr-only">Close</span></button></td>
 							</tr>
 							<tr>
