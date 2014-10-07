@@ -117,7 +117,7 @@
 				}
 				$scope.updatePostalCode = function () {
 					if ( $scope.pc && $scope.pc.length == 6 && $scope.pc < 1000000 ) {
-						var s = "" + $scope.pc;
+						var s = $scope.pc;
 						var r = "";
 						for ( var i = 0 ; i < s.length ; i++ ) {
 							r += s[ s.length - i - 1 ];
