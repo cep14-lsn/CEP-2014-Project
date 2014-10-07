@@ -214,7 +214,7 @@
 					<div class = "panel-body">
 						<div class = "row">
 							<div class = "col-xs-12">
-								<div class = "btn-group btn-group-justified">
+								<div class = "btn-group">
 									<div class = "btn-group" data-ng-repeat = "dd in dds">
 										<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
 											{{ dd.name }}
