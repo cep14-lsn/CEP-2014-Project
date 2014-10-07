@@ -169,6 +169,7 @@
 				$scope.distancecharge = 0;
 				$scope.foodgst = 0;
 				$scope.svccharge = 0;
+				$scope.instr = "";
 				$scope.foods = [];
 				$scope.items = [];
 				$scope.newcartitem = {}
