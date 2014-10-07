@@ -99,6 +99,7 @@
 					$scope.totalcost = 0;
 					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
 						$scope.totalcost += $scope.itemcost( $scope.items[i] );
+						$scope.totalcost += $scope.items[i].instr ? 0.30 : 0;
 					}
 					$scope.updatePostalCode()
 					$scope.instr = "";
@@ -231,7 +232,7 @@
 						</div>
 						<div class = "row">
 							<div class = "col-xs-12 col-md-4">
-								<p>Add an optional preparation instruction / request:</p>
+								<p><abbr title = "30 cents charged per item with attached requests">Preparation instructions / requests</abbr>:</p>
 							</div>
 							<div class = "col-xs-12 col-md-8">
 								<input type = "text" class = "form-control" data-ng-model = "instr" />
