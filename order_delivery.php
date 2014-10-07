@@ -237,7 +237,7 @@
 								<p><abbr title = "30 cents charged per item with attached requests">Preparation instructions / requests</abbr>:</p>
 							</div>
 							<div class = "col-xs-12 col-md-8">
-								<input type = "text" class = "form-control" data-ng-model = "instr" maxlength = "120" />
+								<input type = "text" class = "form-control" data-ng-model = "instr" maxlength = "60" />
 							</div>
 						</div>
 					</div>
