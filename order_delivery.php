@@ -99,7 +99,7 @@
 					$scope.totalcost = 0;
 					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
 						$scope.totalcost += $scope.itemcost( $scope.items[i] );
-						$scope.totalcost += $scope.items[i].instr ? 0.30 : 0;
+						$scope.totalcost += $scope.items[i].instr.trim() ? 0.30 : 0;
 					}
 					$scope.updatePostalCode()
 					$scope.instr = "";
@@ -256,9 +256,9 @@
 								<td>
 									{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + ( item.side.name && item.drink.name ? " + " : "" ) + item.drink.name ) : "" ) }}
 									<abbr title = "All funds raised in this manner go to the Take-a-Wish Foundation." data-ng-hide = "item.side.name || item.drink.name">Paying extra for nothing</abbr>
-									<p class = "in-the-line" data-ng-show = "item.instr.trim()"><br />Special Order: <abbr title = "We reserve the right to choose which requests to process.">{{ item.instr.trim() }}</abbr></p>
+									<p class = "in-the-line" data-ng-show = "item.instr.trim()"><br />Special Order: {{ item.instr.trim() }}</p>
 								</td>
-								<td>{{ itemcost(item) | currency }}<button type = "button" data-ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true" class="glyphicon glyphicon-remove"></span><span class = "sr-only">Close</span></button></td>
+								<td>{{ itemcost(item) | currency }} <abbr data-ng-show = "item.instr.trim()" title = "Attached request">+ $0.30</abbr><button type = "button" data-ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true" class="glyphicon glyphicon-remove"></span><span class = "sr-only">Close</span></button></td>
 							</tr>
 							<tr>
 								<td>Total Cost</td>
