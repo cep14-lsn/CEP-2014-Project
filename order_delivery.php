@@ -274,7 +274,7 @@
 				<table class = "table">
 					<tr>
 						<td>Postal Code</td>
-						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 ? '' : ' data-ng-invalid' }}" data-ng-change = "updatePostalCode()" /></td>
+						<td><input type = "text" data-ng-model = "pc" class = "form-control{{ pc.length == 6 && pc < 1000000 ? '' : ' data-ng-invalid' }}" data-ng-change = "updatePostalCode()" /></td>
 					</tr>
 					<tr>
 						<td>Distance</td>
