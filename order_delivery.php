@@ -81,6 +81,7 @@
 						for ( var i = 0 ; i < infoFood.mealSide.length ; i++ ) {
 							sd.options.push( {"food":infoFood.mealSide[i],"display":infoFood.mealSide[i].name,"handler":$scope.newcartitem_mealside} );
 						}
+						sd.options.push( {"food":{"name":""},"display":"None","handler":$scope.newcartitem_mealside} );
 						var drink = {
 							"name" : "Select a Drink ...",
 							"options" : []
@@ -88,6 +89,7 @@
 						for ( var i = 0 ; i < infoFood.drinks.length ; i++ ) {
 							drink.options.push( {"food":infoFood.drinks[i],"display":infoFood.drinks[i].name,"handler":$scope.newcartitem_drink} );
 						}
+						sd.options.push( {"food":{"name":""},"display":"None","handler":$scope.newcartitem_drink} );
 						$scope.dds.push( sd );
 						$scope.dds.push( drink );
 					}
@@ -210,18 +212,30 @@
 						New Item
 					</div>
 					<div class = "panel-body">
-						<div class = "btn-group" data-ng-repeat = "dd in dds">
-							<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
-								{{ dd.name }}
-								<span class = "caret"></span>
-							</button>
-							<ul class = "dropdown-menu" role = "menu">
-								<li data-ng-repeat = "c in dd.options">
-									<a href = "#" onclick = "return false;" data-ng-click = "itemclick( c )">
-										{{ c.display }}
-									</a>
-								</li>
-							</ul>
+						<div class = "row">
+							<div class = "col-xs-12">
+								<div class = "btn-group btn-group-justified" data-ng-repeat = "dd in dds">
+									<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
+										{{ dd.name }}
+										<span class = "caret"></span>
+									</button>
+									<ul class = "dropdown-menu" role = "menu">
+										<li data-ng-repeat = "c in dd.options">
+											<a href = "#" onclick = "return false;" data-ng-click = "itemclick( c )">
+												{{ c.display }}
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class = "row">
+							<div class = "col-xs-12 col-md-4">
+								<p>Add an optional preparation instruction / request:</p>
+							</div>
+							<div class = "col-xs-12 col-md-8">
+								<input type = "text" class = "form-control" data-ng-model = "instr" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -238,7 +252,7 @@
 								<th>Price</th>
 							</tr>
 							<tr data-ng-repeat = "item in items">
-								<td>{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + " + " + item.drink.name ) : "" ) }}</td>
+								<td class = "linebreak">{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + ( item.side.name && item.drink.name ? " + " : "" ) + item.drink.name ) : "" ) + ( instr.trim() ? "\nSpecial Order: " + instr : "" ) }}</td>
 								<td>{{ itemcost(item) | currency }}<button type = "button" data-ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true" class="glyphicon glyphicon-remove"></span><span class = "sr-only">Close</span></button></td>
 							</tr>
 							<tr>
