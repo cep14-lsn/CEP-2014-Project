@@ -125,7 +125,7 @@
 						$scope.distance = hashdigest( hash( s ) ) * hashdigest( hash( r ) ) / 100;
 						$scope.distancecharge = $scope.distance * COST_PER_KM;
 						$scope.foodgst = $scope.totalcost * GST;
-						$scope.svccharge = ( $scope.totalcost + $scope.distancecharge + $scope.foodgst ) * SVC;
+						$scope.svccharge = ( $scope.totalcost + $scope.distancecharge + $scope.foodgst + 3 ) * SVC;
 					}
 				}
 				$scope.order = function () {
@@ -284,7 +284,7 @@
 					</tr>
 					<tr>
 						<td>Delivery Expenses</td>
-						<td>{{ distancecharge | currency }}</td>
+						<td><abbr title = "Distance Charge">{{ distancecharge | currency }}</abbr> + <abbr title = "Base Delivery Cost">$3.00</abbr></td>
 					</tr>
 					<tr>
 						<td>Food Expenditure</td>
