@@ -92,6 +92,12 @@ input.data-ng-invalid {
 	background-color : #444;
 }
 
+/* Rows */
+.row {
+	margin-top : 10px;
+	margin-bottom : 10px;
+}
+
 /* Navbar styles*/
 .navbar-default {
 	background-color: #000;
