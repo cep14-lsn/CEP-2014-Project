@@ -257,7 +257,7 @@
 							<tr data-ng-repeat = "item in items">
 								<td>
 									{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + ( item.side.name && item.drink.name ? " + " : "" ) + item.drink.name ) : "" ) }}
-									<abbr title = "All funds raised in this manner go to the Take-a-Wish Foundation." data-ng-hide = "item.side.name || item.drink.name">Paying extra for nothing</abbr>
+									<abbr title = "All funds raised in this manner go to the Take-a-Wish Foundation." data-ng-hide = "item.mode != 'meal' || item.side.name || item.drink.name">Paying extra for nothing</abbr>
 									<p class = "in-the-line" data-ng-show = "item.instr.trim()"><br />Special Order: {{ item.instr.trim() }}</p>
 								</td>
 								<td>{{ itemcost(item) | currency }} <abbr data-ng-show = "item.instr.trim()" title = "Attached request">+ $0.30</abbr><button type = "button" data-ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true" class="glyphicon glyphicon-remove"></span><span class = "sr-only">Close</span></button></td>
