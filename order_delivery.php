@@ -100,6 +100,7 @@
 					for ( var i = 0 ; i < $scope.items.length ; i++ ) {
 						$scope.totalcost += $scope.itemcost( $scope.items[i] );
 						$scope.totalcost += $scope.items[i].instr.trim() ? 0.30 : 0;
+						console.log("$scope.items[i].instr.trim()");
 					}
 					$scope.updatePostalCode()
 					$scope.instr = "";
