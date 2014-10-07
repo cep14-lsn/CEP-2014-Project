@@ -12,7 +12,7 @@
 		<script>
 			var GST = 0.07;
 			var SVC = 0.10;
-			var COST_PER_KM = 0.01;
+			var COST_PER_KM = 0.2;
 			var infoFood;
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
