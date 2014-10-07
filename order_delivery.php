@@ -186,6 +186,7 @@
 				for ( var i = 0 ; i < 6 ; i++ ) {
 					$scope.pc += Math.floor( Math.random() * 10 );
 				}
+				$scope.updatePostalCode()
 			}
 		</script>
 	</head>
