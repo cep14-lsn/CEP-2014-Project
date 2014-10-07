@@ -202,3 +202,6 @@ input.data-ng-invalid {
 .linebreak {
 	white-space : pre-wrap;
 }
+.in-the-line {
+	display : inline;
+}
