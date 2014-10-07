@@ -214,18 +214,20 @@
 					<div class = "panel-body">
 						<div class = "row">
 							<div class = "col-xs-12">
-								<div class = "btn-group btn-group-justified" data-ng-repeat = "dd in dds">
-									<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
-										{{ dd.name }}
-										<span class = "caret"></span>
-									</button>
-									<ul class = "dropdown-menu" role = "menu">
-										<li data-ng-repeat = "c in dd.options">
-											<a href = "#" onclick = "return false;" data-ng-click = "itemclick( c )">
-												{{ c.display }}
-											</a>
-										</li>
-									</ul>
+								<div class = "btn-group btn-group-justified">
+									<div class = "btn-group" data-ng-repeat = "dd in dds">
+										<button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
+											{{ dd.name }}
+											<span class = "caret"></span>
+										</button>
+										<ul class = "dropdown-menu" role = "menu">
+											<li data-ng-repeat = "c in dd.options">
+												<a href = "#" onclick = "return false;" data-ng-click = "itemclick( c )">
+													{{ c.display }}
+												</a>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
