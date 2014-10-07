@@ -14,7 +14,7 @@ function hash( s ) {
 	for ( var i = 0 ; i < s.length / 2 ; i++ ) {
 		var j = i * 2;
 		var r = ( p[ j ] ^ p[ j + 1 ] ) << i % 32
-		while ( r >> 2 << 2 == r ) r = r >> 2;
+		while ( r >> 2 << 2 == r && r != 0 ) r = r >> 2;
 		o += String.fromCharCode( r );
 	}
 	return hash( o );
