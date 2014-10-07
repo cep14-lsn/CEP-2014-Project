@@ -252,9 +252,7 @@
 								<th>Price</th>
 							</tr>
 							<tr data-ng-repeat = "item in items">
-								<td class = "linebreak">
-									{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + ( item.side.name && item.drink.name ? " + " : "" ) + item.drink.name + ( item.side.name || item.drink.name ? "" : "Paying extra for nothing" ) ) : "" ) + ( item.instr.trim() ? "\nSpecial Order: " + item.instr : "" ) }}
-								</td>
+								<td class = "linebreak">{{ item.food.name + ( item.mode ? item.mode == "alc" ? " / À la carte" : ( " / Set Meal / " + item.side.name + ( item.side.name && item.drink.name ? " + " : "" ) + item.drink.name + ( item.side.name || item.drink.name ? "" : "Paying extra for nothing" ) ) : "" ) + ( item.instr.trim() ? "\nSpecial Order: " + item.instr : "" ) }}</td>
 								<td>{{ itemcost(item) | currency }}<button type = "button" data-ng-click = "removecart(item)" class = "close"><span data-aria-hidden = "true" class="glyphicon glyphicon-remove"></span><span class = "sr-only">Close</span></button></td>
 							</tr>
 							<tr>
